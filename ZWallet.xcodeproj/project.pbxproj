@@ -1,0 +1,536 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
+		EE57700021CFCC5500433CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFF21CFCC5500433CAB /* ViewController.swift */; };
+		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
+		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
+		EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */; };
+		EE57701321CFCC5600433CAB /* ZWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57701221CFCC5600433CAB /* ZWalletTests.swift */; };
+		EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702521CFFDDB00433CAB /* ZWButtom.swift */; };
+		EE57702921D0011400433CAB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702821D0011400433CAB /* Colors.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EE57700F21CFCC5600433CAB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EE576FF221CFCC5500433CAB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EE576FF921CFCC5500433CAB;
+			remoteInfo = ZWallet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EE576FFF21CFCC5500433CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EE57700421CFCC5600433CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EE57700721CFCC5600433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EE57700921CFCC5600433CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE57700E21CFCC5600433CAB /* ZWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE57701221CFCC5600433CAB /* ZWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWalletTests.swift; sourceTree = "<group>"; };
+		EE57701421CFCC5600433CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EE57702521CFFDDB00433CAB /* ZWButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWButtom.swift; sourceTree = "<group>"; };
+		EE57702821D0011400433CAB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EE576FF721CFCC5500433CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE57700B21CFCC5600433CAB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EE576FF121CFCC5500433CAB = {
+			isa = PBXGroup;
+			children = (
+				EE576FFC21CFCC5500433CAB /* ZWallet */,
+				EE57701121CFCC5600433CAB /* ZWalletTests */,
+				EE576FFB21CFCC5500433CAB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EE576FFB21CFCC5500433CAB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EE576FFA21CFCC5500433CAB /* ZWallet.app */,
+				EE57700E21CFCC5600433CAB /* ZWalletTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE576FFC21CFCC5500433CAB /* ZWallet */ = {
+			isa = PBXGroup;
+			children = (
+				EE57701E21CFCFCE00433CAB /* _Assets */,
+				EE57701D21CFCFB000433CAB /* _Main */,
+				EE57702721D000EE00433CAB /* Definitions */,
+				EE57700921CFCC5600433CAB /* Info.plist */,
+				EE57701F21CFD00100433CAB /* Storyboards */,
+				EE57702421CFFDB700433CAB /* UIElements */,
+				EE57702021CFD02900433CAB /* ViewCoordinators */,
+				EE57702121CFD03500433CAB /* Views */,
+			);
+			path = ZWallet;
+			sourceTree = "<group>";
+		};
+		EE57701121CFCC5600433CAB /* ZWalletTests */ = {
+			isa = PBXGroup;
+			children = (
+				EE57701221CFCC5600433CAB /* ZWalletTests.swift */,
+				EE57701421CFCC5600433CAB /* Info.plist */,
+			);
+			path = ZWalletTests;
+			sourceTree = "<group>";
+		};
+		EE57701D21CFCFB000433CAB /* _Main */ = {
+			isa = PBXGroup;
+			children = (
+				EE576FFD21CFCC5500433CAB /* AppDelegate.swift */,
+			);
+			path = _Main;
+			sourceTree = "<group>";
+		};
+		EE57701E21CFCFCE00433CAB /* _Assets */ = {
+			isa = PBXGroup;
+			children = (
+				EE57700421CFCC5600433CAB /* Assets.xcassets */,
+			);
+			path = _Assets;
+			sourceTree = "<group>";
+		};
+		EE57701F21CFD00100433CAB /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
+				EE57700121CFCC5500433CAB /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		EE57702021CFD02900433CAB /* ViewCoordinators */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewCoordinators;
+			sourceTree = "<group>";
+		};
+		EE57702121CFD03500433CAB /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EE576FFF21CFCC5500433CAB /* ViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EE57702421CFFDB700433CAB /* UIElements */ = {
+			isa = PBXGroup;
+			children = (
+				EE57702521CFFDDB00433CAB /* ZWButtom.swift */,
+			);
+			path = UIElements;
+			sourceTree = "<group>";
+		};
+		EE57702721D000EE00433CAB /* Definitions */ = {
+			isa = PBXGroup;
+			children = (
+				EE57702821D0011400433CAB /* Colors.swift */,
+			);
+			path = Definitions;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EE576FF921CFCC5500433CAB /* ZWallet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE57701721CFCC5600433CAB /* Build configuration list for PBXNativeTarget "ZWallet" */;
+			buildPhases = (
+				EE576FF621CFCC5500433CAB /* Sources */,
+				EE576FF721CFCC5500433CAB /* Frameworks */,
+				EE576FF821CFCC5500433CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZWallet;
+			productName = ZWallet;
+			productReference = EE576FFA21CFCC5500433CAB /* ZWallet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EE57700D21CFCC5600433CAB /* ZWalletTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EE57701A21CFCC5600433CAB /* Build configuration list for PBXNativeTarget "ZWalletTests" */;
+			buildPhases = (
+				EE57700A21CFCC5600433CAB /* Sources */,
+				EE57700B21CFCC5600433CAB /* Frameworks */,
+				EE57700C21CFCC5600433CAB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EE57701021CFCC5600433CAB /* PBXTargetDependency */,
+			);
+			name = ZWalletTests;
+			productName = ZWalletTests;
+			productReference = EE57700E21CFCC5600433CAB /* ZWalletTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EE576FF221CFCC5500433CAB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "XMR Systems LLC";
+				TargetAttributes = {
+					EE576FF921CFCC5500433CAB = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					EE57700D21CFCC5600433CAB = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = EE576FF921CFCC5500433CAB;
+					};
+				};
+			};
+			buildConfigurationList = EE576FF521CFCC5500433CAB /* Build configuration list for PBXProject "ZWallet" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EE576FF121CFCC5500433CAB;
+			productRefGroup = EE576FFB21CFCC5500433CAB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EE576FF921CFCC5500433CAB /* ZWallet */,
+				EE57700D21CFCC5600433CAB /* ZWalletTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EE576FF821CFCC5500433CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */,
+				EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */,
+				EE57700321CFCC5500433CAB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE57700C21CFCC5600433CAB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EE576FF621CFCC5500433CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
+				EE57702921D0011400433CAB /* Colors.swift in Sources */,
+				EE57700021CFCC5500433CAB /* ViewController.swift in Sources */,
+				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EE57700A21CFCC5600433CAB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE57701321CFCC5600433CAB /* ZWalletTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EE57701021CFCC5600433CAB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EE576FF921CFCC5500433CAB /* ZWallet */;
+			targetProxy = EE57700F21CFCC5600433CAB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EE57700121CFCC5500433CAB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE57700221CFCC5500433CAB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE57700721CFCC5600433CAB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EE57701521CFCC5600433CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EE57701621CFCC5600433CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EE57701821CFCC5600433CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H6QW9ES945;
+				INFOPLIST_FILE = ZWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMRSystemsLLC.ZWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EE57701921CFCC5600433CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H6QW9ES945;
+				INFOPLIST_FILE = ZWallet/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMRSystemsLLC.ZWallet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EE57701B21CFCC5600433CAB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H6QW9ES945;
+				INFOPLIST_FILE = ZWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMRSystemsLLC.ZWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWallet.app/ZWallet";
+			};
+			name = Debug;
+		};
+		EE57701C21CFCC5600433CAB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = H6QW9ES945;
+				INFOPLIST_FILE = ZWalletTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.XMRSystemsLLC.ZWalletTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWallet.app/ZWallet";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EE576FF521CFCC5500433CAB /* Build configuration list for PBXProject "ZWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE57701521CFCC5600433CAB /* Debug */,
+				EE57701621CFCC5600433CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE57701721CFCC5600433CAB /* Build configuration list for PBXNativeTarget "ZWallet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE57701821CFCC5600433CAB /* Debug */,
+				EE57701921CFCC5600433CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EE57701A21CFCC5600433CAB /* Build configuration list for PBXNativeTarget "ZWalletTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE57701B21CFCC5600433CAB /* Debug */,
+				EE57701C21CFCC5600433CAB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EE576FF221CFCC5500433CAB /* Project object */;
+}
