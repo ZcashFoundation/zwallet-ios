@@ -15,6 +15,9 @@
 		EE57701321CFCC5600433CAB /* ZWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57701221CFCC5600433CAB /* ZWalletTests.swift */; };
 		EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702521CFFDDB00433CAB /* ZWButtom.swift */; };
 		EE57702921D0011400433CAB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702821D0011400433CAB /* Colors.swift */; };
+		EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702A21D0230C00433CAB /* ZWProgressBar.swift */; };
+		EE57702D21D38A8200433CAB /* PIN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57702C21D38A8200433CAB /* PIN.storyboard */; };
+		EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,9 @@
 		EE57701421CFCC5600433CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE57702521CFFDDB00433CAB /* ZWButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWButtom.swift; sourceTree = "<group>"; };
 		EE57702821D0011400433CAB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		EE57702A21D0230C00433CAB /* ZWProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWProgressBar.swift; sourceTree = "<group>"; };
+		EE57702C21D38A8200433CAB /* PIN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PIN.storyboard; sourceTree = "<group>"; };
+		EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWPinDotView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +129,7 @@
 			children = (
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
 				EE57700121CFCC5500433CAB /* Main.storyboard */,
+				EE57702C21D38A8200433CAB /* PIN.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -146,6 +153,8 @@
 			isa = PBXGroup;
 			children = (
 				EE57702521CFFDDB00433CAB /* ZWButtom.swift */,
+				EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */,
+				EE57702A21D0230C00433CAB /* ZWProgressBar.swift */,
 			);
 			path = UIElements;
 			sourceTree = "<group>";
@@ -239,6 +248,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE57702D21D38A8200433CAB /* PIN.storyboard in Resources */,
 				EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */,
 				EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */,
 				EE57700321CFCC5500433CAB /* Main.storyboard in Resources */,
@@ -260,9 +270,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
+				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
 				EE57700021CFCC5500433CAB /* ViewController.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
+				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
