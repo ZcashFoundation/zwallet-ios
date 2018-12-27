@@ -46,6 +46,7 @@
 		EE57702A21D0230C00433CAB /* ZWProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWProgressBar.swift; sourceTree = "<group>"; };
 		EE57702C21D38A8200433CAB /* PIN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PIN.storyboard; sourceTree = "<group>"; };
 		EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWPinDotView.swift; sourceTree = "<group>"; };
+		EE96916F21D561BE00BE1289 /* Passphrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Passphrase.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +130,7 @@
 			children = (
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
 				EE57700121CFCC5500433CAB /* Main.storyboard */,
+				EE96916F21D561BE00BE1289 /* Passphrase.storyboard */,
 				EE57702C21D38A8200433CAB /* PIN.storyboard */,
 			);
 			path = Storyboards;
