@@ -9,6 +9,14 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.ttf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="5TK-63-Amy">
@@ -44,8 +52,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="TKL-j1-J2Y"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="21"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
+                                <color key="textColor" red="0.29016751050949097" green="0.29021432995796204" blue="0.2901572585105896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Set a PIN. If you forget your PIN you must restore your wallet from your seed you wrote down." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000004" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dhj-KA-DVx">
@@ -53,8 +61,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="41" id="lQs-jy-ZpH"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="16"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                                <color key="textColor" red="0.2901675105" green="0.29021433000000002" blue="0.29015725850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y4R-iy-GOg" customClass="ZWPinDotView" customModule="ZWallet" customModuleProvider="target">
