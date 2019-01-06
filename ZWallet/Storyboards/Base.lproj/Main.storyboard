@@ -10,6 +10,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.ttf">
+            <string>SourceSansPro-Bold</string>
+        </array>
         <array key="SourceSansPro-Regular.ttf">
             <string>SourceSansPro-Regular</string>
         </array>
@@ -25,10 +28,12 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xdj-TX-2Zc" customClass="ZWButton" customModule="ZWallet" customModuleProvider="target">
                                 <rect key="frame" x="24" y="690" width="366" height="48"/>
+                                <color key="backgroundColor" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Igh-s5-jmk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="!!Create a new wallet"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -36,6 +41,12 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                         <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
@@ -55,14 +66,49 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="0vQ-2g-rdx">
+                                <rect key="frame" x="147" y="255" width="120" height="120"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="120" id="bi8-yd-vbX"/>
+                                    <constraint firstAttribute="width" constant="120" id="oYB-gN-r56"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ZEC Wallet" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWg-1c-Yha">
+                                <rect key="frame" x="24" y="403" width="366" height="43"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="pNu-7K-alM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="34"/>
+                                <color key="textColor" red="0.17999999999999999" green="0.16" blue="0.14999999999999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="prG-Ro-Nhd">
+                                <rect key="frame" x="24" y="462" width="366" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="41" id="4h3-U2-pSC"/>
+                                </constraints>
+                                <string key="text">!!Welcome to the official ZEC wallet from the
+Zcash Foundation.</string>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="0vQ-2g-rdx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="01P-xr-UJz"/>
+                            <constraint firstItem="0vQ-2g-rdx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="211" id="Ghe-d1-7cS"/>
+                            <constraint firstItem="LWg-1c-Yha" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="Ivb-7F-e0X"/>
                             <constraint firstItem="4wC-lp-3HR" firstAttribute="top" secondItem="Xdj-TX-2Zc" secondAttribute="bottom" constant="24" id="L5n-Yk-Fry"/>
+                            <constraint firstItem="prG-Ro-Nhd" firstAttribute="top" secondItem="LWg-1c-Yha" secondAttribute="bottom" constant="16" id="O3v-j3-vYp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4wC-lp-3HR" secondAttribute="trailing" constant="24" id="T8a-if-9Kp"/>
                             <constraint firstItem="4wC-lp-3HR" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="TlL-VZ-33v"/>
+                            <constraint firstItem="prG-Ro-Nhd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="V8R-eP-cWN"/>
+                            <constraint firstItem="LWg-1c-Yha" firstAttribute="top" secondItem="0vQ-2g-rdx" secondAttribute="bottom" constant="28" id="ZuJ-qN-64u"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Xdj-TX-2Zc" secondAttribute="trailing" constant="24" id="cPp-0n-cjx"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="4wC-lp-3HR" secondAttribute="bottom" constant="52" id="kex-6X-kmg"/>
+                            <constraint firstAttribute="trailing" secondItem="prG-Ro-Nhd" secondAttribute="trailing" constant="24" id="pu5-Tw-bKd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LWg-1c-Yha" secondAttribute="trailing" constant="24" id="teT-A4-4AG"/>
                             <constraint firstItem="Xdj-TX-2Zc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="wKW-0v-9Eq"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -72,4 +118,7 @@
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="Logo" width="120" height="120"/>
+    </resources>
 </document>
