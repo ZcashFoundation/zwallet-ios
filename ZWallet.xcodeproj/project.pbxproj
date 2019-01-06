@@ -45,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrxDetails.storyboard; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE576FFF21CFCC5500433CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -157,11 +158,12 @@
 		EE57701F21CFD00100433CAB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EE76B84121D7EC3F0093571F /* Home.storyboard */,
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
 				EE57700121CFCC5500433CAB /* Main.storyboard */,
 				EE96916F21D561BE00BE1289 /* Passphrase.storyboard */,
 				EE57702C21D38A8200433CAB /* PIN.storyboard */,
-				EE76B84121D7EC3F0093571F /* Home.storyboard */,
+				EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
