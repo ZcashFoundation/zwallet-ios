@@ -125,10 +125,12 @@ public class ZWProgressBar: UIView {
             indicator.layer.borderWidth = self.borderWidth
             indicator.layer.borderColor = self.borderColor.cgColor
 
-            let checkmarkImageView = UIImageView(image: UIImage(named: "Checkmark"))
-            checkmarkImageView.frame = indicator.frame
-            checkmarkImageView.contentMode = .scaleAspectFit
-            indicator.addSubview(checkmarkImageView)
+//            let checkmarkImageView = UIImageView(image: UIImage(named: "Checkmark"))
+//            checkmarkImageView.frame = CGRect(x: 0, y: 0, width: 2 * self.radius, height: 2 * self.radius)
+//            checkmarkImageView.contentMode = .scaleAspectFit
+//            checkmarkImageView.backgroundColor = UIColor.red
+//            checkmarkImageView.tintColor = UIColor.black
+//            indicator.addSubview(checkmarkImageView)
 
             self.indicators.append(indicator)
             self.addSubview(indicator)

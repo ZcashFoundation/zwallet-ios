@@ -3,10 +3,15 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE07A45021E23E43006031C8 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A44F21E23E43006031C8 /* MainVC.swift */; };
+		EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A45121E23E92006031C8 /* MainVCDelegate.swift */; };
+		EE07A45521E24FDD006031C8 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A45421E24FDD006031C8 /* Localization.swift */; };
+		EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A45621E26E88006031C8 /* IocContainer.swift */; };
+		EE07A46521E279A8006031C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE07A46721E279A8006031C8 /* InfoPlist.strings */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700021CFCC5500433CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFF21CFCC5500433CAB /* ViewController.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
@@ -46,6 +51,12 @@
 
 /* Begin PBXFileReference section */
 		EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TrxDetails.storyboard; sourceTree = "<group>"; };
+		EE07A44F21E23E43006031C8 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		EE07A45121E23E92006031C8 /* MainVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVCDelegate.swift; sourceTree = "<group>"; };
+		EE07A45421E24FDD006031C8 /* Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localization.swift; sourceTree = "<group>"; };
+		EE07A45621E26E88006031C8 /* IocContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IocContainer.swift; sourceTree = "<group>"; };
+		EE07A46621E279A8006031C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE07A46821E27B55006031C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE576FFF21CFCC5500433CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -96,6 +107,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EE07A44E21E217E0006031C8 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				EE07A44F21E23E43006031C8 /* MainVC.swift */,
+				EE07A45121E23E92006031C8 /* MainVCDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		EE07A45321E2498D006031C8 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				EE57700921CFCC5600433CAB /* Info.plist */,
+				EE07A45421E24FDD006031C8 /* Localization.swift */,
+				EE07A45621E26E88006031C8 /* IocContainer.swift */,
+				EE07A46721E279A8006031C8 /* InfoPlist.strings */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
 		EE576FF121CFCC5500433CAB = {
 			isa = PBXGroup;
 			children = (
@@ -121,7 +152,7 @@
 				EE57701D21CFCFB000433CAB /* _Main */,
 				EE57702721D000EE00433CAB /* Definitions */,
 				EE76B84321D8D1350093571F /* Externals */,
-				EE57700921CFCC5600433CAB /* Info.plist */,
+				EE07A45321E2498D006031C8 /* Infrastructure */,
 				EE57701F21CFD00100433CAB /* Storyboards */,
 				EE57702421CFFDB700433CAB /* UIElements */,
 				EE57702021CFD02900433CAB /* ViewCoordinators */,
@@ -178,6 +209,7 @@
 		EE57702121CFD03500433CAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE07A44E21E217E0006031C8 /* Main */,
 				EE576FFF21CFCC5500433CAB /* ViewController.swift */,
 			);
 			path = Views;
@@ -295,12 +327,13 @@
 				};
 			};
 			buildConfigurationList = EE576FF521CFCC5500433CAB /* Build configuration list for PBXProject "ZWallet" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 10.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				de,
 			);
 			mainGroup = EE576FF121CFCC5500433CAB;
 			productRefGroup = EE576FFB21CFCC5500433CAB /* Products */;
@@ -328,6 +361,7 @@
 				EE76B85521D8D1930093571F /* SourceSansPro-Regular.ttf in Resources */,
 				EE76B85721D8D1930093571F /* SourceSansPro-LightItalic.ttf in Resources */,
 				EE76B85D21D8D1930093571F /* SourceSansPro-SemiBold.ttf in Resources */,
+				EE07A46521E279A8006031C8 /* InfoPlist.strings in Resources */,
 				EE76B85F21D8D1930093571F /* SourceSansPro-Italic.ttf in Resources */,
 				EE76B85B21D8D1930093571F /* SourceSansPro-ExtraLight.ttf in Resources */,
 				EE76B85A21D8D1930093571F /* OFL.txt in Resources */,
@@ -353,12 +387,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
 				EE57700021CFCC5500433CAB /* ViewController.swift in Sources */,
+				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
+				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,
+				EE07A45021E23E43006031C8 /* MainVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,6 +419,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EE07A46721E279A8006031C8 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EE07A46621E279A8006031C8 /* en */,
+				EE07A46821E27B55006031C8 /* de */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		EE57700121CFCC5500433CAB /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -404,6 +451,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -465,6 +513,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -522,7 +571,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6QW9ES945;
-				INFOPLIST_FILE = ZWallet/Info.plist;
+				INFOPLIST_FILE = ZWallet/Infrastructure/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -541,7 +590,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6QW9ES945;
-				INFOPLIST_FILE = ZWallet/Info.plist;
+				INFOPLIST_FILE = ZWallet/Infrastructure/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

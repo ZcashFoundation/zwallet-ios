@@ -1,0 +1,12 @@
+/* InfoPlist.strings
+  ZWallet
+
+  Created by loj on 06.01.19.
+  Copyright © 2019 XMR Systems LLC. All rights reserved. */
+
+"main.welcome" = "Willkommen zur offiziellen ZEC Wallet der\nZcash Foundation.";
+
+"main.createNewWallet" = "Neue Wallet erstellen";
+
+"main.recoverWaller" = "Wallet wiederherstellen";
+
