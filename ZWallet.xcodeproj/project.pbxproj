@@ -12,6 +12,10 @@
 		EE07A45521E24FDD006031C8 /* Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A45421E24FDD006031C8 /* Localization.swift */; };
 		EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A45621E26E88006031C8 /* IocContainer.swift */; };
 		EE07A46521E279A8006031C8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EE07A46721E279A8006031C8 /* InfoPlist.strings */; };
+		EE07A46A21E29B6F006031C8 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46921E29B6F006031C8 /* AppCoordinator.swift */; };
+		EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */; };
+		EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */; };
+		EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700021CFCC5500433CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFF21CFCC5500433CAB /* ViewController.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
@@ -57,6 +61,10 @@
 		EE07A45621E26E88006031C8 /* IocContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IocContainer.swift; sourceTree = "<group>"; };
 		EE07A46621E279A8006031C8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		EE07A46821E27B55006031C8 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EE07A46921E29B6F006031C8 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
+		EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.Delegate.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE576FFF21CFCC5500433CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +210,10 @@
 		EE57702021CFD02900433CAB /* ViewCoordinators */ = {
 			isa = PBXGroup;
 			children = (
+				EE07A46921E29B6F006031C8 /* AppCoordinator.swift */,
+				EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */,
+				EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */,
+				EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */,
 			);
 			path = ViewCoordinators;
 			sourceTree = "<group>";
@@ -387,11 +399,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE07A46A21E29B6F006031C8 /* AppCoordinator.swift in Sources */,
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
+				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
+				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
 				EE57700021CFCC5500433CAB /* ViewController.swift in Sources */,
+				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
