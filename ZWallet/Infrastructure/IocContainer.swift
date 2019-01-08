@@ -12,6 +12,7 @@ import Foundation
 internal protocol IocContainerProtocol {
 
     var localizer: Localizable { get }
+    var viewFactory: ViewFactoryProtocol { get }
 }
 
 
@@ -20,7 +21,10 @@ internal class IocContainer: IocContainerProtocol {
     public static let instance = IocContainer()
 
     public lazy var localizer: Localizable = {
-        let localizer = Localization()
-        return localizer
+        return Localization()
+    }()
+
+    public lazy var viewFactory: ViewFactoryProtocol = {
+        return ViewFactory()
     }()
 }

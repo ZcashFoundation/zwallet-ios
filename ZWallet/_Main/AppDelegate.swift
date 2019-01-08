@@ -12,10 +12,27 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var appCoordinator: AppCoordinator!
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let navigationController = UINavigationController()
+        navigationController.setToolbarHidden(true, animated: false)
+
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        self.window?.tintColor = UIColor.black
+        self.window?.rootViewController = navigationController
+
+        let iocContainer = IocContainer()
+
+        self.appCoordinator = AppCoordinator(navigationController: navigationController,
+                                             iocContainer: iocContainer)
+        self.appCoordinator.start()
+
+        self.window?.makeKeyAndVisible()
+        
         return true
     }
 

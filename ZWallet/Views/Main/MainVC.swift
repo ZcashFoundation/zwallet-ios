@@ -29,6 +29,11 @@ class MainVC: UIViewController {
         super.viewDidLoad()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.setup()
+    }
+
     private func setup() {
         if let localizer = self.localizer {
             self.welcomeLabel.text = localizer.localized("main.welcome")

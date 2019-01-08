@@ -16,6 +16,7 @@
 		EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */; };
 		EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */; };
 		EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */; };
+		EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB221E5303D00138385 /* ViewFactory.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700021CFCC5500433CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFF21CFCC5500433CAB /* ViewController.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.Delegate.swift; sourceTree = "<group>"; };
+		EE377EB221E5303D00138385 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE576FFF21CFCC5500433CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			path = Infrastructure;
 			sourceTree = "<group>";
 		};
+		EE377EB121E5300400138385 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE377EB221E5303D00138385 /* ViewFactory.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EE576FF121CFCC5500433CAB = {
 			isa = PBXGroup;
 			children = (
@@ -161,6 +171,7 @@
 				EE57702721D000EE00433CAB /* Definitions */,
 				EE76B84321D8D1350093571F /* Externals */,
 				EE07A45321E2498D006031C8 /* Infrastructure */,
+				EE377EB121E5300400138385 /* Services */,
 				EE57701F21CFD00100433CAB /* Storyboards */,
 				EE57702421CFFDB700433CAB /* UIElements */,
 				EE57702021CFD02900433CAB /* ViewCoordinators */,
@@ -406,6 +417,7 @@
 				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
+				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE57700021CFCC5500433CAB /* ViewController.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,

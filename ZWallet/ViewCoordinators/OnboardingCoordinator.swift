@@ -14,13 +14,30 @@ internal class OnboardingCoordinator: BaseCoordinator {
 
     internal weak var delegate: OnboardingCoordinatorDelegate?
 
+    private var iocContainer: IocContainerProtocol
+
+    private var viewFactory: ViewFactoryProtocol
+    private var localizer: Localizable
+
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
     {
+        self.iocContainer = iocContainer
+
+        self.viewFactory = self.iocContainer.viewFactory
+        self.localizer = self.iocContainer.localizer
+
         super.init(navigationController: navigationController)
     }
 
     internal func start() {
-        #warning("implement")
+        self.showMainView()
+    }
+
+    private func showMainView() {
+        let vc = self.viewFactory.getOnboardingMainView()
+//        vc.delegate = self
+        vc.localizer = self.localizer
+        self.navigationController.pushViewController(vc, animated: true)
     }
 }

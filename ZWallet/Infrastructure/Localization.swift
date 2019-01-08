@@ -16,7 +16,15 @@ internal protocol Localizable: class {
 
 internal class Localization: Localizable {
 
-    func localized(_ text: String) -> String {
-        return NSLocalizedString(text, comment: text)
+    private var languageBundle: Bundle
+    private let languageId = "en"
+
+    public init() {
+        let path = Bundle.main.path(forResource: self.languageId, ofType: "lproj")!
+        self.languageBundle = Bundle(path: path)!
+    }
+
+    public func localized(_ text: String) -> String {
+        return self.languageBundle.localizedString(forKey: text, value: text, table: "InfoPlist")
     }
 }
