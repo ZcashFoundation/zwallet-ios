@@ -10,3 +10,7 @@
 
 "main.recoverWaller" = "Recover wallet";
 
+"pin.title.initialPin" = "Choose a PIN";
+
+"pin.description.initialPin" = "Set a PIN. If you forget your PIN you must restore your wallet from the seed you wrote down.";
+

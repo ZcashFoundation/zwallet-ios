@@ -36,8 +36,36 @@ internal class OnboardingCoordinator: BaseCoordinator {
 
     private func showMainView() {
         let vc = self.viewFactory.getOnboardingMainView()
-//        vc.delegate = self
+        vc.delegate = self
         vc.localizer = self.localizer
         self.navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+
+extension OnboardingCoordinator: MainVCDelegate {
+
+    func mainVCCreateNewWalletTouched() {
+        let createNewWalletCoordinator = CreateNewWalletCoordinator(navigationController: self.navigationController,
+                                                                    iocContainer: self.iocContainer)
+        self.add(childCoordinator: createNewWalletCoordinator)
+        createNewWalletCoordinator.delegate = self
+        createNewWalletCoordinator.start()
+    }
+
+    func mainVCRecoverWalletTouched() {
+        #warning("implement revocer wallet")
+    }
+}
+
+
+extension OnboardingCoordinator: CreateNewWalletCoordinatorDelegate {
+
+    func createNewWalletCoordinatorSuccessful(coordinator: CreateNewWalletCoordinator) {
+        #warning("implement")
+    }
+
+    func createNewWalletCoordinatorCancelled(coordinator: CreateNewWalletCoordinator) {
+        #warning("implement")
     }
 }

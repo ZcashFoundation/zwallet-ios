@@ -33,6 +33,10 @@ internal class AppCoordinator: BaseCoordinator {
         #warning("implement")
         return false
     }
+}
+
+
+extension AppCoordinator: OnboardingCoordinatorDelegate {
 
     private func showOnboarding() {
         let onboardingCoordinator = OnboardingCoordinator(navigationController: self.navigationController,
@@ -41,10 +45,6 @@ internal class AppCoordinator: BaseCoordinator {
         onboardingCoordinator.delegate = self
         onboardingCoordinator.start()
     }
-}
-
-
-extension AppCoordinator: OnboardingCoordinatorDelegate {
 
     func onboardingCoordinatorSuccessful(coordinator: OnboardingCoordinator) {
         #warning("implement")

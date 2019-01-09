@@ -10,3 +10,7 @@
 
 "main.recoverWaller" = "Wallet wiederherstellen";
 
+"pin.title.initialPin" = "Wähle einen PIN";
+
+"pin.description.initialPin" = "Setze einen PIN. Wenn du deinen PIN vergessen hast, musst du deine Wallet wiederherstellen mit dem Seed, den du notiert hast.";
+

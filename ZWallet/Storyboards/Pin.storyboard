@@ -18,10 +18,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--PinVC-->
         <scene sceneID="5TK-63-Amy">
             <objects>
-                <viewController storyboardIdentifier="PIN" id="M2V-hB-lEq" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pin" id="M2V-hB-lEq" customClass="PinVC" customModule="ZWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MfU-s3-T92">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -90,6 +90,11 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
                     </view>
+                    <connections>
+                        <outlet property="descriptionLabel" destination="dhj-KA-DVx" id="ykw-0X-Htq"/>
+                        <outlet property="progressBar" destination="wua-MI-GFO" id="EBH-1G-88d"/>
+                        <outlet property="titleLabel" destination="r9g-U1-6GC" id="Rdi-Rp-dcN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fNu-aZ-Pmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

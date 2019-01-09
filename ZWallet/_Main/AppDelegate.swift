@@ -21,6 +21,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navigationController = UINavigationController()
         navigationController.setToolbarHidden(true, animated: false)
 
+        navigationController.navigationBar.backgroundColor = .white
+        navigationController.navigationBar.isTranslucent = false
+        navigationController.navigationBar.isOpaque = false
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
         self.window?.tintColor = UIColor.black
         self.window?.rootViewController = navigationController

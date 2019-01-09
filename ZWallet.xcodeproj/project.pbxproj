@@ -17,8 +17,11 @@
 		EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */; };
 		EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */; };
 		EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB221E5303D00138385 /* ViewFactory.swift */; };
+		EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */; };
+		EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */; };
+		EE377EBC21E68AB000138385 /* PinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBB21E68AB000138385 /* PinVC.swift */; };
+		EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
-		EE57700021CFCC5500433CAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFF21CFCC5500433CAB /* ViewController.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
 		EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */; };
@@ -26,7 +29,7 @@
 		EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702521CFFDDB00433CAB /* ZWButtom.swift */; };
 		EE57702921D0011400433CAB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702821D0011400433CAB /* Colors.swift */; };
 		EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702A21D0230C00433CAB /* ZWProgressBar.swift */; };
-		EE57702D21D38A8200433CAB /* PIN.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57702C21D38A8200433CAB /* PIN.storyboard */; };
+		EE57702D21D38A8200433CAB /* Pin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57702C21D38A8200433CAB /* Pin.storyboard */; };
 		EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */; };
 		EE76B84221D7EC3F0093571F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE76B84121D7EC3F0093571F /* Home.storyboard */; };
 		EE76B85321D8D1930093571F /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B84621D8D1930093571F /* SourceSansPro-BlackItalic.ttf */; };
@@ -67,9 +70,12 @@
 		EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.Delegate.swift; sourceTree = "<group>"; };
 		EE377EB221E5303D00138385 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
+		EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.swift; sourceTree = "<group>"; };
+		EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.Delegate.swift; sourceTree = "<group>"; };
+		EE377EBB21E68AB000138385 /* PinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVC.swift; sourceTree = "<group>"; };
+		EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVCDelegate.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EE576FFF21CFCC5500433CAB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EE57700421CFCC5600433CAB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE57700721CFCC5600433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -80,7 +86,7 @@
 		EE57702521CFFDDB00433CAB /* ZWButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWButtom.swift; sourceTree = "<group>"; };
 		EE57702821D0011400433CAB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		EE57702A21D0230C00433CAB /* ZWProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWProgressBar.swift; sourceTree = "<group>"; };
-		EE57702C21D38A8200433CAB /* PIN.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PIN.storyboard; sourceTree = "<group>"; };
+		EE57702C21D38A8200433CAB /* Pin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pin.storyboard; sourceTree = "<group>"; };
 		EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWPinDotView.swift; sourceTree = "<group>"; };
 		EE76B84121D7EC3F0093571F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EE76B84621D8D1930093571F /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
@@ -143,6 +149,15 @@
 				EE377EB221E5303D00138385 /* ViewFactory.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		EE377EBA21E68A6600138385 /* Pin */ = {
+			isa = PBXGroup;
+			children = (
+				EE377EBB21E68AB000138385 /* PinVC.swift */,
+				EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */,
+			);
+			path = Pin;
 			sourceTree = "<group>";
 		};
 		EE576FF121CFCC5500433CAB = {
@@ -212,7 +227,7 @@
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
 				EE57700121CFCC5500433CAB /* Main.storyboard */,
 				EE96916F21D561BE00BE1289 /* Passphrase.storyboard */,
-				EE57702C21D38A8200433CAB /* PIN.storyboard */,
+				EE57702C21D38A8200433CAB /* Pin.storyboard */,
 				EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */,
 			);
 			path = Storyboards;
@@ -223,8 +238,10 @@
 			children = (
 				EE07A46921E29B6F006031C8 /* AppCoordinator.swift */,
 				EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */,
-				EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */,
+				EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */,
+				EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */,
 				EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */,
+				EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */,
 			);
 			path = ViewCoordinators;
 			sourceTree = "<group>";
@@ -233,7 +250,7 @@
 			isa = PBXGroup;
 			children = (
 				EE07A44E21E217E0006031C8 /* Main */,
-				EE576FFF21CFCC5500433CAB /* ViewController.swift */,
+				EE377EBA21E68A6600138385 /* Pin */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -380,7 +397,7 @@
 				EE76B85821D8D1930093571F /* SourceSansPro-Light.ttf in Resources */,
 				EE76B85621D8D1930093571F /* SourceSansPro-Bold.ttf in Resources */,
 				EE76B85921D8D1930093571F /* SourceSansPro-Black.ttf in Resources */,
-				EE57702D21D38A8200433CAB /* PIN.storyboard in Resources */,
+				EE57702D21D38A8200433CAB /* Pin.storyboard in Resources */,
 				EE76B85521D8D1930093571F /* SourceSansPro-Regular.ttf in Resources */,
 				EE76B85721D8D1930093571F /* SourceSansPro-LightItalic.ttf in Resources */,
 				EE76B85D21D8D1930093571F /* SourceSansPro-SemiBold.ttf in Resources */,
@@ -418,11 +435,14 @@
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
-				EE57700021CFCC5500433CAB /* ViewController.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
+				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
+				EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */,
+				EE377EBC21E68AB000138385 /* PinVC.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
+				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,
 				EE07A45021E23E43006031C8 /* MainVC.swift in Sources */,
 			);
