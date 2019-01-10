@@ -19,6 +19,8 @@ internal class CreateNewWalletCoordinator: BaseCoordinator {
     private var viewFactory: ViewFactoryProtocol
     private var localizer: Localizable
 
+    private var isInitialPin = true
+
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
     {
@@ -31,25 +33,42 @@ internal class CreateNewWalletCoordinator: BaseCoordinator {
     }
 
     internal func start() {
-        self.showPinView()
+        self.showInitialPinView()
     }
 }
 
 
 extension CreateNewWalletCoordinator: PinVCDelegate {
 
-    func pinVCNextTouched() {
-        #warning("implement")
+    func pinVCPinCompleted(pinEntered pin: String, viewController: PinVC) {
+        if self.isInitialPin {
+            self.showConfirmationPinView(initialPin: pin)
+        } else {
+            #warning("save pin and continue onboarding")
+        }
     }
 
     func pinVCCancelTouched() {
         #warning("implement")
     }
 
-    private func showPinView() {
+    private func showInitialPinView() {
         let vc = self.viewFactory.getPinView()
         vc.delegate = self
         vc.localizer = self.localizer
+        vc.pinMode = .initial
+        vc.pinAutoConfirm = true
+        vc.progressStep = 1
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    private func showConfirmationPinView(initialPin: String) {
+        let vc = self.viewFactory.getPinView()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        vc.pinMode = .confirm(withInitialPin: initialPin)
+        vc.pinAutoConfirm = true
+        vc.progressStep = 2
         self.navigationController.pushViewController(vc, animated: true)
     }
 }

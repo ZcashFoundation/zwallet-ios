@@ -8,9 +8,13 @@
 
 "main.createNewWallet" = "Create a new wallet";
 
-"main.recoverWaller" = "Recover wallet";
+"main.recoverWallet" = "Recover wallet";
 
 "pin.title.initialPin" = "Choose a PIN";
 
 "pin.description.initialPin" = "Set a PIN. If you forget your PIN you must restore your wallet from the seed you wrote down.";
+
+"pin.title.verifyPin" = "Re-enter PIN";
+
+"pin.description.verifyPin" = "You know the drill. Re-enter the PIN from the last step to confirm it.";
 

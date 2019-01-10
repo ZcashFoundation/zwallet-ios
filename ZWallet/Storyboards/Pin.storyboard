@@ -92,6 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="descriptionLabel" destination="dhj-KA-DVx" id="ykw-0X-Htq"/>
+                        <outlet property="pinDotView" destination="Y4R-iy-GOg" id="NzE-sr-n2N"/>
                         <outlet property="progressBar" destination="wua-MI-GFO" id="EBH-1G-88d"/>
                         <outlet property="titleLabel" destination="r9g-U1-6GC" id="Rdi-Rp-dcN"/>
                     </connections>

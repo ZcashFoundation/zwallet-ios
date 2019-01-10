@@ -21,6 +21,8 @@
 		EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */; };
 		EE377EBC21E68AB000138385 /* PinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBB21E68AB000138385 /* PinVC.swift */; };
 		EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */; };
+		EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBF21E7D92200138385 /* PinEntryMode.swift */; };
+		EE377EC221E7DFD200138385 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC121E7DFD200138385 /* Constants.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
@@ -74,6 +76,8 @@
 		EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.Delegate.swift; sourceTree = "<group>"; };
 		EE377EBB21E68AB000138385 /* PinVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVC.swift; sourceTree = "<group>"; };
 		EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVCDelegate.swift; sourceTree = "<group>"; };
+		EE377EBF21E7D92200138385 /* PinEntryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryMode.swift; sourceTree = "<group>"; };
+		EE377EC121E7DFD200138385 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,6 +158,7 @@
 		EE377EBA21E68A6600138385 /* Pin */ = {
 			isa = PBXGroup;
 			children = (
+				EE377EBF21E7D92200138385 /* PinEntryMode.swift */,
 				EE377EBB21E68AB000138385 /* PinVC.swift */,
 				EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */,
 			);
@@ -269,6 +274,7 @@
 			isa = PBXGroup;
 			children = (
 				EE57702821D0011400433CAB /* Colors.swift */,
+				EE377EC121E7DFD200138385 /* Constants.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -438,9 +444,11 @@
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
+				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
 				EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */,
 				EE377EBC21E68AB000138385 /* PinVC.swift in Sources */,
+				EE377EC221E7DFD200138385 /* Constants.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,

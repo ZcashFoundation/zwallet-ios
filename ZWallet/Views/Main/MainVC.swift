@@ -31,14 +31,14 @@ class MainVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.setup()
+        self.updateView()
     }
 
-    private func setup() {
+    private func updateView() {
         if let localizer = self.localizer {
             self.welcomeLabel.text = localizer.localized("main.welcome")
             self.createNewWalletButton.setTitle(localizer.localized("main.createNewWallet"), for: .normal)
-            self.recoverWalletButton.setTitle(localizer.localized("main.recoverWaller"), for: .normal)
+            self.recoverWalletButton.setTitle(localizer.localized("main.recoverWallet"), for: .normal)
         }
     }
 }
