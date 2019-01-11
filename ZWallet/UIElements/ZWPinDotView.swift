@@ -72,8 +72,8 @@ public class ZWPinDotView: UIView {
         let maxShakeCount = 5
         var duration = 0.10
 
-        let centerX = bounds.midX
-        let centerY = bounds.midY
+        let centerX = self.center.x
+        let centerY = self.center.y
         var moveX: CGFloat = 5
 
         if shakeCount == 0 || shakeCount == maxShakeCount {
