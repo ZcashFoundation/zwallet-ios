@@ -63,6 +63,7 @@ extension CreateNewWalletCoordinator: PinVCDelegate {
     }
 
     private func showConfirmationPinView(initialPin: String) {
+        self.isInitialPin = false
         let vc = self.viewFactory.getPinView()
         vc.delegate = self
         vc.localizer = self.localizer

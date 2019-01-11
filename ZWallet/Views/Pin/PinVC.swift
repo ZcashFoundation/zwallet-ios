@@ -41,6 +41,7 @@ class PinVC: UIViewController {
     }
 
     private func setup() {
+        self.pinCode = ""
         self.pinDotView.totalDotCount = Constants.pinCodeLength
         self.pinDotView.inputDotCount = 0
         self.pinDotView.fillColor = .black
@@ -104,7 +105,10 @@ extension PinVC : UIKeyInput {
             return
         }
 
-        self.pinDotView.shakeAnimationWithCompletion {}
+        self.pinDotView.shakeAnimationWithCompletion {
+            self.pinCode = ""
+            self.pinDotView.inputDotCount = 0
+        }
     }
 
     public func deleteBackward() {
