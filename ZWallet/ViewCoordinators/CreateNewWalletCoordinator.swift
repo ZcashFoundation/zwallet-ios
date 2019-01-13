@@ -44,7 +44,8 @@ extension CreateNewWalletCoordinator: PinVCDelegate {
         if self.isInitialPin {
             self.showConfirmationPinView(initialPin: pin)
         } else {
-            #warning("save pin and continue onboarding")
+            #warning("save pin")
+            self.showInitialPassphraseView()
         }
     }
 
@@ -74,8 +75,44 @@ extension CreateNewWalletCoordinator: PinVCDelegate {
     }
 }
 
-// sequence is:
-// 1. choose a pin
-// 2. re-enter pin
-// 3. choose passphrase
-// 4. confirm passphrase
+
+extension CreateNewWalletCoordinator: PassphraseVCDelegate {
+
+    func passphraseVCCompleted(with passphrase: String, mode: PassphraseEntryMode, sender: PassphraseVC) {
+        switch mode {
+        case .initial:
+            self.showConfirmPassphraseView(with: passphrase)
+        case let .confirm(passphrase):
+            #warning("save passphrase")
+            #warning("onboarding done")
+        }
+    }
+
+    func passphraseVCInvalid(sender: PassphraseVC) {
+        let alert = UIAlertController(title: self.localizer.localized("passphrase.mismatch.title"),
+                                      message: self.localizer.localized("passphrase.mismatch.description"),
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: self.localizer.localized("global.Ok"),
+                                      style: .default,
+                                      handler: nil))
+        sender.present(alert, animated: false, completion: nil)
+    }
+
+    private func showInitialPassphraseView() {
+        let vc = self.viewFactory.getPasphraseView()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        vc.passphraseMode = .initial
+        vc.progressStep = 3
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    private func showConfirmPassphraseView(with initialPassphrase: String) {
+        let vc = self.viewFactory.getPasphraseView()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        vc.passphraseMode = .confirm(withInitialPassphrase: initialPassphrase)
+        vc.progressStep = 4
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+}

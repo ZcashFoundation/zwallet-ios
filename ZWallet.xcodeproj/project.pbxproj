@@ -23,6 +23,11 @@
 		EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */; };
 		EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EBF21E7D92200138385 /* PinEntryMode.swift */; };
 		EE377EC221E7DFD200138385 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC121E7DFD200138385 /* Constants.swift */; };
+		EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC421E8F47100138385 /* PassphraseVC.swift */; };
+		EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC821E8F67000138385 /* PassphraseVCDelegate.swift */; };
+		EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ECA21E8F71700138385 /* PassphraseEntryMode.swift */; };
+		EE377ECC21EB4A6800138385 /* Passphrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE96916F21D561BE00BE1289 /* Passphrase.storyboard */; };
+		EE377ECF21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
@@ -78,6 +83,10 @@
 		EE377EBD21E68C0B00138385 /* PinVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinVCDelegate.swift; sourceTree = "<group>"; };
 		EE377EBF21E7D92200138385 /* PinEntryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinEntryMode.swift; sourceTree = "<group>"; };
 		EE377EC121E7DFD200138385 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		EE377EC421E8F47100138385 /* PassphraseVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseVC.swift; sourceTree = "<group>"; };
+		EE377EC821E8F67000138385 /* PassphraseVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseVCDelegate.swift; sourceTree = "<group>"; };
+		EE377ECA21E8F71700138385 /* PassphraseEntryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseEntryMode.swift; sourceTree = "<group>"; };
+		EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWKeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -165,6 +174,24 @@
 			path = Pin;
 			sourceTree = "<group>";
 		};
+		EE377EC321E8F44C00138385 /* Passphrase */ = {
+			isa = PBXGroup;
+			children = (
+				EE377ECA21E8F71700138385 /* PassphraseEntryMode.swift */,
+				EE377EC421E8F47100138385 /* PassphraseVC.swift */,
+				EE377EC821E8F67000138385 /* PassphraseVCDelegate.swift */,
+			);
+			path = Passphrase;
+			sourceTree = "<group>";
+		};
+		EE377ECD21EB567400138385 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		EE576FF121CFCC5500433CAB = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +216,7 @@
 				EE57701E21CFCFCE00433CAB /* _Assets */,
 				EE57701D21CFCFB000433CAB /* _Main */,
 				EE57702721D000EE00433CAB /* Definitions */,
+				EE377ECD21EB567400138385 /* Extensions */,
 				EE76B84321D8D1350093571F /* Externals */,
 				EE07A45321E2498D006031C8 /* Infrastructure */,
 				EE377EB121E5300400138385 /* Services */,
@@ -255,6 +283,7 @@
 			isa = PBXGroup;
 			children = (
 				EE07A44E21E217E0006031C8 /* Main */,
+				EE377EC321E8F44C00138385 /* Passphrase */,
 				EE377EBA21E68A6600138385 /* Pin */,
 			);
 			path = Views;
@@ -399,6 +428,7 @@
 			files = (
 				EE76B85421D8D1930093571F /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
 				EE76B85C21D8D1930093571F /* SourceSansPro-BoldItalic.ttf in Resources */,
+				EE377ECC21EB4A6800138385 /* Passphrase.storyboard in Resources */,
 				EE76B85321D8D1930093571F /* SourceSansPro-BlackItalic.ttf in Resources */,
 				EE76B85821D8D1930093571F /* SourceSansPro-Light.ttf in Resources */,
 				EE76B85621D8D1930093571F /* SourceSansPro-Bold.ttf in Resources */,
@@ -435,11 +465,13 @@
 			files = (
 				EE07A46A21E29B6F006031C8 /* AppCoordinator.swift in Sources */,
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
+				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
 				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
 				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
+				EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
@@ -447,8 +479,10 @@
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
 				EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */,
+				EE377ECF21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift in Sources */,
 				EE377EBC21E68AB000138385 /* PinVC.swift in Sources */,
 				EE377EC221E7DFD200138385 /* Constants.swift in Sources */,
+				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,

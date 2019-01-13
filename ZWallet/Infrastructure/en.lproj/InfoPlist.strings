@@ -14,7 +14,25 @@
 
 "pin.description.initialPin" = "Set a PIN. If you forget your PIN you must restore your wallet from the seed you wrote down.";
 
-"pin.title.verifyPin" = "Re-enter PIN";
+"pin.title.confirmPin" = "Re-enter PIN";
 
-"pin.description.verifyPin" = "You know the drill. Re-enter the PIN from the last step to confirm it.";
+"pin.description.confirmPin" = "You know the drill. Re-enter the PIN from the last step to confirm it.";
+
+"passphrase.title.initialPassphrase" = "Choose Passphrase";
+
+"passphrase.description.initialPassphrase" = "Please choose a passphrase to protect the backup of your wallet. Your backups will be saved to your iCloud account. If you forget this passphrase or lose access to your iCloud account, your wallet will be impossible to recover.";
+
+"passphrase.next" = "Next";
+
+"passphrase.placeholder.initialPassphrase" = "Type your passphrase";
+
+"passphrase.title.confirmPassphrase" = "Confirm Passphrase";
+
+"passphrase.description.confirmPassphrase" = "Retype your passphrase and write it down on a piece of paper *exactly as you type it here*. Then store this paper in a safe place and never show or talk about it to anyone.";
+
+"passphrase.placeholder.confirmPassphrase" = "Retype your passphrase";
+
+"passphrase.mismatch.title" = "Passphrase Mismatch";
+
+"global.Ok" = "Ok";
 

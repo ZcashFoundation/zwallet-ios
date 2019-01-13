@@ -55,8 +55,8 @@ class PinVC: UIViewController {
                 self.titleLabel.text = localizer.localized("pin.title.initialPin")
                 self.descriptionLabel.text = localizer.localized("pin.description.initialPin")
             case .confirm(withInitialPin: _):
-                self.titleLabel.text = localizer.localized("pin.title.verifyPin")
-                self.descriptionLabel.text = localizer.localized("pin.description.verifyPin")
+                self.titleLabel.text = localizer.localized("pin.title.confirmPin")
+                self.descriptionLabel.text = localizer.localized("pin.description.confirmPin")
             }
         }
     }
