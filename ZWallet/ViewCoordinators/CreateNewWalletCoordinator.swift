@@ -19,8 +19,6 @@ internal class CreateNewWalletCoordinator: BaseCoordinator {
     private var viewFactory: ViewFactoryProtocol
     private var localizer: Localizable
 
-    private var isInitialPin = true
-
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
     {
@@ -40,10 +38,11 @@ internal class CreateNewWalletCoordinator: BaseCoordinator {
 
 extension CreateNewWalletCoordinator: PinVCDelegate {
 
-    func pinVCPinCompleted(pinEntered pin: String, viewController: PinVC) {
-        if self.isInitialPin {
+    func pinVCPinCompleted(with pin: String, mode: PinEntryMode, sender: PinVC) {
+        switch mode {
+        case .initial:
             self.showConfirmationPinView(initialPin: pin)
-        } else {
+        case let .confirm(pinCode):
             #warning("save pin")
             self.showInitialPassphraseView()
         }
@@ -64,7 +63,6 @@ extension CreateNewWalletCoordinator: PinVCDelegate {
     }
 
     private func showConfirmationPinView(initialPin: String) {
-        self.isInitialPin = false
         let vc = self.viewFactory.getPinView()
         vc.delegate = self
         vc.localizer = self.localizer
@@ -99,7 +97,7 @@ extension CreateNewWalletCoordinator: PassphraseVCDelegate {
     }
 
     private func showInitialPassphraseView() {
-        let vc = self.viewFactory.getPasphraseView()
+        let vc = self.viewFactory.getPassphraseView()
         vc.delegate = self
         vc.localizer = self.localizer
         vc.passphraseMode = .initial
@@ -108,7 +106,7 @@ extension CreateNewWalletCoordinator: PassphraseVCDelegate {
     }
 
     private func showConfirmPassphraseView(with initialPassphrase: String) {
-        let vc = self.viewFactory.getPasphraseView()
+        let vc = self.viewFactory.getPassphraseView()
         vc.delegate = self
         vc.localizer = self.localizer
         vc.passphraseMode = .confirm(withInitialPassphrase: initialPassphrase)

@@ -9,6 +9,6 @@
 import Foundation
 
 internal protocol PinVCDelegate: class {
-    func pinVCPinCompleted(pinEntered pin: String, viewController: PinVC)
+    func pinVCPinCompleted(with pin: String, mode: PinEntryMode, sender: PinVC)
     func pinVCCancelTouched()
 }

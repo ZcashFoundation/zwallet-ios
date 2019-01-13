@@ -45,11 +45,12 @@ class PinVC: UIViewController {
         self.pinDotView.totalDotCount = Constants.pinCodeLength
         self.pinDotView.inputDotCount = 0
         self.pinDotView.fillColor = .black
+        self.progressBar.currentStep = self.progressStep
     }
 
     private func updateView() {
+
         if let localizer = self.localizer {
-            self.progressBar.currentStep = self.progressStep
             switch self.pinMode {
             case .initial:
                 self.titleLabel.text = localizer.localized("pin.title.initialPin")
@@ -93,14 +94,14 @@ extension PinVC : UIKeyInput {
 
     private func initialPinCompleted() {
         if self.pinAutoConfirm {
-            self.delegate?.pinVCPinCompleted(pinEntered: self.pinCode, viewController: self)
+            self.delegate?.pinVCPinCompleted(with: self.pinCode, mode: self.pinMode, sender: self)
         }
     }
 
     private func confirmationPinCompleted(compareWith initialPin: String) {
         if initialPin == self.pinCode {
             if self.pinAutoConfirm {
-                self.delegate?.pinVCPinCompleted(pinEntered: self.pinCode, viewController: self)
+                self.delegate?.pinVCPinCompleted(with: self.pinCode, mode: self.pinMode, sender: self)
             }
             return
         }
