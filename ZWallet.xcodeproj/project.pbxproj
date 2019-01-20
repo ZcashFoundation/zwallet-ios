@@ -32,11 +32,15 @@
 		EE377ED421F4827500138385 /* HomeTrxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED321F4827500138385 /* HomeTrxTableViewCell.swift */; };
 		EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED521F4835F00138385 /* HomeVCDelegate.swift */; };
 		EE377ED821F485FB00138385 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED721F485FB00138385 /* HomeCoordinator.swift */; };
+		EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */; };
+		EE377EDF21F4C45A00138385 /* TrxHistoryProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EDE21F4C45A00138385 /* TrxHistoryProviderTests.swift */; };
+		EE377EE221F4F18700138385 /* TrxDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE121F4F18700138385 /* TrxDirection.swift */; };
+		EE377EE421F4F1A100138385 /* TrxDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE321F4F1A100138385 /* TrxDetail.swift */; };
+		EE377EE621F4F1C400138385 /* TrxHistoryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE521F4F1C400138385 /* TrxHistoryObserver.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
 		EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */; };
-		EE57701321CFCC5600433CAB /* ZWalletTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57701221CFCC5600433CAB /* ZWalletTests.swift */; };
 		EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702521CFFDDB00433CAB /* ZWButtom.swift */; };
 		EE57702921D0011400433CAB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702821D0011400433CAB /* Colors.swift */; };
 		EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702A21D0230C00433CAB /* ZWProgressBar.swift */; };
@@ -95,6 +99,11 @@
 		EE377ED321F4827500138385 /* HomeTrxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrxTableViewCell.swift; sourceTree = "<group>"; };
 		EE377ED521F4835F00138385 /* HomeVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCDelegate.swift; sourceTree = "<group>"; };
 		EE377ED721F485FB00138385 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
+		EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryProvider.swift; sourceTree = "<group>"; };
+		EE377EDE21F4C45A00138385 /* TrxHistoryProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryProviderTests.swift; sourceTree = "<group>"; };
+		EE377EE121F4F18700138385 /* TrxDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDirection.swift; sourceTree = "<group>"; };
+		EE377EE321F4F1A100138385 /* TrxDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetail.swift; sourceTree = "<group>"; };
+		EE377EE521F4F1C400138385 /* TrxHistoryObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryObserver.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -102,7 +111,6 @@
 		EE57700721CFCC5600433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EE57700921CFCC5600433CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE57700E21CFCC5600433CAB /* ZWalletTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZWalletTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		EE57701221CFCC5600433CAB /* ZWalletTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWalletTests.swift; sourceTree = "<group>"; };
 		EE57701421CFCC5600433CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE57702521CFFDDB00433CAB /* ZWButtom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWButtom.swift; sourceTree = "<group>"; };
 		EE57702821D0011400433CAB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -168,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				EE377EB221E5303D00138385 /* ViewFactory.swift */,
+				EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -210,6 +219,24 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		EE377EDB21F4C40900138385 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EE377EDE21F4C45A00138385 /* TrxHistoryProviderTests.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		EE377EE021F4F16100138385 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EE377EE321F4F1A100138385 /* TrxDetail.swift */,
+				EE377EE121F4F18700138385 /* TrxDirection.swift */,
+				EE377EE521F4F1C400138385 /* TrxHistoryObserver.swift */,
+			);
+			path = Types;
+			sourceTree = "<group>";
+		};
 		EE576FF121CFCC5500433CAB = {
 			isa = PBXGroup;
 			children = (
@@ -239,6 +266,7 @@
 				EE07A45321E2498D006031C8 /* Infrastructure */,
 				EE377EB121E5300400138385 /* Services */,
 				EE57701F21CFD00100433CAB /* Storyboards */,
+				EE377EE021F4F16100138385 /* Types */,
 				EE57702421CFFDB700433CAB /* UIElements */,
 				EE57702021CFD02900433CAB /* ViewCoordinators */,
 				EE57702121CFD03500433CAB /* Views */,
@@ -249,7 +277,7 @@
 		EE57701121CFCC5600433CAB /* ZWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				EE57701221CFCC5600433CAB /* ZWalletTests.swift */,
+				EE377EDB21F4C40900138385 /* Services */,
 				EE57701421CFCC5600433CAB /* Info.plist */,
 			);
 			path = ZWalletTests;
@@ -483,15 +511,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE377EE221F4F18700138385 /* TrxDirection.swift in Sources */,
 				EE07A46A21E29B6F006031C8 /* AppCoordinator.swift in Sources */,
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
+				EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */,
 				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
 				EE377ED821F485FB00138385 /* HomeCoordinator.swift in Sources */,
 				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
+				EE377EE621F4F1C400138385 /* TrxHistoryObserver.swift in Sources */,
+				EE377EE421F4F1A100138385 /* TrxDetail.swift in Sources */,
 				EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
@@ -518,7 +550,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE57701321CFCC5600433CAB /* ZWalletTests.swift in Sources */,
+				EE377EDF21F4C45A00138385 /* TrxHistoryProviderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,6 +13,7 @@ internal protocol IocContainerProtocol {
 
     var localizer: Localizable { get }
     var viewFactory: ViewFactoryProtocol { get }
+    var trxHistoryProvider: TrxHistoryProviderProtocol { get }
 }
 
 
@@ -26,5 +27,9 @@ internal class IocContainer: IocContainerProtocol {
 
     public lazy var viewFactory: ViewFactoryProtocol = {
         return ViewFactory()
+    }()
+
+    public lazy var trxHistoryProvider: TrxHistoryProviderProtocol = {
+        return TrxHistoryProvider()
     }()
 }
