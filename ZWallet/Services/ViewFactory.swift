@@ -22,7 +22,7 @@ import UIKit
 internal protocol ViewFactoryProtocol {
     func getOnboardingMainView() -> MainVC
     func getPinView() -> PinVC
-    func getPasphraseView() -> PassphraseVC
+    func getPassphraseView() -> PassphraseVC
 }
 
 
@@ -50,7 +50,7 @@ internal class ViewFactory: ViewFactoryProtocol {
         return vc
     }
 
-    func getPasphraseView() -> PassphraseVC {
+    func getPassphraseView() -> PassphraseVC {
         let vc = self.passphraseStoryboard.instantiateViewController(withIdentifier: "Passphrase") as! PassphraseVC
         return vc
     }

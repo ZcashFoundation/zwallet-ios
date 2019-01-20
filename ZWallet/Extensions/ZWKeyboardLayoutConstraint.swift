@@ -21,21 +21,21 @@ public class ZWKeyboardLayoutConstraint: NSLayoutConstraint {
         self.offset = constant
 
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillShowNotification(_:)),
+                                               selector: #selector(keyboardShows(_:)),
                                                name: UIWindow.keyboardWillShowNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillHideNotification(_:)),
+                                               selector: #selector(keyboardHides(_:)),
                                                name: UIWindow.keyboardWillHideNotification,
                                                object: nil)
         NotificationCenter.default.addObserver(self,
-                                               selector: #selector(keyboardWillChangeFrameNotification(_:)),
+                                               selector: #selector(keyboardShows(_:)),
                                                name: UIWindow.keyboardWillChangeFrameNotification,
                                                object: nil)
-//        NotificationCenter.default.addObserver(self,
-//                                               selector: #selector(UIWindow.keyboardDidChangeFrameNotification(_:),
-//                                               name: UIWindow.keyboardDidChangeFrameNotification,
-//                                               object: nil)
+        NotificationCenter.default.addObserver(self,
+                                               selector: #selector(keyboardShows(_:)),
+                                               name: UIWindow.keyboardDidChangeFrameNotification,
+                                               object: nil)
     }
 
     deinit {
@@ -43,7 +43,7 @@ public class ZWKeyboardLayoutConstraint: NSLayoutConstraint {
     }
 
     @objc
-    private func keyboardWillShowNotification(_ notification: Notification) {
+    private func keyboardShows(_ notification: Notification) {
         guard let userInfo = notification.userInfo else {
             return
         }
@@ -58,27 +58,12 @@ public class ZWKeyboardLayoutConstraint: NSLayoutConstraint {
     }
 
     @objc
-    private func keyboardWillHideNotification(_ notification: NSNotification) {
+    private func keyboardHides(_ notification: NSNotification) {
         guard let userInfo = notification.userInfo else {
             return
         }
 
         self.keyboardVisibleHeight = 0
-        self.updateConstant()
-        self.animate(with: userInfo)
-    }
-
-    @objc
-    private func keyboardWillChangeFrameNotification(_ notification: NSNotification) {
-        guard let userInfo = notification.userInfo else {
-            return
-        }
-
-        if let frameValue = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
-            let frame = frameValue.cgRectValue
-            self.keyboardVisibleHeight = frame.size.height
-        }
-
         self.updateConstant()
         self.animate(with: userInfo)
     }

@@ -49,10 +49,10 @@ class PassphraseVC: UIViewController {
         self.updateView()
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        self.passphraseTextField.resignFirstResponder()
-    }
+//    override func viewWillDisappear(_ animated: Bool) {
+//        super.viewWillDisappear(animated)
+//        self.passphraseTextField.resignFirstResponder()
+//    }
 
     private func setup() {
         self.passphraseTextField.text = ""
@@ -60,7 +60,8 @@ class PassphraseVC: UIViewController {
         self.passphraseTextField.addTarget(self,
                                            action: #selector(textFieldDidChange),
                                            for: .editingChanged)
-        self.passphraseTextField.delegate = self
+//        self.passphraseTextField.delegate = self
+        self.progressBar.currentStep = self.progressStep
         self.updateNextButton()
     }
 
@@ -105,15 +106,15 @@ class PassphraseVC: UIViewController {
 }
 
 
-extension PassphraseVC: UITextFieldDelegate {
-
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
-        self.nextButton.isHidden = false
-        return true
-    }
-
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        self.nextButton.isHidden = true
-    }
-}
+//extension PassphraseVC: UITextFieldDelegate {
+//
+//    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+//        self.nextButton.isHidden = false
+//        return true
+//    }
+//
+//    func textFieldDidEndEditing(_ textField: UITextField) {
+//        self.nextButton.isHidden = true
+//    }
+//}
 
