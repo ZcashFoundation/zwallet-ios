@@ -23,6 +23,7 @@ internal protocol ViewFactoryProtocol {
     func getOnboardingMainView() -> MainVC
     func getPinView() -> PinVC
     func getPassphraseView() -> PassphraseVC
+    func getHomeView() -> HomeVC
 }
 
 
@@ -40,6 +41,10 @@ internal class ViewFactory: ViewFactoryProtocol {
         return UIStoryboard(name: "Passphrase", bundle: nil)
     }()
 
+    private lazy var homeStoryboard: UIStoryboard = {
+        return UIStoryboard(name: "Home", bundle: nil)
+    }()
+
     func getOnboardingMainView() -> MainVC {
         let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "Main") as! MainVC
         return vc
@@ -52,6 +57,11 @@ internal class ViewFactory: ViewFactoryProtocol {
 
     func getPassphraseView() -> PassphraseVC {
         let vc = self.passphraseStoryboard.instantiateViewController(withIdentifier: "Passphrase") as! PassphraseVC
+        return vc
+    }
+
+    func getHomeView() -> HomeVC {
+        let vc = self.homeStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeVC
         return vc
     }
 }

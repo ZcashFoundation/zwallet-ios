@@ -48,5 +48,20 @@ extension AppCoordinator: OnboardingCoordinatorDelegate {
 
     func onboardingCoordinatorSuccessful(coordinator: OnboardingCoordinator) {
         #warning("implement")
+
+        self.remove(childCoordinator: coordinator)
+        self.navigationController.popToRootViewController(animated: false)
+        self.showHome()
+    }
+}
+
+
+extension AppCoordinator {
+
+    private func showHome() {
+        let homeCoordinator = HomeCoordinator(navigationController: self.navigationController,
+                                              iocContainer: self.iocContainer)
+        self.add(childCoordinator: homeCoordinator)
+        homeCoordinator.start()
     }
 }

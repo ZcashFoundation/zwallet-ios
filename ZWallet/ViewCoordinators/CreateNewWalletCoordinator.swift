@@ -82,7 +82,7 @@ extension CreateNewWalletCoordinator: PassphraseVCDelegate {
             self.showConfirmPassphraseView(with: passphrase)
         case let .confirm(passphrase):
             #warning("save passphrase")
-            #warning("onboarding done")
+            self.delegate?.createNewWalletCoordinatorSuccessful(coordinator: self)
         }
     }
 

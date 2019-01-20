@@ -28,6 +28,10 @@
 		EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ECA21E8F71700138385 /* PassphraseEntryMode.swift */; };
 		EE377ECC21EB4A6800138385 /* Passphrase.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE96916F21D561BE00BE1289 /* Passphrase.storyboard */; };
 		EE377ECF21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */; };
+		EE377ED221F47E1400138385 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED121F47E1400138385 /* HomeVC.swift */; };
+		EE377ED421F4827500138385 /* HomeTrxTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED321F4827500138385 /* HomeTrxTableViewCell.swift */; };
+		EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED521F4835F00138385 /* HomeVCDelegate.swift */; };
+		EE377ED821F485FB00138385 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED721F485FB00138385 /* HomeCoordinator.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
@@ -87,6 +91,10 @@
 		EE377EC821E8F67000138385 /* PassphraseVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseVCDelegate.swift; sourceTree = "<group>"; };
 		EE377ECA21E8F71700138385 /* PassphraseEntryMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PassphraseEntryMode.swift; sourceTree = "<group>"; };
 		EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWKeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
+		EE377ED121F47E1400138385 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EE377ED321F4827500138385 /* HomeTrxTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTrxTableViewCell.swift; sourceTree = "<group>"; };
+		EE377ED521F4835F00138385 /* HomeVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVCDelegate.swift; sourceTree = "<group>"; };
+		EE377ED721F485FB00138385 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -192,6 +200,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		EE377ED021F47D5200138385 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EE377ED321F4827500138385 /* HomeTrxTableViewCell.swift */,
+				EE377ED121F47E1400138385 /* HomeVC.swift */,
+				EE377ED521F4835F00138385 /* HomeVCDelegate.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 		EE576FF121CFCC5500433CAB = {
 			isa = PBXGroup;
 			children = (
@@ -273,6 +291,7 @@
 				EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */,
 				EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */,
 				EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */,
+				EE377ED721F485FB00138385 /* HomeCoordinator.swift */,
 				EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */,
 				EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */,
 			);
@@ -282,6 +301,7 @@
 		EE57702121CFD03500433CAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE377ED021F47D5200138385 /* Home */,
 				EE07A44E21E217E0006031C8 /* Main */,
 				EE377EC321E8F44C00138385 /* Passphrase */,
 				EE377EBA21E68A6600138385 /* Pin */,
@@ -468,6 +488,7 @@
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
 				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
+				EE377ED821F485FB00138385 /* HomeCoordinator.swift in Sources */,
 				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
@@ -478,12 +499,15 @@
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
+				EE377ED421F4827500138385 /* HomeTrxTableViewCell.swift in Sources */,
 				EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */,
 				EE377ECF21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift in Sources */,
 				EE377EBC21E68AB000138385 /* PinVC.swift in Sources */,
 				EE377EC221E7DFD200138385 /* Constants.swift in Sources */,
 				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
+				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
+				EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,
 				EE07A45021E23E43006031C8 /* MainVC.swift in Sources */,

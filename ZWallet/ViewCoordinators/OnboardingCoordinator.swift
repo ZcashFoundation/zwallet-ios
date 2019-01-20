@@ -62,7 +62,8 @@ extension OnboardingCoordinator: MainVCDelegate {
 extension OnboardingCoordinator: CreateNewWalletCoordinatorDelegate {
 
     func createNewWalletCoordinatorSuccessful(coordinator: CreateNewWalletCoordinator) {
-        #warning("implement")
+        self.remove(childCoordinator: coordinator)
+        self.delegate?.onboardingCoordinatorSuccessful(coordinator: self)
     }
 
     func createNewWalletCoordinatorCancelled(coordinator: CreateNewWalletCoordinator) {

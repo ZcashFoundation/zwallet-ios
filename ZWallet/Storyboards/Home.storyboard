@@ -21,10 +21,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--HomeVC-->
         <scene sceneID="Tig-fj-IV0">
             <objects>
-                <viewController storyboardIdentifier="Home" id="3iR-4S-bLd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Home" id="3iR-4S-bLd" customClass="HomeVC" customModule="ZWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kOX-QC-cnU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -53,13 +53,14 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Gear" translatesAutoresizingMaskIntoConstraints="NO" id="X2K-bn-u7l">
-                                        <rect key="frame" x="372" y="58" width="18" height="18"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kcu-27-Sce">
+                                        <rect key="frame" x="359" y="48" width="44" height="44"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="18" id="Hjk-fJ-8zX"/>
-                                            <constraint firstAttribute="height" constant="18" id="dOH-qN-CgQ"/>
+                                            <constraint firstAttribute="height" constant="44" id="Fmj-aV-Z2d"/>
+                                            <constraint firstAttribute="width" constant="44" id="cGi-TZ-Ooh"/>
                                         </constraints>
-                                    </imageView>
+                                        <state key="normal" image="Gear"/>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.15160199999809265" green="0.13179048895835876" blue="0.47870725393295288" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -68,13 +69,13 @@
                                     <constraint firstAttribute="trailing" secondItem="oqZ-HW-Zcf" secondAttribute="trailing" constant="8" id="MyX-QC-dVy"/>
                                     <constraint firstItem="oqZ-HW-Zcf" firstAttribute="centerX" secondItem="jbe-IX-HiN" secondAttribute="centerX" id="Otm-PF-qdB"/>
                                     <constraint firstItem="oqZ-HW-Zcf" firstAttribute="top" secondItem="Uox-ul-SfL" secondAttribute="bottom" constant="24" id="Peq-V4-GNd"/>
-                                    <constraint firstAttribute="trailing" secondItem="X2K-bn-u7l" secondAttribute="trailing" constant="24" id="UkS-Cw-a9a"/>
+                                    <constraint firstAttribute="trailing" secondItem="Kcu-27-Sce" secondAttribute="trailing" constant="11" id="T3c-oX-jwt"/>
                                     <constraint firstAttribute="trailing" secondItem="9dR-7B-uMn" secondAttribute="trailing" constant="8" id="b7D-gH-8Mc"/>
-                                    <constraint firstItem="X2K-bn-u7l" firstAttribute="top" secondItem="Uox-ul-SfL" secondAttribute="top" id="c4U-iu-hJB"/>
                                     <constraint firstItem="Uox-ul-SfL" firstAttribute="centerX" secondItem="jbe-IX-HiN" secondAttribute="centerX" id="d7m-Nv-PkO"/>
                                     <constraint firstItem="9dR-7B-uMn" firstAttribute="leading" secondItem="jbe-IX-HiN" secondAttribute="leading" constant="8" id="jgc-my-yJO"/>
                                     <constraint firstItem="oqZ-HW-Zcf" firstAttribute="leading" secondItem="jbe-IX-HiN" secondAttribute="leading" constant="8" id="ku8-jX-vvF"/>
                                     <constraint firstItem="Uox-ul-SfL" firstAttribute="top" secondItem="jbe-IX-HiN" secondAttribute="top" constant="58" id="lx8-83-ZLS"/>
+                                    <constraint firstItem="Kcu-27-Sce" firstAttribute="top" secondItem="jbe-IX-HiN" secondAttribute="top" constant="48" id="umt-Xy-iIk"/>
                                     <constraint firstItem="9dR-7B-uMn" firstAttribute="centerX" secondItem="jbe-IX-HiN" secondAttribute="centerX" id="v9Y-Yr-4BN"/>
                                 </constraints>
                             </view>
@@ -131,7 +132,7 @@
                                 <rect key="frame" x="0.0" y="316" width="414" height="580"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxCell" rowHeight="80" id="tJV-bC-RBh">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxCell" rowHeight="80" id="tJV-bC-RBh" customClass="HomeTrxTableViewCell" customModule="ZWallet" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tJV-bC-RBh" id="tbN-Xt-Swv">
@@ -204,6 +205,13 @@
                                                 <constraint firstItem="PdB-OF-EFR" firstAttribute="trailing" secondItem="KXK-L6-XWN" secondAttribute="trailing" constant="24" id="peB-OP-Naa"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="directionImageView" destination="Zo3-P7-XAE" id="PWI-re-LZe"/>
+                                            <outlet property="directionLabel" destination="kfl-QO-Fmg" id="14s-3u-LNW"/>
+                                            <outlet property="trxAmountLabel" destination="KXK-L6-XWN" id="PZt-Zr-Xc1"/>
+                                            <outlet property="trxDateLabel" destination="TJc-P0-KVQ" id="4nz-jQ-aP2"/>
+                                            <outlet property="trxFiatAmountLabel" destination="q6G-cM-ax8" id="9yZ-f8-rra"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -224,6 +232,15 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BYh-FW-Fpk"/>
                     </view>
+                    <connections>
+                        <outlet property="balanceLabel" destination="oqZ-HW-Zcf" id="2Tx-qC-kZw"/>
+                        <outlet property="fiatBalanceLabel" destination="9dR-7B-uMn" id="0md-Qx-clj"/>
+                        <outlet property="receiveButton" destination="Wm8-M3-API" id="0ko-mS-UFn"/>
+                        <outlet property="sendButton" destination="7YJ-EF-wfQ" id="fK3-DO-T2x"/>
+                        <outlet property="settingsButton" destination="Kcu-27-Sce" id="uuK-tQ-nmu"/>
+                        <outlet property="titleLabel" destination="Uox-ul-SfL" id="bOe-YL-1Qf"/>
+                        <outlet property="trxTableView" destination="etR-G8-YOv" id="L5P-qP-8nn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avL-L1-Q13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
