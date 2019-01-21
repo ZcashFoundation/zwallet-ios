@@ -22,3 +22,7 @@
 
 "global.Ok" = "Ok";
 
+"trxDetailCell.received" = "Empfangen";
+
+"trxDetailCell.sent" = "Gesendet";
+

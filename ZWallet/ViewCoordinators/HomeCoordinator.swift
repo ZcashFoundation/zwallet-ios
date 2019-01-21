@@ -52,8 +52,39 @@ extension HomeCoordinator: HomeVCDelegate {
     }
 
     private func showHomeView() {
+
+        #warning("remove")
+        self.test_addDummyData()
+
         let vc = self.viewFactory.getHomeView()
+        vc.delegate = self
         vc.localizer = self.localizer
+        vc.trxHistoryProvider = self.iocContainer.trxHistoryProvider
         self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    private func test_addDummyData() {
+        let trxHistoryProvider = self.iocContainer.trxHistoryProvider
+
+        let detailSent = TrxDetail(direction: .send,
+                                   date: Date.init(),
+                                   amountInAtomicUnits: 2208,
+                                   address: "address send to",
+                                   trxId: "trx id send",
+                                   memo: "memo send")
+        let detailReceived = TrxDetail(direction: .receive,
+                                       date: Date.init(),
+                                       amountInAtomicUnits: 22,
+                                       address: "address received from",
+                                       trxId: "trx id receive",
+                                       memo: "memo receive")
+        trxHistoryProvider.add(trxDetail: detailSent)
+        trxHistoryProvider.add(trxDetail: detailReceived)
+        trxHistoryProvider.add(trxDetail: detailSent)
+        trxHistoryProvider.add(trxDetail: detailReceived)
+        trxHistoryProvider.add(trxDetail: detailSent)
+        trxHistoryProvider.add(trxDetail: detailReceived)
+        trxHistoryProvider.add(trxDetail: detailSent)
+        trxHistoryProvider.add(trxDetail: detailReceived)
     }
 }

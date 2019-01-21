@@ -50,6 +50,25 @@ class TrxHistoryProviderTests: XCTestCase {
         XCTAssertTrue(observer.isNotified)
     }
 
+    func test_WhenAddingAnElement_ThenCountIsIncremented() {
+        let countBefore = self.testee.count()
+
+        self.testee.add(trxDetail: self.getTrxDetail())
+
+        let countAfter = self.testee.count()
+        XCTAssertTrue(countAfter == countBefore + 1)
+    }
+
+    func test_WhenRemovingObserver_ThenThisObserverIsNoLongerNotified() {
+        let observer = ObserverMock()
+        self.testee.register(observer: observer)
+        self.testee.deregister(observer: observer)
+
+        self.testee.add(trxDetail: self.getTrxDetail())
+
+        XCTAssertFalse(observer.isNotified)
+    }
+
     private func getTrxDetail() -> TrxDetail {
         return TrxDetail(direction: .receive,
                          date: Date.init(),

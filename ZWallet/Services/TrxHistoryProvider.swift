@@ -9,9 +9,10 @@
 import Foundation
 
 
-public protocol TrxHistoryProviderProtocol {
+public protocol TrxHistoryProviderProtocol: class {
     func add(trxDetail: TrxDetail)
     func all() -> [TrxDetail]
+    func count() -> Int
     func register(observer: TrxHistoryObserver)
     func deregister(observer: TrxHistoryObserver)
 }
@@ -34,6 +35,10 @@ public class TrxHistoryProvider: TrxHistoryProviderProtocol {
 
     public func all() -> [TrxDetail] {
         return self.trxHistory
+    }
+
+    public func count() -> Int {
+        return self.trxHistory.count
     }
 
     public func register(observer: TrxHistoryObserver) {
