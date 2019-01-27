@@ -18,11 +18,35 @@
 
 "pin.description.confirmPin" = "Du kennst das. Wiederhole den PIN aus dem letzten Schritt um diesen zu bestätigen.";
 
+"passphrase.title.initialPassphrase" = "Wähle ein Passwort";
+
+"passphrase.description.initialPassphrase" = "Bitte wähle ein Passwort um das Backup deiner Wallet zu verschlüsseln. Deine Backups werden in deinem iCloud Nutzerkonto gespeichert. Falls du dein Passwort vergisst kann deine Wallet nicht wiederhergestellt werden.";
+
 "passphrase.next" = "Weiter";
+
+"passphrase.placeholder.initialPassphrase" = "Passwort";
+
+"passphrase.title.confirmPassphrase" = "Bestätige Passwort";
+
+"passphrase.description.confirmPassphrase" = "Wiederhole dein Passwort und notiere es *exakt so wie du es hier eingibst* auf einem Blatt Papier. Anschliessend versorge dieses Papier an einem sicheren Ort. Zeige es niemandem und rede nicht darüber.";
+
+"passphrase.placeholder.confirmPassphrase" = "Wiederhole dein Passwort";
+
+"passphrase.mismatch.title" = "Passwort ungleich";
 
 "global.Ok" = "Ok";
 
-"trxDetailCell.received" = "Empfangen";
+"trxDetail.received" = "Empfangen";
 
-"trxDetailCell.sent" = "Gesendet";
+"trxDetail.sent" = "Gesendet";
+
+"trxDetail.date" = "Datum";
+
+"trxDetail.sourceAddress" = "Von Adresse";
+
+"trxDetail.trxId" = "Transaktions-ID";
+
+"trxDetail.memo" = "Anmerkung";
+
+"trxDetail.destinationAddress" = "Nach Adresse";
 

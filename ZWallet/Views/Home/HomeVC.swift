@@ -20,9 +20,8 @@ class HomeVC: UIViewController {
 
     public weak var delegate: HomeVCDelegate?
     public weak var localizer: Localizable?
-    public weak var trxHistoryProvider: TrxHistoryProviderProtocol?
 
-    private var trxHistory = [TrxDetail]()
+    public var trxHistory = [TrxDetails]()
 
     @IBAction func sendButtonTouched() {
         self.delegate?.homeVCSendButtonTouched(sender: self)
@@ -45,36 +44,38 @@ class HomeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
-        self.trxHistoryProvider?.register(observer: self)
-
         self.updateView()
     }
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
-        self.trxHistoryProvider?.deregister(observer: self)
     }
 
     private func setup() {
         self.trxTableView.dataSource = self
+        self.trxTableView.delegate = self
     }
 
     private func updateView() {
-        #warning("move somewhere else")
-        self.trxHistory = self.trxHistoryProvider?.all() ?? [TrxDetail]()
-
         self.trxTableView.reloadData()
     }
 }
 
 
-extension HomeVC: TrxHistoryObserver {
+//extension HomeVC: TrxHistoryObservable {
+//
+//    func changed() {
+//        DispatchQueue.main.async {
+//            self.updateView()
+//        }
+//    }
+//}
 
-    func changed() {
-        DispatchQueue.main.async {
-            self.updateView()
-        }
+
+extension HomeVC: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.homeVCTrxCellTouched(sender: self, rowNumber: indexPath.row)
     }
 }
 
@@ -89,17 +90,22 @@ extension HomeVC: UITableViewDataSource {
         let cell = self.trxTableView.dequeueReusableCell(withIdentifier: "TrxCell") as! HomeTrxTableViewCell
 
         let cellData = self.trxHistory[indexPath.row]
+        cell.trxDateLabel.text = cellData.date.time()
+
         switch cellData.direction {
         case .receive:
-            cell.directionLabel.text = self.localizer?.localized("trxDetailCell.received")
+            cell.directionLabel.text = self.localizer?.localized("trxDetail.received")
             cell.directionImageView.image = UIImage(named: "ArrowDown")
+            cell.trxAmountLabel.text = "+\(cellData.amount.formatted()) ZEC"
+            #warning("fill in real value")
+            cell.trxFiatAmountLabel.text = "+ fiat CHF"
         case .send:
-            cell.directionLabel.text = self.localizer?.localized("trxDetailCell.sent")
+            cell.directionLabel.text = self.localizer?.localized("trxDetail.sent")
             cell.directionImageView.image = UIImage(named: "ArrowUp")
+            cell.trxAmountLabel.text = "-\(cellData.amount.formatted()) ZEC"
+            #warning("fill in real value")
+            cell.trxFiatAmountLabel.text = "- fiat CHF"
         }
-        cell.trxDateLabel.text = "date"
-        cell.trxAmountLabel.text = "amount ZEC"
-        cell.trxFiatAmountLabel.text = "fiat CHF"
 
         return cell
     }

@@ -31,4 +31,8 @@ public class Colors {
         background: Colors.zwalletColor,
         border: Colors.zwalletColor,
         text: .white)
+
+    public static let trxDetailReceivedBackgroundColor = UIColor(red: 0.15, green: 0.7, blue: 0.32, alpha: 1)
+
+    public static let trxDetailSentBackgroundColor = UIColor(red: 0.87, green: 0.07, blue: 0.13, alpha: 1)
 }

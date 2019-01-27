@@ -36,7 +36,17 @@
 
 "global.Ok" = "Ok";
 
-"trxDetailCell.received" = "Received";
+"trxDetail.received" = "Received";
 
-"trxDetailCell.sent" = "Sent";
+"trxDetail.sent" = "Sent";
+
+"trxDetail.date" = "Date";
+
+"trxDetail.sourceAddress" = "From Address";
+
+"trxDetail.trxId" = "Transaction ID";
+
+"trxDetail.memo" = "Memo";
+
+"trxDetail.destinationAddress" = "To Address";
 

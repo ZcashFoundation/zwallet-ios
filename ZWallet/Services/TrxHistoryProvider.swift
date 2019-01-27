@@ -10,30 +10,30 @@ import Foundation
 
 
 public protocol TrxHistoryProviderProtocol: class {
-    func add(trxDetail: TrxDetail)
-    func all() -> [TrxDetail]
+    func add(trxDetails: TrxDetails)
+    func all() -> [TrxDetails]
     func count() -> Int
-    func register(observer: TrxHistoryObserver)
-    func deregister(observer: TrxHistoryObserver)
+    func register(observer: TrxHistoryObservable)
+    func deregister(observer: TrxHistoryObservable)
 }
 
 
 public class TrxHistoryProvider: TrxHistoryProviderProtocol {
 
-    private var trxHistory: [TrxDetail]
-    private var observers: [TrxHistoryObserver]
+    private var trxHistory: [TrxDetails]
+    private var observers: [TrxHistoryObservable]
 
     public init() {
-        self.trxHistory = [TrxDetail]()
-        self.observers = [TrxHistoryObserver]()
+        self.trxHistory = [TrxDetails]()
+        self.observers = [TrxHistoryObservable]()
     }
 
-    public func add(trxDetail: TrxDetail) {
-        self.trxHistory.append(trxDetail)
+    public func add(trxDetails: TrxDetails) {
+        self.trxHistory.append(trxDetails)
         self.notifyAllObservers()
     }
 
-    public func all() -> [TrxDetail] {
+    public func all() -> [TrxDetails] {
         return self.trxHistory
     }
 
@@ -41,11 +41,11 @@ public class TrxHistoryProvider: TrxHistoryProviderProtocol {
         return self.trxHistory.count
     }
 
-    public func register(observer: TrxHistoryObserver) {
+    public func register(observer: TrxHistoryObservable) {
         self.observers.append(observer)
     }
 
-    public func deregister(observer: TrxHistoryObserver) {
+    public func deregister(observer: TrxHistoryObservable) {
         self.observers = self.observers.filter { $0 !== observer }
     }
 

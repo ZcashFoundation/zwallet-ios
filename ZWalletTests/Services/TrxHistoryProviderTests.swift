@@ -80,7 +80,7 @@ class TrxHistoryProviderTests: XCTestCase {
 }
 
 
-private class ObserverMock: TrxHistoryObserver {
+private class ObserverMock: TrxHistoryObservable {
 
     public var isNotified = false
 

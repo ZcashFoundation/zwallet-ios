@@ -9,6 +9,6 @@
 import Foundation
 
 
-public protocol TrxHistoryObserver: class {
+public protocol TrxHistoryObservable: class {
     func changed()
 }

@@ -20,10 +20,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Trx DetailsVC-->
         <scene sceneID="Tig-fj-IV0">
             <objects>
-                <viewController storyboardIdentifier="Home" id="3iR-4S-bLd" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrxDetails" id="3iR-4S-bLd" customClass="TrxDetailsVC" customModule="ZWallet" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kOX-QC-cnU">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -31,7 +31,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jbe-IX-HiN" userLabel="BalanceView">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="212"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!TrxKind" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uox-ul-SfL" userLabel="TitleLabel">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!TrxDirection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uox-ul-SfL" userLabel="TitleLabel">
                                         <rect key="frame" x="132" y="58" width="150" height="23"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="150" id="y3J-5f-Wcc"/>
@@ -68,11 +68,11 @@
                                     <constraint firstItem="9dR-7B-uMn" firstAttribute="centerX" secondItem="jbe-IX-HiN" secondAttribute="centerX" id="v9Y-Yr-4BN"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="etR-G8-YOv" userLabel="TrxDetailsTableView">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="91" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="etR-G8-YOv" userLabel="TrxDetailsTableView">
                                 <rect key="frame" x="0.0" y="212" width="414" height="684"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxDetailCell" rowHeight="91" id="tJV-bC-RBh" userLabel="TrxDetailCell">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxDetailsCell" rowHeight="91" id="tJV-bC-RBh" customClass="TrxDetailsTableViewCell" customModule="ZWallet">
                                         <rect key="frame" x="0.0" y="55.5" width="414" height="91"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="tJV-bC-RBh" id="tbN-Xt-Swv">
@@ -101,8 +101,12 @@
                                                 <constraint firstAttribute="trailing" secondItem="kfl-QO-Fmg" secondAttribute="trailing" constant="16" id="w1x-MU-H2J"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyLabel" destination="TJc-P0-KVQ" id="rhL-Q2-idb"/>
+                                            <outlet property="titleLabel" destination="kfl-QO-Fmg" id="Mrh-qR-20w"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxMemoCell" rowHeight="150" id="9TF-EQ-0V3" userLabel="TrxMemoCell">
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="TrxMemoCell" rowHeight="150" id="9TF-EQ-0V3" customClass="TrxMemoTableViewCell" customModule="ZWallet">
                                         <rect key="frame" x="0.0" y="146.5" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9TF-EQ-0V3" id="Ggp-h3-rdl">
@@ -135,6 +139,10 @@ Memo 4</string>
                                                 <constraint firstAttribute="trailing" secondItem="tgH-GG-6Bg" secondAttribute="trailing" constant="16" id="RyH-h3-ZfN"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="bodyLabel" destination="hcq-mJ-dSS" id="Upe-uj-5gL"/>
+                                            <outlet property="titleLabel" destination="tgH-GG-6Bg" id="2Cv-wv-Nw7"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -151,6 +159,13 @@ Memo 4</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="BYh-FW-Fpk"/>
                     </view>
+                    <connections>
+                        <outlet property="amountLabel" destination="oqZ-HW-Zcf" id="r5e-JA-dQq"/>
+                        <outlet property="detailsTableView" destination="etR-G8-YOv" id="5r1-iQ-qOl"/>
+                        <outlet property="fiatAmountLabel" destination="9dR-7B-uMn" id="y2f-Fc-VGx"/>
+                        <outlet property="headerView" destination="jbe-IX-HiN" id="ShJ-QC-BaI"/>
+                        <outlet property="trxDirectionLabel" destination="Uox-ul-SfL" id="VMn-tQ-ICJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="avL-L1-Q13" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

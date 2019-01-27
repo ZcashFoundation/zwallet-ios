@@ -35,8 +35,14 @@
 		EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */; };
 		EE377EDF21F4C45A00138385 /* TrxHistoryProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EDE21F4C45A00138385 /* TrxHistoryProviderTests.swift */; };
 		EE377EE221F4F18700138385 /* TrxDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE121F4F18700138385 /* TrxDirection.swift */; };
-		EE377EE421F4F1A100138385 /* TrxDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE321F4F1A100138385 /* TrxDetail.swift */; };
-		EE377EE621F4F1C400138385 /* TrxHistoryObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE521F4F1C400138385 /* TrxHistoryObserver.swift */; };
+		EE377EE421F4F1A100138385 /* TrxDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE321F4F1A100138385 /* TrxDetails.swift */; };
+		EE377EE621F4F1C400138385 /* TrxHistoryObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */; };
+		EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE821F7A76500138385 /* TrxDetailsVC.swift */; };
+		EE377EEB21F7AF3C00138385 /* TrxDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EEA21F7AF3C00138385 /* TrxDetailTableViewCell.swift */; };
+		EE377EED21F7B02600138385 /* TrxMemoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EEC21F7B02600138385 /* TrxMemoTableViewCell.swift */; };
+		EE377EEF21FDE64400138385 /* TrxDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */; };
+		EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EF021FDEE3F00138385 /* ZEC.swift */; };
+		EE377EF321FE181000138385 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EF221FE181000138385 /* Date-Extension.swift */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
@@ -102,8 +108,14 @@
 		EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryProvider.swift; sourceTree = "<group>"; };
 		EE377EDE21F4C45A00138385 /* TrxHistoryProviderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryProviderTests.swift; sourceTree = "<group>"; };
 		EE377EE121F4F18700138385 /* TrxDirection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDirection.swift; sourceTree = "<group>"; };
-		EE377EE321F4F1A100138385 /* TrxDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetail.swift; sourceTree = "<group>"; };
-		EE377EE521F4F1C400138385 /* TrxHistoryObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryObserver.swift; sourceTree = "<group>"; };
+		EE377EE321F4F1A100138385 /* TrxDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetails.swift; sourceTree = "<group>"; };
+		EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryObservable.swift; sourceTree = "<group>"; };
+		EE377EE821F7A76500138385 /* TrxDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetailsVC.swift; sourceTree = "<group>"; };
+		EE377EEA21F7AF3C00138385 /* TrxDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetailTableViewCell.swift; sourceTree = "<group>"; };
+		EE377EEC21F7B02600138385 /* TrxMemoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxMemoTableViewCell.swift; sourceTree = "<group>"; };
+		EE377EEE21F9013800138385 /* ___TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "___TODO.md"; sourceTree = "<group>"; };
+		EE377EF021FDEE3F00138385 /* ZEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZEC.swift; sourceTree = "<group>"; };
+		EE377EF221FE181000138385 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -205,6 +217,7 @@
 			isa = PBXGroup;
 			children = (
 				EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */,
+				EE377EF221FE181000138385 /* Date-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,11 +243,22 @@
 		EE377EE021F4F16100138385 /* Types */ = {
 			isa = PBXGroup;
 			children = (
-				EE377EE321F4F1A100138385 /* TrxDetail.swift */,
+				EE377EE321F4F1A100138385 /* TrxDetails.swift */,
 				EE377EE121F4F18700138385 /* TrxDirection.swift */,
-				EE377EE521F4F1C400138385 /* TrxHistoryObserver.swift */,
+				EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */,
+				EE377EF021FDEE3F00138385 /* ZEC.swift */,
 			);
 			path = Types;
+			sourceTree = "<group>";
+		};
+		EE377EE721F7A71A00138385 /* TrxDetails */ = {
+			isa = PBXGroup;
+			children = (
+				EE377EEA21F7AF3C00138385 /* TrxDetailTableViewCell.swift */,
+				EE377EE821F7A76500138385 /* TrxDetailsVC.swift */,
+				EE377EEC21F7B02600138385 /* TrxMemoTableViewCell.swift */,
+			);
+			path = TrxDetails;
 			sourceTree = "<group>";
 		};
 		EE576FF121CFCC5500433CAB = {
@@ -258,6 +282,7 @@
 		EE576FFC21CFCC5500433CAB /* ZWallet */ = {
 			isa = PBXGroup;
 			children = (
+				EE377EEE21F9013800138385 /* ___TODO.md */,
 				EE57701E21CFCFCE00433CAB /* _Assets */,
 				EE57701D21CFCFB000433CAB /* _Main */,
 				EE57702721D000EE00433CAB /* Definitions */,
@@ -333,6 +358,7 @@
 				EE07A44E21E217E0006031C8 /* Main */,
 				EE377EC321E8F44C00138385 /* Passphrase */,
 				EE377EBA21E68A6600138385 /* Pin */,
+				EE377EE721F7A71A00138385 /* TrxDetails */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -478,6 +504,7 @@
 				EE76B85C21D8D1930093571F /* SourceSansPro-BoldItalic.ttf in Resources */,
 				EE377ECC21EB4A6800138385 /* Passphrase.storyboard in Resources */,
 				EE76B85321D8D1930093571F /* SourceSansPro-BlackItalic.ttf in Resources */,
+				EE377EEF21FDE64400138385 /* TrxDetails.storyboard in Resources */,
 				EE76B85821D8D1930093571F /* SourceSansPro-Light.ttf in Resources */,
 				EE76B85621D8D1930093571F /* SourceSansPro-Bold.ttf in Resources */,
 				EE76B85921D8D1930093571F /* SourceSansPro-Black.ttf in Resources */,
@@ -516,18 +543,22 @@
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
+				EE377EEB21F7AF3C00138385 /* TrxDetailTableViewCell.swift in Sources */,
 				EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */,
 				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
 				EE377ED821F485FB00138385 /* HomeCoordinator.swift in Sources */,
 				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
+				EE377EED21F7B02600138385 /* TrxMemoTableViewCell.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
-				EE377EE621F4F1C400138385 /* TrxHistoryObserver.swift in Sources */,
-				EE377EE421F4F1A100138385 /* TrxDetail.swift in Sources */,
+				EE377EE621F4F1C400138385 /* TrxHistoryObservable.swift in Sources */,
+				EE377EE421F4F1A100138385 /* TrxDetails.swift in Sources */,
 				EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
+				EE377EF321FE181000138385 /* Date-Extension.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
+				EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
@@ -538,6 +569,7 @@
 				EE377EC221E7DFD200138385 /* Constants.swift in Sources */,
 				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
+				EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */,
 				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
 				EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,

@@ -9,24 +9,24 @@
 import Foundation
 
 
-public struct TrxDetail {
+public struct TrxDetails {
     public let direction: TrxDirection
     public let date: Date
-    public let amountInAtomicUnits: UInt64
+    public let amount: ZecInAtomicUnits
     public let address: String
     public let trxId: String
     public let memo: String
 
     public init(direction: TrxDirection,
                 date: Date,
-                amountInAtomicUnits: UInt64,
+                amount: ZecInAtomicUnits,
                 address: String,
                 trxId: String,
                 memo: String)
     {
         self.direction  = direction
         self.date = date
-        self.amountInAtomicUnits = amountInAtomicUnits
+        self.amount = amount
         self.address = address
         self.trxId = trxId
         self.memo = memo

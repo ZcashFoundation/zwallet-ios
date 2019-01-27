@@ -12,5 +12,8 @@ import Foundation
 internal class Constants {
 
     public static let pinCodeLength = 6
-    
+
+    public static let atomicUnitsPerZec: UInt64 = 1_000_000_000_000
+    public static let numberOfFractionDigits: Int = 12
+    public static let prettyPrintNumberOfFractionDigits = 7
 }

@@ -16,6 +16,9 @@ internal class HomeCoordinator: BaseCoordinator {
 
     private var viewFactory: ViewFactoryProtocol
     private var localizer: Localizable
+    private var trxHistoryProvider: TrxHistoryProviderProtocol
+
+    private var homeVC: HomeVC?
 
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
@@ -24,6 +27,7 @@ internal class HomeCoordinator: BaseCoordinator {
 
         self.viewFactory = self.iocContainer.viewFactory
         self.localizer = self.iocContainer.localizer
+        self.trxHistoryProvider = self.iocContainer.trxHistoryProvider
 
         super.init(navigationController: navigationController)
     }
@@ -47,8 +51,9 @@ extension HomeCoordinator: HomeVCDelegate {
         #warning("implement")
     }
 
-    func homeVCTrxCellTouched(sender: HomeVC) {
-        #warning("implement")
+    func homeVCTrxCellTouched(sender: HomeVC, rowNumber: Int) {
+        let trxDetails = self.trxHistoryProvider.all()[rowNumber]
+        self.showTrxDetailsView(for: trxDetails)
     }
 
     private func showHomeView() {
@@ -56,35 +61,60 @@ extension HomeCoordinator: HomeVCDelegate {
         #warning("remove")
         self.test_addDummyData()
 
+        self.registerForNewTrx()
+
         let vc = self.viewFactory.getHomeView()
         vc.delegate = self
         vc.localizer = self.localizer
-        vc.trxHistoryProvider = self.iocContainer.trxHistoryProvider
+        vc.trxHistory = self.trxHistoryProvider.all()
         self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    private func showTrxDetailsView(for trxDetails: TrxDetails) {
+        let vc = self.viewFactory.getTrxDetailsView()
+        vc.localizer = self.localizer
+        vc.trxDetails = trxDetails
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    private func registerForNewTrx() {
+        self.trxHistoryProvider.register(observer: self)
+    }
+
+    private func deregisterFromNewTrx() {
+        self.trxHistoryProvider.deregister(observer: self)
     }
 
     private func test_addDummyData() {
         let trxHistoryProvider = self.iocContainer.trxHistoryProvider
 
-        let detailSent = TrxDetail(direction: .send,
-                                   date: Date.init(),
-                                   amountInAtomicUnits: 2208,
-                                   address: "address send to",
-                                   trxId: "trx id send",
-                                   memo: "memo send")
-        let detailReceived = TrxDetail(direction: .receive,
-                                       date: Date.init(),
-                                       amountInAtomicUnits: 22,
-                                       address: "address received from",
-                                       trxId: "trx id receive",
-                                       memo: "memo receive")
-        trxHistoryProvider.add(trxDetail: detailSent)
-        trxHistoryProvider.add(trxDetail: detailReceived)
-        trxHistoryProvider.add(trxDetail: detailSent)
-        trxHistoryProvider.add(trxDetail: detailReceived)
-        trxHistoryProvider.add(trxDetail: detailSent)
-        trxHistoryProvider.add(trxDetail: detailReceived)
-        trxHistoryProvider.add(trxDetail: detailSent)
-        trxHistoryProvider.add(trxDetail: detailReceived)
+        let detailsSent = TrxDetails(direction: .send,
+                                     date: Date.init(),
+                                     amount: 22_080_000_000_000_000,
+                                     address: "address send to",
+                                     trxId: "trx id send",
+                                     memo: "memo send")
+        let detailsReceived = TrxDetails(direction: .receive,
+                                         date: Date.init(),
+                                         amount: 22_000_000_000_000,
+                                         address: "address received from",
+                                         trxId: "trx id receive",
+                                         memo: "memo receive")
+        trxHistoryProvider.add(trxDetails: detailsSent)
+        trxHistoryProvider.add(trxDetails: detailsReceived)
+        trxHistoryProvider.add(trxDetails: detailsSent)
+        trxHistoryProvider.add(trxDetails: detailsReceived)
+        trxHistoryProvider.add(trxDetails: detailsSent)
+        trxHistoryProvider.add(trxDetails: detailsReceived)
+        trxHistoryProvider.add(trxDetails: detailsSent)
+        trxHistoryProvider.add(trxDetails: detailsReceived)
+    }
+}
+
+
+extension HomeCoordinator: TrxHistoryObservable {
+    
+    func changed() {
+        #warning("implement")
     }
 }

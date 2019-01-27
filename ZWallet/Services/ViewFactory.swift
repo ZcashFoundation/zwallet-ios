@@ -24,6 +24,7 @@ internal protocol ViewFactoryProtocol {
     func getPinView() -> PinVC
     func getPassphraseView() -> PassphraseVC
     func getHomeView() -> HomeVC
+    func getTrxDetailsView() -> TrxDetailsVC
 }
 
 
@@ -45,6 +46,10 @@ internal class ViewFactory: ViewFactoryProtocol {
         return UIStoryboard(name: "Home", bundle: nil)
     }()
 
+    private lazy var trxDetailsStoryboard: UIStoryboard = {
+        return UIStoryboard(name: "TrxDetails", bundle: nil)
+    }()
+
     func getOnboardingMainView() -> MainVC {
         let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "Main") as! MainVC
         return vc
@@ -62,6 +67,11 @@ internal class ViewFactory: ViewFactoryProtocol {
 
     func getHomeView() -> HomeVC {
         let vc = self.homeStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeVC
+        return vc
+    }
+
+    func getTrxDetailsView() -> TrxDetailsVC {
+        let vc = self.trxDetailsStoryboard.instantiateViewController(withIdentifier: "TrxDetails") as! TrxDetailsVC
         return vc
     }
 }

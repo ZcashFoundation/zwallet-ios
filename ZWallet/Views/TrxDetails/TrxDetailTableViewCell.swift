@@ -1,20 +1,17 @@
 //
-//  HomeTrxTableViewCell.swift
+//  TrxDetailTableViewCell.swift
 //  ZWallet
 //
-//  Created by loj on 20.01.19.
+//  Created by loj on 22.01.19.
 //  Copyright © 2019 XMR Systems LLC. All rights reserved.
 //
 
 import UIKit
 
-class HomeTrxTableViewCell: UITableViewCell {
+class TrxDetailsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var directionImageView: UIImageView!
-    @IBOutlet weak var directionLabel: UILabel!
-    @IBOutlet weak var trxDateLabel: UILabel!
-    @IBOutlet weak var trxAmountLabel: UILabel!
-    @IBOutlet weak var trxFiatAmountLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var bodyLabel: UILabel!
 
     override func awakeFromNib() {
         super.awakeFromNib()
