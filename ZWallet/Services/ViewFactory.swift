@@ -25,53 +25,39 @@ internal protocol ViewFactoryProtocol {
     func getPassphraseView() -> PassphraseVC
     func getHomeView() -> HomeVC
     func getTrxDetailsView() -> TrxDetailsVC
+    func getRecipientAddressView() -> RecipientAddressVC
 }
 
 
 internal class ViewFactory: ViewFactoryProtocol {
 
-    private lazy var mainStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Main", bundle: nil)
-    }()
-
-    private lazy var pinStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Pin", bundle: nil)
-    }()
-
-    private lazy var passphraseStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Passphrase", bundle: nil)
-    }()
-
-    private lazy var homeStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "Home", bundle: nil)
-    }()
-
-    private lazy var trxDetailsStoryboard: UIStoryboard = {
-        return UIStoryboard(name: "TrxDetails", bundle: nil)
-    }()
-
     func getOnboardingMainView() -> MainVC {
-        let vc = self.mainStoryboard.instantiateViewController(withIdentifier: "Main") as! MainVC
-        return vc
+        return self.view(withName: "Main", onStoryboard: "Main")
     }
 
     func getPinView() -> PinVC {
-        let vc = self.pinStoryboard.instantiateViewController(withIdentifier: "Pin") as! PinVC
-        return vc
+        return self.view(withName: "Pin", onStoryboard: "Pin")
     }
 
     func getPassphraseView() -> PassphraseVC {
-        let vc = self.passphraseStoryboard.instantiateViewController(withIdentifier: "Passphrase") as! PassphraseVC
-        return vc
+        return self.view(withName: "Passphrase", onStoryboard: "Passphrase")
     }
 
     func getHomeView() -> HomeVC {
-        let vc = self.homeStoryboard.instantiateViewController(withIdentifier: "Home") as! HomeVC
-        return vc
+        return self.view(withName: "Home", onStoryboard: "Home")
     }
 
     func getTrxDetailsView() -> TrxDetailsVC {
-        let vc = self.trxDetailsStoryboard.instantiateViewController(withIdentifier: "TrxDetails") as! TrxDetailsVC
+        return self.view(withName: "TrxDetails", onStoryboard: "TrxDetails")
+    }
+
+    func getRecipientAddressView() -> RecipientAddressVC {
+        return self.view(withName: "RecipientAddress", onStoryboard: "RecipientAddress")
+    }
+
+    private func view<T>(withName viewName: String, onStoryboard storyboardName: String) -> T {
+        let sb = UIStoryboard(name: storyboardName, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: viewName) as! T
         return vc
     }
 }

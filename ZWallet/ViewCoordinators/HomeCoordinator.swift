@@ -40,7 +40,7 @@ internal class HomeCoordinator: BaseCoordinator {
 
 extension HomeCoordinator: HomeVCDelegate {
     func homeVCSendButtonTouched(sender: HomeVC) {
-        #warning("implement")
+        self.showRecipientAddressView()
     }
 
     func homeVCReceiveButtonTouched(sender: HomeVC) {
@@ -77,6 +77,13 @@ extension HomeCoordinator: HomeVCDelegate {
         self.navigationController.pushViewController(vc, animated: true)
     }
 
+    private func showRecipientAddressView() {
+        let vc = self.viewFactory.getRecipientAddressView()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+
     private func registerForNewTrx() {
         self.trxHistoryProvider.register(observer: self)
     }
@@ -108,6 +115,21 @@ extension HomeCoordinator: HomeVCDelegate {
         trxHistoryProvider.add(trxDetails: detailsReceived)
         trxHistoryProvider.add(trxDetails: detailsSent)
         trxHistoryProvider.add(trxDetails: detailsReceived)
+    }
+}
+
+
+extension HomeCoordinator: RecipientAddressDelegate {
+    func recipientAddressVCScanButtonTouched(sender: RecipientAddressVC) {
+        #warning("implement")
+    }
+
+    func recipientAddressVCPasteFromClipboardButtonTouched(sender: RecipientAddressVC) {
+        #warning("implement")
+    }
+
+    func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
+        #warning("implement")
     }
 }
 

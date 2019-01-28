@@ -50,3 +50,13 @@
 
 "trxDetail.destinationAddress" = "To Address";
 
+"recipientAddress.title" = "Recipient Address";
+
+"recipientAddress.description" = "Enter, scan or paste the recipient's address.";
+
+"recipientAddress.scanButton" = "Scan code";
+
+"recipientAddress.pasteFromClipboardButton" = "Paste from clipboard";
+
+"recipientAddress.enterManuallyButton" = "Enter manually";
+
