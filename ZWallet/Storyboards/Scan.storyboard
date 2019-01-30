@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--ScanVC-->
+        <scene sceneID="LRi-v7-O1F">
+            <objects>
+                <viewController storyboardIdentifier="Scan" id="LS8-Bg-2on" customClass="ScanVC" customModule="ZWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xBu-hN-lf8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Viewfinder" translatesAutoresizingMaskIntoConstraints="NO" id="z7w-Du-ztS">
+                                <rect key="frame" x="67" y="277.5" width="280" height="341"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="280" id="L3R-XR-cmr"/>
+                                    <constraint firstAttribute="width" secondItem="z7w-Du-ztS" secondAttribute="height" multiplier="280:341" id="O5x-q0-Gt8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Place the code inside the box." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y8Z-sX-hmw">
+                                <rect key="frame" x="67" y="623.5" width="280" height="40"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.30297517123287671" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="baT-rE-bCg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bf-V7-fpZ">
+                                <rect key="frame" x="338" y="92" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="8ND-ry-H6Z"/>
+                                    <constraint firstAttribute="height" constant="44" id="sdk-iY-Y19"/>
+                                </constraints>
+                                <state key="normal" image="CloseXwhite"/>
+                                <connections>
+                                    <action selector="cancelButtonTouched" destination="LS8-Bg-2on" eventType="touchUpInside" id="VU5-Cw-4iH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="z7w-Du-ztS" firstAttribute="trailing" secondItem="Y8Z-sX-hmw" secondAttribute="trailing" id="E7z-dZ-JNC"/>
+                            <constraint firstItem="z7w-Du-ztS" firstAttribute="centerX" secondItem="xBu-hN-lf8" secondAttribute="centerX" id="N19-al-IwU"/>
+                            <constraint firstItem="Y8Z-sX-hmw" firstAttribute="top" secondItem="z7w-Du-ztS" secondAttribute="bottom" constant="5" id="ca9-1y-xcq"/>
+                            <constraint firstItem="9bf-V7-fpZ" firstAttribute="top" secondItem="qfh-Fs-D4h" secondAttribute="top" constant="48" id="gDd-Vh-ejd"/>
+                            <constraint firstItem="Y8Z-sX-hmw" firstAttribute="leading" secondItem="z7w-Du-ztS" secondAttribute="leading" id="oYG-Og-hdO"/>
+                            <constraint firstItem="z7w-Du-ztS" firstAttribute="centerY" secondItem="xBu-hN-lf8" secondAttribute="centerY" id="vkC-0L-yeM"/>
+                            <constraint firstItem="qfh-Fs-D4h" firstAttribute="trailing" secondItem="9bf-V7-fpZ" secondAttribute="trailing" constant="32" id="zzz-ye-CaJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qfh-Fs-D4h"/>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="9bf-V7-fpZ" id="Po9-8s-kZt"/>
+                        <outlet property="descriptionLabel" destination="Y8Z-sX-hmw" id="uBa-r6-IIC"/>
+                        <outlet property="viewFinderImageView" destination="z7w-Du-ztS" id="88A-n0-bhP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3c-Ic-pRG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="82.5" y="-33.802816901408448"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="CloseXwhite" width="24" height="24"/>
+        <image name="Viewfinder" width="280" height="341"/>
+    </resources>
+</document>

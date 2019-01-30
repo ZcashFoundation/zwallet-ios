@@ -121,7 +121,10 @@ extension HomeCoordinator: HomeVCDelegate {
 
 extension HomeCoordinator: RecipientAddressDelegate {
     func recipientAddressVCScanButtonTouched(sender: RecipientAddressVC) {
-        #warning("implement")
+        let vc = self.viewFactory.getScanView()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        self.navigationController.pushViewController(vc, animated: true)
     }
 
     func recipientAddressVCPasteFromClipboardButtonTouched(sender: RecipientAddressVC) {
@@ -129,6 +132,18 @@ extension HomeCoordinator: RecipientAddressDelegate {
     }
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
+        #warning("implement")
+    }
+}
+
+
+extension HomeCoordinator: ScanVCDelegate {
+
+    func scanVCDelegateUriDetected(uri: String, sender: ScanVC) {
+        #warning("implement")
+    }
+
+    func scanVCDelegateCancelled(sender: ScanVC) {
         #warning("implement")
     }
 }

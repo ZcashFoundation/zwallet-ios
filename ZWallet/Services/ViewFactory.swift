@@ -10,15 +10,6 @@ import Foundation
 import UIKit
 
 
-//internal struct StoryboardScene {
-//    var storyboardName: String
-//    var sceneName: String
-//}
-//
-//internal enum Views {
-//    case onboarding
-//}
-
 internal protocol ViewFactoryProtocol {
     func getOnboardingMainView() -> MainVC
     func getPinView() -> PinVC
@@ -26,6 +17,7 @@ internal protocol ViewFactoryProtocol {
     func getHomeView() -> HomeVC
     func getTrxDetailsView() -> TrxDetailsVC
     func getRecipientAddressView() -> RecipientAddressVC
+    func getScanView() -> ScanVC
 }
 
 
@@ -53,6 +45,10 @@ internal class ViewFactory: ViewFactoryProtocol {
 
     func getRecipientAddressView() -> RecipientAddressVC {
         return self.view(withName: "RecipientAddress", onStoryboard: "RecipientAddress")
+    }
+
+    func getScanView() -> ScanVC {
+        return self.view(withName: "Scan", onStoryboard: "Scan")
     }
 
     private func view<T>(withName viewName: String, onStoryboard storyboardName: String) -> T {

@@ -34,6 +34,8 @@
 
 "passphrase.mismatch.title" = "Passwort ungleich";
 
+"passphrase.mismatch.description" = "Das wiederholte Passwort entspricht nicht dem zuerst eingegebenem. Bitte versuche es erneut.";
+
 "global.Ok" = "Ok";
 
 "trxDetail.received" = "Empfangen";
@@ -59,4 +61,12 @@
 "recipientAddress.pasteFromClipboardButton" = "Von Clipboard einfügen";
 
 "recipientAddress.enterManuallyButton" = "Manuell eingeben";
+
+"scan.description" = "Plaziere den Code innerhalb des Rahmens.";
+
+"scan.error.title" = "Scannen nicht unterstützt";
+
+"scan.error.message" = "Benutze bitte ein Gerät mit Kamera und erteile die Erlaubnis, diese zu benutzen.";
+
+"NSCameraUsageDescription" = "Wir benötigen Zugriff auf die Kamera, um die QR Code scannen zu können.";
 

@@ -34,6 +34,8 @@
 
 "passphrase.mismatch.title" = "Passphrase Mismatch";
 
+"passphrase.mismatch.description" = "The passphrase you re-entered does not match the initial one. Please try again.";
+
 "global.Ok" = "Ok";
 
 "trxDetail.received" = "Received";
@@ -59,4 +61,12 @@
 "recipientAddress.pasteFromClipboardButton" = "Paste from clipboard";
 
 "recipientAddress.enterManuallyButton" = "Enter manually";
+
+"scan.description" = "Place the code inside the box.";
+
+"scan.error.title" = "Scanning not supported";
+
+"scan.error.message" = "Please use a device with a camera and give permission.";
+
+"NSCameraUsageDescription" = "We need to access your camera for scanning QR codes.";
 
