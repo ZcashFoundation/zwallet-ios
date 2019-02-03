@@ -40,7 +40,7 @@ internal class HomeCoordinator: BaseCoordinator {
 
 extension HomeCoordinator: HomeVCDelegate {
     func homeVCSendButtonTouched(sender: HomeVC) {
-        self.showRecipientAddressView()
+        self.showSend()
     }
 
     func homeVCReceiveButtonTouched(sender: HomeVC) {
@@ -57,7 +57,6 @@ extension HomeCoordinator: HomeVCDelegate {
     }
 
     private func showHomeView() {
-
         #warning("remove")
         self.test_addDummyData()
 
@@ -70,17 +69,18 @@ extension HomeCoordinator: HomeVCDelegate {
         self.navigationController.pushViewController(vc, animated: true)
     }
 
+    private func showSend() {
+        let sendCoordinator = SendCoordinator(navigationController: self.navigationController,
+                                              iocContainer: self.iocContainer)
+        self.add(childCoordinator: sendCoordinator)
+        sendCoordinator.delegate = self
+        sendCoordinator.start()
+    }
+
     private func showTrxDetailsView(for trxDetails: TrxDetails) {
         let vc = self.viewFactory.getTrxDetailsView()
         vc.localizer = self.localizer
         vc.trxDetails = trxDetails
-        self.navigationController.pushViewController(vc, animated: true)
-    }
-
-    private func showRecipientAddressView() {
-        let vc = self.viewFactory.getRecipientAddressView()
-        vc.delegate = self
-        vc.localizer = self.localizer
         self.navigationController.pushViewController(vc, animated: true)
     }
 
@@ -119,39 +119,12 @@ extension HomeCoordinator: HomeVCDelegate {
 }
 
 
-extension HomeCoordinator: RecipientAddressDelegate {
-    func recipientAddressVCScanButtonTouched(sender: RecipientAddressVC) {
-        let vc = self.viewFactory.getScanView()
-        vc.delegate = self
-        vc.localizer = self.localizer
-        self.navigationController.pushViewController(vc, animated: true)
-    }
-
-    func recipientAddressVCPasteFromClipboardButtonTouched(sender: RecipientAddressVC) {
-        #warning("implement")
-    }
-
-    func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
-        #warning("implement")
-    }
-}
-
-
-extension HomeCoordinator: ScanVCDelegate {
-
-    func scanVCDelegateUriDetected(uri: String, sender: ScanVC) {
-        #warning("implement")
-    }
-
-    func scanVCDelegateCancelled(sender: ScanVC) {
-        #warning("implement")
-    }
-}
-
-
 extension HomeCoordinator: TrxHistoryObservable {
     
     func changed() {
         #warning("implement")
     }
 }
+
+
+extension HomeCoordinator: SendCoordinatorDelegate {}

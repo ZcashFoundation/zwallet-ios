@@ -72,6 +72,17 @@
 		EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB7A2200DFC000A6BD18 /* ScanVC.swift */; };
 		EEBEBB7D2200E10B00A6BD18 /* ScanVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB7C2200E10B00A6BD18 /* ScanVCDelegate.swift */; };
 		EEBEBB7F2200E41D00A6BD18 /* Scan.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBEBB7E2200E41D00A6BD18 /* Scan.storyboard */; };
+		EEBEBB812206F81F00A6BD18 /* Amount.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBEBB802206F80300A6BD18 /* Amount.storyboard */; };
+		EEBEBB842206FB4D00A6BD18 /* AmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB832206FB4D00A6BD18 /* AmountVC.swift */; };
+		EEBEBB862206FE1000A6BD18 /* AmountVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB852206FE1000A6BD18 /* AmountVCDelegate.swift */; };
+		EEBEBB882207061300A6BD18 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB872207061300A6BD18 /* String-Extension.swift */; };
+		EEBEBB8B2207073900A6BD18 /* String-ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB8A2207073900A6BD18 /* String-ExtensionTests.swift */; };
+		EEBEBB8C220707FC00A6BD18 /* String-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB872207061300A6BD18 /* String-Extension.swift */; };
+		EEBEBB90220728E000A6BD18 /* ZEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EF021FDEE3F00138385 /* ZEC.swift */; };
+		EEBEBB922207290A00A6BD18 /* ZECTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB912207290A00A6BD18 /* ZECTests.swift */; };
+		EEBEBB9322073A4500A6BD18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC121E7DFD200138385 /* Constants.swift */; };
+		EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB942207425500A6BD18 /* SendCoordinator.swift */; };
+		EEBEBB972207477100A6BD18 /* SendCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,6 +167,14 @@
 		EEBEBB7A2200DFC000A6BD18 /* ScanVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVC.swift; sourceTree = "<group>"; };
 		EEBEBB7C2200E10B00A6BD18 /* ScanVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanVCDelegate.swift; sourceTree = "<group>"; };
 		EEBEBB7E2200E41D00A6BD18 /* Scan.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Scan.storyboard; sourceTree = "<group>"; };
+		EEBEBB802206F80300A6BD18 /* Amount.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Amount.storyboard; sourceTree = "<group>"; };
+		EEBEBB832206FB4D00A6BD18 /* AmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVC.swift; sourceTree = "<group>"; };
+		EEBEBB852206FE1000A6BD18 /* AmountVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVCDelegate.swift; sourceTree = "<group>"; };
+		EEBEBB872207061300A6BD18 /* String-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-Extension.swift"; sourceTree = "<group>"; };
+		EEBEBB8A2207073900A6BD18 /* String-ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-ExtensionTests.swift"; sourceTree = "<group>"; };
+		EEBEBB912207290A00A6BD18 /* ZECTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZECTests.swift; sourceTree = "<group>"; };
+		EEBEBB942207425500A6BD18 /* SendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinator.swift; sourceTree = "<group>"; };
+		EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinatorDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +249,7 @@
 			children = (
 				EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */,
 				EE377EF221FE181000138385 /* Date-Extension.swift */,
+				EEBEBB872207061300A6BD18 /* String-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -314,8 +334,10 @@
 		EE57701121CFCC5600433CAB /* ZWalletTests */ = {
 			isa = PBXGroup;
 			children = (
-				EE377EDB21F4C40900138385 /* Services */,
+				EEBEBB892207071300A6BD18 /* ExtensionsTests */,
 				EE57701421CFCC5600433CAB /* Info.plist */,
+				EE377EDB21F4C40900138385 /* Services */,
+				EEBEBB8D2207286100A6BD18 /* Types */,
 			);
 			path = ZWalletTests;
 			sourceTree = "<group>";
@@ -339,6 +361,7 @@
 		EE57701F21CFD00100433CAB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EEBEBB802206F80300A6BD18 /* Amount.storyboard */,
 				EE76B84121D7EC3F0093571F /* Home.storyboard */,
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
 				EE57700121CFCC5500433CAB /* Main.storyboard */,
@@ -361,6 +384,8 @@
 				EE377ED721F485FB00138385 /* HomeCoordinator.swift */,
 				EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */,
 				EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */,
+				EEBEBB942207425500A6BD18 /* SendCoordinator.swift */,
+				EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */,
 			);
 			path = ViewCoordinators;
 			sourceTree = "<group>";
@@ -368,6 +393,7 @@
 		EE57702121CFD03500433CAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EEBEBB822206FB3200A6BD18 /* Amount */,
 				EE377ED021F47D5200138385 /* Home */,
 				EE07A44E21E217E0006031C8 /* Main */,
 				EE377EC321E8F44C00138385 /* Passphrase */,
@@ -450,6 +476,31 @@
 				EEBEBB7C2200E10B00A6BD18 /* ScanVCDelegate.swift */,
 			);
 			path = Scan;
+			sourceTree = "<group>";
+		};
+		EEBEBB822206FB3200A6BD18 /* Amount */ = {
+			isa = PBXGroup;
+			children = (
+				EEBEBB832206FB4D00A6BD18 /* AmountVC.swift */,
+				EEBEBB852206FE1000A6BD18 /* AmountVCDelegate.swift */,
+			);
+			path = Amount;
+			sourceTree = "<group>";
+		};
+		EEBEBB892207071300A6BD18 /* ExtensionsTests */ = {
+			isa = PBXGroup;
+			children = (
+				EEBEBB8A2207073900A6BD18 /* String-ExtensionTests.swift */,
+			);
+			path = ExtensionsTests;
+			sourceTree = "<group>";
+		};
+		EEBEBB8D2207286100A6BD18 /* Types */ = {
+			isa = PBXGroup;
+			children = (
+				EEBEBB912207290A00A6BD18 /* ZECTests.swift */,
+			);
+			path = Types;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -554,6 +605,7 @@
 				EE76B85A21D8D1930093571F /* OFL.txt in Resources */,
 				EE76B84221D7EC3F0093571F /* Home.storyboard in Resources */,
 				EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */,
+				EEBEBB812206F81F00A6BD18 /* Amount.storyboard in Resources */,
 				EE76B85E21D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */,
 				EE57700321CFCC5500433CAB /* Main.storyboard in Resources */,
@@ -574,10 +626,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBEBB862206FE1000A6BD18 /* AmountVCDelegate.swift in Sources */,
 				EE377EE221F4F18700138385 /* TrxDirection.swift in Sources */,
 				EE07A46A21E29B6F006031C8 /* AppCoordinator.swift in Sources */,
+				EEBEBB842206FB4D00A6BD18 /* AmountVC.swift in Sources */,
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
+				EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
 				EE377EEB21F7AF3C00138385 /* TrxDetailTableViewCell.swift in Sources */,
 				EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */,
@@ -590,6 +645,7 @@
 				EE377EE621F4F1C400138385 /* TrxHistoryObservable.swift in Sources */,
 				EE377EE421F4F1A100138385 /* TrxDetails.swift in Sources */,
 				EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */,
+				EEBEBB882207061300A6BD18 /* String-Extension.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE377EF321FE181000138385 /* Date-Extension.swift in Sources */,
@@ -609,6 +665,7 @@
 				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
 				EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */,
+				EEBEBB972207477100A6BD18 /* SendCoordinatorDelegate.swift in Sources */,
 				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
 				EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
@@ -622,7 +679,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBEBB8B2207073900A6BD18 /* String-ExtensionTests.swift in Sources */,
 				EE377EDF21F4C45A00138385 /* TrxHistoryProviderTests.swift in Sources */,
+				EEBEBB8C220707FC00A6BD18 /* String-Extension.swift in Sources */,
+				EEBEBB90220728E000A6BD18 /* ZEC.swift in Sources */,
+				EEBEBB922207290A00A6BD18 /* ZECTests.swift in Sources */,
+				EEBEBB9322073A4500A6BD18 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

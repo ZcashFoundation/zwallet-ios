@@ -9,6 +9,7 @@
 - constraints for smaller phones
 - expand content to top margin
 - check for longer texts of other languages
+- attributes strings (from localization)
 
 ## Onboarding
 - keyboard hides "next" button

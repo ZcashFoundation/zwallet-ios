@@ -70,3 +70,11 @@
 
 "NSCameraUsageDescription" = "Wir benötigen Zugriff auf die Kamera, um die QR Code scannen zu können.";
 
+"amount.title" = "Betrag";
+
+"amount.sendMaximum" = "Maximalbetrag senden";
+
+"amount.next" = "Weiter";
+
+"amount.available" = "verfügbar";
+

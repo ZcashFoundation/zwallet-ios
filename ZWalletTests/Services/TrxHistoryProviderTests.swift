@@ -26,7 +26,7 @@ class TrxHistoryProviderTests: XCTestCase {
     func test_WhenAddingAnElement_ThenListContainsThisElement() {
         let trxDetail = self.getTrxDetail()
 
-        self.testee.add(trxDetail: trxDetail)
+        self.testee.add(trxDetails: trxDetail)
 
         let trxList = self.testee.all()
         XCTAssertFalse(trxList.isEmpty)
@@ -35,7 +35,7 @@ class TrxHistoryProviderTests: XCTestCase {
 
         XCTAssertEqual(element.direction, trxDetail.direction)
         XCTAssertEqual(element.date, trxDetail.date)
-        XCTAssertEqual(element.amountInAtomicUnits, trxDetail.amountInAtomicUnits)
+        XCTAssertEqual(element.amount, trxDetail.amount)
         XCTAssertEqual(element.address, trxDetail.address)
         XCTAssertEqual(element.trxId, trxDetail.trxId)
         XCTAssertEqual(element.memo, trxDetail.memo)
@@ -45,7 +45,7 @@ class TrxHistoryProviderTests: XCTestCase {
         let observer = ObserverMock()
         self.testee.register(observer: observer)
 
-        self.testee.add(trxDetail: self.getTrxDetail())
+        self.testee.add(trxDetails: self.getTrxDetail())
 
         XCTAssertTrue(observer.isNotified)
     }
@@ -53,7 +53,7 @@ class TrxHistoryProviderTests: XCTestCase {
     func test_WhenAddingAnElement_ThenCountIsIncremented() {
         let countBefore = self.testee.count()
 
-        self.testee.add(trxDetail: self.getTrxDetail())
+        self.testee.add(trxDetails: self.getTrxDetail())
 
         let countAfter = self.testee.count()
         XCTAssertTrue(countAfter == countBefore + 1)
@@ -64,18 +64,18 @@ class TrxHistoryProviderTests: XCTestCase {
         self.testee.register(observer: observer)
         self.testee.deregister(observer: observer)
 
-        self.testee.add(trxDetail: self.getTrxDetail())
+        self.testee.add(trxDetails: self.getTrxDetail())
 
         XCTAssertFalse(observer.isNotified)
     }
 
-    private func getTrxDetail() -> TrxDetail {
-        return TrxDetail(direction: .receive,
-                         date: Date.init(),
-                         amountInAtomicUnits: 2208,
-                         address: "22of8.ch",
-                         trxId: "2208",
-                         memo: "22.08")
+    private func getTrxDetail() -> TrxDetails {
+        return TrxDetails(direction: .receive,
+                          date: Date.init(),
+                          amount: 2208,
+                          address: "22of8.ch",
+                          trxId: "2208",
+                          memo: "22.08")
     }
 }
 
