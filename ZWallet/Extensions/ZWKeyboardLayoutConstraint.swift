@@ -18,7 +18,7 @@ public class ZWKeyboardLayoutConstraint: NSLayoutConstraint {
     override public func awakeFromNib() {
         super.awakeFromNib()
 
-        self.offset = constant
+        self.offset = self.constant
 
         NotificationCenter.default.addObserver(self,
                                                selector: #selector(keyboardShows(_:)),

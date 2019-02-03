@@ -40,6 +40,12 @@ class PinVC: UIViewController {
         self.becomeFirstResponder()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+
+        self.resignFirstResponder()
+    }
+
     private func setup() {
         self.pinCode = ""
         self.pinDotView.totalDotCount = Constants.pinCodeLength

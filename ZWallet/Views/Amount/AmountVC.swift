@@ -43,11 +43,18 @@ class AmountVC: UIViewController {
         self.updateView()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.amountTextField.resignFirstResponder()
+    }
+
     private func setup() {
         self.amountTextField.delegate = self
     }
 
     private func updateView() {
+        self.amountTextField.becomeFirstResponder()
+        
         guard let localizer = self.localizer else { return }
 
         self.titleLabel.text = localizer.localized("amount.title")

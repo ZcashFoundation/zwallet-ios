@@ -83,6 +83,7 @@
 		EEBEBB9322073A4500A6BD18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC121E7DFD200138385 /* Constants.swift */; };
 		EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB942207425500A6BD18 /* SendCoordinator.swift */; };
 		EEBEBB972207477100A6BD18 /* SendCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */; };
+		EEBEBB99220763AB00A6BD18 /* KeyboardObserverService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB98220763AB00A6BD18 /* KeyboardObserverService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -175,6 +176,7 @@
 		EEBEBB912207290A00A6BD18 /* ZECTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZECTests.swift; sourceTree = "<group>"; };
 		EEBEBB942207425500A6BD18 /* SendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinator.swift; sourceTree = "<group>"; };
 		EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		EEBEBB98220763AB00A6BD18 /* KeyboardObserverService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserverService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -220,6 +222,7 @@
 			children = (
 				EE377EB221E5303D00138385 /* ViewFactory.swift */,
 				EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */,
+				EEBEBB98220763AB00A6BD18 /* KeyboardObserverService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -654,6 +657,7 @@
 				EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
+				EEBEBB99220763AB00A6BD18 /* KeyboardObserverService.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
 				EEBEBB7D2200E10B00A6BD18 /* ScanVCDelegate.swift in Sources */,
 				EE377ED421F4827500138385 /* HomeTrxTableViewCell.swift in Sources */,
