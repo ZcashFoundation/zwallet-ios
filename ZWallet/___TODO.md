@@ -3,14 +3,13 @@
 ## HomeVC
 - group by date
 - cell touched -> (group, row)
-- hide back button
+- disable swipe back (although back button/navbar not visible)
 
 ## All VC
+- show custom back button
 - constraints for smaller phones
-- expand content to top margin
 - check for longer texts of other languages
 - attributes strings (from localization)
 
 ## Onboarding
-- keyboard hides "next" button
 - implement "X" button

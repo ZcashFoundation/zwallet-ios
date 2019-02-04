@@ -19,6 +19,8 @@ internal class AppCoordinator: BaseCoordinator {
     {
         self.iocContainer = iocContainer
         super.init(navigationController: navigationController)
+
+        self.setup()
     }
 
     public func start() {
@@ -32,6 +34,10 @@ internal class AppCoordinator: BaseCoordinator {
     private func hasWallet() -> Bool {
         #warning("implement")
         return false
+    }
+
+    private func setup() {
+        self.navigationController.navigationBar.isHidden = true
     }
 }
 
