@@ -84,6 +84,8 @@ extension SendCoordinator: AmountVCDelegate {
 
     func amountVCDelegateNextButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits) {
         #warning("implement")
+
+        self.showMemoView()
     }
 
     private func showAmountView() {
@@ -93,6 +95,22 @@ extension SendCoordinator: AmountVCDelegate {
         vc.amount = 0
         #warning("set correct available amount")
         vc.availableAmount = 22_080_000_000_000
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+
+extension SendCoordinator: MemoVCDelegate {
+
+    func memoVCDelegateNextButtonTouched(sender: MemoVC, memo: String?) {
+        #warning("implement")
+    }
+
+    private func showMemoView() {
+        let vc = self.viewFactory.getMemoVC()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        vc.memo = "22of8.ch"
         self.navigationController.pushViewController(vc, animated: true)
     }
 }

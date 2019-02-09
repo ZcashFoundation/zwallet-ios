@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.ttf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-SemiBold.ttf">
+            <string>SourceSansPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--MemoVC-->
+        <scene sceneID="5TK-63-Amy">
+            <objects>
+                <viewController storyboardIdentifier="Memo" id="M2V-hB-lEq" customClass="MemoVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MfU-s3-T92">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wua-MI-GFO" customClass="ZWProgressBar" customModule="ZWallet" customModuleProvider="target">
+                                <rect key="frame" x="24" y="124" width="366" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Wcl-zL-3Hh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalSteps">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Memo" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-U1-6GC">
+                                <rect key="frame" x="24" y="172" width="366" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="TKL-j1-J2Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
+                                <color key="textColor" red="0.2901675105" green="0.29021433000000002" blue="0.29015725850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="!!Start typing" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="miM-vD-sj4">
+                                <rect key="frame" x="24" y="243" width="366" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2tw-nU-SUI"/>
+                                </constraints>
+                                <color key="textColor" red="0.17999999999999999" green="0.16" blue="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0N-Ax-m9d" customClass="ZWButton" customModule="ZWallet">
+                                <rect key="frame" x="0.0" y="840" width="414" height="56"/>
+                                <color key="backgroundColor" red="0.14474189281463623" green="0.55489373207092285" blue="0.96221667528152466" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="brW-Yb-hQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="16"/>
+                                <state key="normal" title="!!Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="EJz-bI-2sK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="miM-vD-sj4" secondAttribute="trailing" constant="24" id="2s0-qI-ezO"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="top" secondItem="wua-MI-GFO" secondAttribute="bottom" constant="32" id="2sr-L1-ZYq"/>
+                            <constraint firstItem="miM-vD-sj4" firstAttribute="top" secondItem="r9g-U1-6GC" secondAttribute="bottom" constant="40" id="CFm-5G-a67"/>
+                            <constraint firstItem="miM-vD-sj4" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="FKs-Vj-WtE"/>
+                            <constraint firstAttribute="bottom" secondItem="H0N-Ax-m9d" secondAttribute="bottom" id="FPj-Sn-BCT" customClass="ZWKeyboardLayoutConstraint" customModule="ZWallet"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="WOg-Dr-Ycf"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="wua-MI-GFO" secondAttribute="trailing" constant="24" id="ig4-Jz-6Gs"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="H0N-Ax-m9d" secondAttribute="trailing" id="j43-qX-LKh"/>
+                            <constraint firstItem="wua-MI-GFO" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="80" id="kXJ-le-AYd"/>
+                            <constraint firstItem="H0N-Ax-m9d" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" id="mFp-Wh-To7"/>
+                            <constraint firstItem="wua-MI-GFO" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="r7j-18-XtY"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="r9g-U1-6GC" secondAttribute="trailing" constant="24" id="unm-EG-rDc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
+                    </view>
+                    <connections>
+                        <outlet property="memoTextField" destination="miM-vD-sj4" id="D9a-Eb-LRK"/>
+                        <outlet property="nextButton" destination="H0N-Ax-m9d" id="5yh-hp-fjw"/>
+                        <outlet property="progressBar" destination="wua-MI-GFO" id="gWZ-hc-G3M"/>
+                        <outlet property="titleLabel" destination="r9g-U1-6GC" id="JRH-ft-th2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNu-aZ-Pmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="-179.46428571428569"/>
+        </scene>
+    </scenes>
+</document>

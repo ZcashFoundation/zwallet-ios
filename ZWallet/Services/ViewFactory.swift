@@ -19,6 +19,7 @@ internal protocol ViewFactoryProtocol {
     func getRecipientAddressView() -> RecipientAddressVC
     func getScanView() -> ScanVC
     func getAmountView() -> AmountVC
+    func getMemoVC() -> MemoVC
 }
 
 
@@ -54,6 +55,10 @@ internal class ViewFactory: ViewFactoryProtocol {
 
     func getAmountView() -> AmountVC {
         return self.view(withName: "Amount", onStoryboard: "Amount")
+    }
+
+    func getMemoVC() -> MemoVC {
+        return self.view(withName: "Memo", onStoryboard: "Memo")
     }
 
     private func view<T>(withName viewName: String, onStoryboard storyboardName: String) -> T {
