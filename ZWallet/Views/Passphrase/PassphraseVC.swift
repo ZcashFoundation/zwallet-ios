@@ -10,6 +10,8 @@ import UIKit
 
 class PassphraseVC: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var progressBar: ZWProgressBar!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -21,6 +23,14 @@ class PassphraseVC: UIViewController {
     public weak var localizer: Localizable?
     public var passphraseMode: PassphraseEntryMode = .initial
     public var progressStep: Int = 0
+
+    @IBAction func backButtonTouched() {
+        self.delegate?.passphraseVCBackTouched(sender: self)
+    }
+
+    @IBAction func cancelButtonTouched() {
+        self.delegate?.passphraseVCCancelTouched(sender: self)
+    }
 
     @IBAction func nextButtonTouched() {
         guard let passphrase = self.passphraseTextField.text else {

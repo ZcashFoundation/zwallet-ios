@@ -79,6 +79,9 @@
                                     <constraint firstAttribute="height" constant="44" id="QeT-Iw-6cR"/>
                                 </constraints>
                                 <state key="normal" image="ArrowBack"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="SWi-AZ-9uD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60E-nR-Q1f">
                                 <rect key="frame" x="356" y="48" width="44" height="44"/>
@@ -87,6 +90,9 @@
                                     <constraint firstAttribute="height" constant="44" id="PYf-IM-bvV"/>
                                 </constraints>
                                 <state key="normal" image="CloseXBlack"/>
+                                <connections>
+                                    <action selector="cancelButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="Fcg-yJ-9BE"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -111,6 +117,8 @@
                         <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="6pL-15-Gc6" id="qkM-sL-3hY"/>
+                        <outlet property="cancelButton" destination="60E-nR-Q1f" id="U7F-7S-6OY"/>
                         <outlet property="descriptionLabel" destination="dhj-KA-DVx" id="ykw-0X-Htq"/>
                         <outlet property="pinDotView" destination="Y4R-iy-GOg" id="NzE-sr-n2N"/>
                         <outlet property="progressBar" destination="wua-MI-GFO" id="EBH-1G-88d"/>

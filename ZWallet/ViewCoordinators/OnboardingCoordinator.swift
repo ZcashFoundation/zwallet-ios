@@ -19,6 +19,8 @@ internal class OnboardingCoordinator: BaseCoordinator {
     private var viewFactory: ViewFactoryProtocol
     private var localizer: Localizable
 
+    private var mainVC: MainVC?
+
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
     {
@@ -35,10 +37,12 @@ internal class OnboardingCoordinator: BaseCoordinator {
     }
 
     private func showMainView() {
-        let vc = self.viewFactory.getOnboardingMainView()
-        vc.delegate = self
-        vc.localizer = self.localizer
-        self.navigationController.pushViewController(vc, animated: true)
+        self.mainVC = self.viewFactory.getOnboardingMainView()
+        if let vc = self.mainVC {
+            vc.delegate = self
+            vc.localizer = self.localizer
+            self.navigationController.pushViewController(vc, animated: true)
+        }
     }
 }
 
@@ -67,6 +71,8 @@ extension OnboardingCoordinator: CreateNewWalletCoordinatorDelegate {
     }
 
     func createNewWalletCoordinatorCancelled(coordinator: CreateNewWalletCoordinator) {
-        #warning("implement")
+        if let vc = self.mainVC {
+            self.navigationController.popToViewController(vc, animated: true)
+        }
     }
 }

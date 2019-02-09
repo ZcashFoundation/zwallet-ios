@@ -48,8 +48,12 @@ extension CreateNewWalletCoordinator: PinVCDelegate {
         }
     }
 
-    func pinVCCancelTouched() {
-        #warning("implement")
+    func pinVCBackTouched(sender: PinVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func pinVCCancelTouched(sender: PinVC) {
+        self.delegate?.createNewWalletCoordinatorCancelled(coordinator: self)
     }
 
     private func showInitialPinView() {
@@ -94,6 +98,14 @@ extension CreateNewWalletCoordinator: PassphraseVCDelegate {
                                       style: .default,
                                       handler: nil))
         sender.present(alert, animated: false, completion: nil)
+    }
+
+    func passphraseVCBackTouched(sender: PassphraseVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func passphraseVCCancelTouched(sender: PassphraseVC) {
+        self.delegate?.createNewWalletCoordinatorCancelled(coordinator: self)
     }
 
     private func showInitialPassphraseView() {

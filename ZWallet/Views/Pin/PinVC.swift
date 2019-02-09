@@ -10,6 +10,8 @@ import UIKit
 
 class PinVC: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var progressBar: ZWProgressBar!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -22,6 +24,14 @@ class PinVC: UIViewController {
     public var progressStep: Int = 0
 
     private var pinCode: String = ""
+
+    @IBAction func backButtonTouched() {
+        self.delegate?.pinVCBackTouched(sender: self)
+    }
+
+    @IBAction func cancelButtonTouched() {
+        self.delegate?.pinVCCancelTouched(sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

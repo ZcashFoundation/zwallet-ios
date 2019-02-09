@@ -12,4 +12,6 @@ import Foundation
 internal protocol PassphraseVCDelegate: class {
     func passphraseVCCompleted(with passphrase: String, mode: PassphraseEntryMode, sender: PassphraseVC)
     func passphraseVCInvalid(sender: PassphraseVC)
+    func passphraseVCBackTouched(sender: PassphraseVC)
+    func passphraseVCCancelTouched(sender: PassphraseVC)
 }
