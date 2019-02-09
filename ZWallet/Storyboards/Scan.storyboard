@@ -41,7 +41,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9bf-V7-fpZ">
-                                <rect key="frame" x="354" y="44" width="44" height="44"/>
+                                <rect key="frame" x="356" y="48" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="44" id="8ND-ry-H6Z"/>
                                     <constraint firstAttribute="height" constant="44" id="sdk-iY-Y19"/>
@@ -57,10 +57,10 @@
                             <constraint firstItem="z7w-Du-ztS" firstAttribute="trailing" secondItem="Y8Z-sX-hmw" secondAttribute="trailing" id="E7z-dZ-JNC"/>
                             <constraint firstItem="z7w-Du-ztS" firstAttribute="centerX" secondItem="xBu-hN-lf8" secondAttribute="centerX" id="N19-al-IwU"/>
                             <constraint firstItem="Y8Z-sX-hmw" firstAttribute="top" secondItem="z7w-Du-ztS" secondAttribute="bottom" constant="5" id="ca9-1y-xcq"/>
-                            <constraint firstItem="9bf-V7-fpZ" firstAttribute="top" secondItem="qfh-Fs-D4h" secondAttribute="top" id="gDd-Vh-ejd"/>
+                            <constraint firstItem="9bf-V7-fpZ" firstAttribute="top" secondItem="qfh-Fs-D4h" secondAttribute="top" constant="4" id="gDd-Vh-ejd"/>
                             <constraint firstItem="Y8Z-sX-hmw" firstAttribute="leading" secondItem="z7w-Du-ztS" secondAttribute="leading" id="oYG-Og-hdO"/>
                             <constraint firstItem="z7w-Du-ztS" firstAttribute="centerY" secondItem="xBu-hN-lf8" secondAttribute="centerY" id="vkC-0L-yeM"/>
-                            <constraint firstItem="qfh-Fs-D4h" firstAttribute="trailing" secondItem="9bf-V7-fpZ" secondAttribute="trailing" constant="16" id="zzz-ye-CaJ"/>
+                            <constraint firstItem="qfh-Fs-D4h" firstAttribute="trailing" secondItem="9bf-V7-fpZ" secondAttribute="trailing" constant="14" id="zzz-ye-CaJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qfh-Fs-D4h"/>
                     </view>

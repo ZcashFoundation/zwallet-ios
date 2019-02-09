@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -129,15 +130,34 @@
                                     <action selector="enterManuallyButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="H46-J7-fQa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bCI-gj-ygp">
+                                <rect key="frame" x="14" y="48" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1gJ-K0-RVg"/>
+                                    <constraint firstAttribute="width" constant="44" id="j2d-fh-jPr"/>
+                                </constraints>
+                                <state key="normal" image="ArrowBack"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-rL-EDb">
+                                <rect key="frame" x="356" y="48" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="RCV-oh-Poc"/>
+                                    <constraint firstAttribute="height" constant="44" id="bCI-BR-QXD"/>
+                                </constraints>
+                                <state key="normal" image="CloseXBlack"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="zO0-jO-sEI" firstAttribute="top" secondItem="DE6-vd-s2G" secondAttribute="bottom" constant="24" id="1aW-ek-AlY"/>
                             <constraint firstItem="r9g-U1-6GC" firstAttribute="top" secondItem="wua-MI-GFO" secondAttribute="bottom" constant="32" id="2sr-L1-ZYq"/>
                             <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="iSS-Fg-6dV" secondAttribute="trailing" constant="24" id="4qW-rG-hfF"/>
+                            <constraint firstItem="bCI-gj-ygp" firstAttribute="leading" secondItem="MfU-s3-T92" secondAttribute="leading" constant="14" id="G65-IF-llh"/>
                             <constraint firstItem="iSS-Fg-6dV" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="I2H-tJ-PXT"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="sj5-rL-EDb" secondAttribute="trailing" constant="14" id="OID-h0-9sk"/>
                             <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="dhj-KA-DVx" secondAttribute="trailing" constant="24" id="Oye-ok-7aN"/>
                             <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="zO0-jO-sEI" secondAttribute="trailing" constant="24" id="RCH-yf-pPI"/>
+                            <constraint firstItem="sj5-rL-EDb" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="4" id="Rtm-kG-aP6"/>
                             <constraint firstItem="dhj-KA-DVx" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="VTn-Ch-vJ3"/>
                             <constraint firstItem="dhj-KA-DVx" firstAttribute="top" secondItem="r9g-U1-6GC" secondAttribute="bottom" constant="8" id="W9d-Rh-pJf"/>
                             <constraint firstItem="r9g-U1-6GC" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="WOg-Dr-Ycf"/>
@@ -149,6 +169,7 @@
                             <constraint firstItem="DE6-vd-s2G" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="uAw-wa-jV1"/>
                             <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="r9g-U1-6GC" secondAttribute="trailing" constant="24" id="unm-EG-rDc"/>
                             <constraint firstItem="zO0-jO-sEI" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="vR6-tj-eY3"/>
+                            <constraint firstItem="bCI-gj-ygp" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="4" id="wUP-US-Io8"/>
                             <constraint firstItem="iSS-Fg-6dV" firstAttribute="top" secondItem="zO0-jO-sEI" secondAttribute="bottom" constant="24" id="yP3-xa-1cg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
@@ -167,4 +188,8 @@
             <point key="canvasLocation" x="133.33333333333334" y="-179.46428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ArrowBack" width="24" height="24"/>
+        <image name="CloseXBlack" width="24" height="24"/>
+    </resources>
 </document>

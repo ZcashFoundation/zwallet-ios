@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -146,13 +147,23 @@ Memo 4</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9h8-Pz-hky">
+                                <rect key="frame" x="14" y="48" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="1Vl-JK-cOq"/>
+                                    <constraint firstAttribute="width" constant="44" id="b2a-iZ-nm6"/>
+                                </constraints>
+                                <state key="normal" image="ArrowBackWhite"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96854275465011597" green="0.96868163347244263" blue="0.96851247549057007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="etR-G8-YOv" firstAttribute="leading" secondItem="kOX-QC-cnU" secondAttribute="leading" id="2mP-wa-7NZ"/>
                             <constraint firstAttribute="bottom" secondItem="etR-G8-YOv" secondAttribute="bottom" id="3dJ-Ip-KXs"/>
                             <constraint firstItem="etR-G8-YOv" firstAttribute="top" secondItem="jbe-IX-HiN" secondAttribute="bottom" id="6aq-qp-aVe"/>
+                            <constraint firstItem="9h8-Pz-hky" firstAttribute="leading" secondItem="BYh-FW-Fpk" secondAttribute="leading" constant="14" id="Ezr-7L-xSW"/>
                             <constraint firstItem="jbe-IX-HiN" firstAttribute="top" secondItem="BYh-FW-Fpk" secondAttribute="top" constant="-44" id="M5y-PJ-egq"/>
+                            <constraint firstItem="9h8-Pz-hky" firstAttribute="top" secondItem="BYh-FW-Fpk" secondAttribute="top" constant="4" id="NfV-1P-0cm"/>
                             <constraint firstItem="jbe-IX-HiN" firstAttribute="leading" secondItem="kOX-QC-cnU" secondAttribute="leading" id="cOV-00-eQf"/>
                             <constraint firstAttribute="trailing" secondItem="etR-G8-YOv" secondAttribute="trailing" id="h8c-ey-Xe7"/>
                             <constraint firstAttribute="trailing" secondItem="jbe-IX-HiN" secondAttribute="trailing" id="vL7-ME-ff7"/>
@@ -172,4 +183,7 @@ Memo 4</string>
             <point key="canvasLocation" x="-162.31884057971016" y="-762.05357142857144"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ArrowBackWhite" width="24" height="24"/>
+    </resources>
 </document>
