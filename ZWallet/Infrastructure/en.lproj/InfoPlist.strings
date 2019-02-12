@@ -78,3 +78,9 @@
 
 "amount.available" = "available";
 
+"memo.title" = "Memo (optional)";
+
+"memo.memo.placeholder" = "Start typing";
+
+"memo.next" = "Next";
+

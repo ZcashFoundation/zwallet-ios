@@ -66,6 +66,7 @@
 		EE76B85D21D8D1930093571F /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85021D8D1930093571F /* SourceSansPro-SemiBold.ttf */; };
 		EE76B85E21D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85121D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf */; };
 		EE76B85F21D8D1930093571F /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */; };
+		EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */; };
 		EEBEBB7521FF8DC800A6BD18 /* RecipientAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB7421FF8DC800A6BD18 /* RecipientAddressVC.swift */; };
 		EEBEBB7721FF91B700A6BD18 /* RecipientAddressDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB7621FF91B700A6BD18 /* RecipientAddressDelegate.swift */; };
 		EEBEBB7821FF97AC00A6BD18 /* RecipientAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBEBB7221FF8B6D00A6BD18 /* RecipientAddress.storyboard */; };
@@ -163,6 +164,7 @@
 		EE76B85021D8D1930093571F /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		EE76B85121D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetailsVCDelegate.swift; sourceTree = "<group>"; };
 		EE96916F21D561BE00BE1289 /* Passphrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Passphrase.storyboard; sourceTree = "<group>"; };
 		EEBEBB7221FF8B6D00A6BD18 /* RecipientAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipientAddress.storyboard; sourceTree = "<group>"; };
 		EEBEBB7421FF8DC800A6BD18 /* RecipientAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientAddressVC.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 			children = (
 				EE377EEA21F7AF3C00138385 /* TrxDetailTableViewCell.swift */,
 				EE377EE821F7A76500138385 /* TrxDetailsVC.swift */,
+				EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */,
 				EE377EEC21F7B02600138385 /* TrxMemoTableViewCell.swift */,
 			);
 			path = TrxDetails;
@@ -671,6 +674,7 @@
 				EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */,
 				EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
+				EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
 				EEBEBB7D2200E10B00A6BD18 /* ScanVCDelegate.swift in Sources */,

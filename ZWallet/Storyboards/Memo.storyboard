@@ -24,7 +24,7 @@
         <!--MemoVC-->
         <scene sceneID="5TK-63-Amy">
             <objects>
-                <viewController storyboardIdentifier="Memo" id="M2V-hB-lEq" customClass="MemoVC" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Memo" id="M2V-hB-lEq" customClass="MemoVC" customModule="ZWallet" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MfU-s3-T92">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,6 +98,9 @@
                                     <constraint firstAttribute="width" constant="44" id="onO-tg-fYE"/>
                                 </constraints>
                                 <state key="normal" image="ArrowBack"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="amt-b4-uUv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-Hs-M8o">
                                 <rect key="frame" x="356" y="48" width="44" height="44"/>
@@ -106,6 +109,9 @@
                                     <constraint firstAttribute="height" constant="44" id="pAE-Sf-QLC"/>
                                 </constraints>
                                 <state key="normal" image="CloseXBlack"/>
+                                <connections>
+                                    <action selector="cancelTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="faP-Yu-GbJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -130,6 +136,8 @@
                         <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="BD7-Xi-ojG" id="pe5-cm-tBf"/>
+                        <outlet property="cancelButton" destination="vp4-Hs-M8o" id="G6b-hm-KO9"/>
                         <outlet property="memoTextField" destination="miM-vD-sj4" id="D9a-Eb-LRK"/>
                         <outlet property="nextButton" destination="H0N-Ax-m9d" id="5yh-hp-fjw"/>
                         <outlet property="progressBar" destination="wua-MI-GFO" id="gWZ-hc-G3M"/>

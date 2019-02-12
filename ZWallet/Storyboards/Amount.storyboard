@@ -132,6 +132,9 @@
                                     <constraint firstAttribute="height" constant="44" id="ngF-sq-bqh"/>
                                 </constraints>
                                 <state key="normal" image="ArrowBack"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="vVH-c8-o4r"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VIp-IB-iwc">
                                 <rect key="frame" x="356" y="48" width="44" height="44"/>
@@ -140,6 +143,9 @@
                                     <constraint firstAttribute="height" constant="44" id="L4i-X4-okR"/>
                                 </constraints>
                                 <state key="normal" image="CloseXBlack"/>
+                                <connections>
+                                    <action selector="cancelButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="wyU-af-Egh"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +181,8 @@
                     <connections>
                         <outlet property="amountTextField" destination="miM-vD-sj4" id="pOE-pW-ai9"/>
                         <outlet property="availableLabel" destination="Pfc-k9-aBV" id="wD0-iM-9fX"/>
+                        <outlet property="backButton" destination="yL3-zj-s2d" id="xWE-ih-G4c"/>
+                        <outlet property="cancelButton" destination="VIp-IB-iwc" id="U6E-7E-yIR"/>
                         <outlet property="currencyLabel" destination="dhj-KA-DVx" id="Qcl-PF-XMH"/>
                         <outlet property="nextButton" destination="H0N-Ax-m9d" id="N4E-Jq-0AF"/>
                         <outlet property="progressBar" destination="wua-MI-GFO" id="Qcd-GW-Y2L"/>

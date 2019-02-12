@@ -54,6 +54,14 @@ extension SendCoordinator: RecipientAddressDelegate {
         self.showAmountView()
     }
 
+    func recipientAddressVCBackTouched(sender: RecipientAddressVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func recipientAddressVCCancelTouched(sender: RecipientAddressVC) {
+        self.delegate?.sendCoordinatorCancelled(coordinator: self)
+    }
+
     private func showRecipientAddressView() {
         let vc = self.viewFactory.getRecipientAddressView()
         vc.delegate = self
@@ -88,6 +96,14 @@ extension SendCoordinator: AmountVCDelegate {
         self.showMemoView()
     }
 
+    func amountVCDelegateBackTouched(sender: AmountVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func amountVCDelegateCancelTouched(sender: AmountVC) {
+        self.delegate?.sendCoordinatorCancelled(coordinator: self)
+    }
+
     private func showAmountView() {
         let vc = self.viewFactory.getAmountView()
         vc.delegate = self
@@ -104,6 +120,14 @@ extension SendCoordinator: MemoVCDelegate {
 
     func memoVCDelegateNextButtonTouched(sender: MemoVC, memo: String?) {
         #warning("implement")
+    }
+
+    func memoVCDelegateBackTouched(sender: MemoVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func memoVCDelegateCancelTouched(sender: MemoVC) {
+        self.delegate?.sendCoordinatorCancelled(coordinator: self)
     }
 
     private func showMemoView() {

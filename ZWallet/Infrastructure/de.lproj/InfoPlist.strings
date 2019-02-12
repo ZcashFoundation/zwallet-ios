@@ -78,3 +78,9 @@
 
 "amount.available" = "verfügbar";
 
+"memo.title" = "Memo (optional)";
+
+"memo.memo.placeholder" = "Eingabe";
+
+"memo.next" = "Weiter";
+

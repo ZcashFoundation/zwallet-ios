@@ -62,11 +62,13 @@ extension HomeCoordinator: HomeVCDelegate {
 
         self.registerForNewTrx()
 
-        let vc = self.viewFactory.getHomeView()
-        vc.delegate = self
-        vc.localizer = self.localizer
-        vc.trxHistory = self.trxHistoryProvider.all()
-        self.navigationController.pushViewController(vc, animated: true)
+        self.homeVC = self.viewFactory.getHomeView()
+        if let vc = self.homeVC {
+            vc.delegate = self
+            vc.localizer = self.localizer
+            vc.trxHistory = self.trxHistoryProvider.all()
+            self.navigationController.pushViewController(vc, animated: true)
+        }
     }
 
     private func showSend() {
@@ -79,6 +81,7 @@ extension HomeCoordinator: HomeVCDelegate {
 
     private func showTrxDetailsView(for trxDetails: TrxDetails) {
         let vc = self.viewFactory.getTrxDetailsView()
+        vc.delegate = self
         vc.localizer = self.localizer
         vc.trxDetails = trxDetails
         self.navigationController.pushViewController(vc, animated: true)
@@ -119,6 +122,14 @@ extension HomeCoordinator: HomeVCDelegate {
 }
 
 
+extension HomeCoordinator: TrxDetailsVCDelegate {
+
+    func trxDetailsVCDelegateBackTouched(sender: TrxDetailsVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+}
+
+
 extension HomeCoordinator: TrxHistoryObservable {
     
     func changed() {
@@ -127,4 +138,15 @@ extension HomeCoordinator: TrxHistoryObservable {
 }
 
 
-extension HomeCoordinator: SendCoordinatorDelegate {}
+extension HomeCoordinator: SendCoordinatorDelegate {
+
+    func sendCoordinatorSuccessful(coordinator: SendCoordinator) {
+        #warning("implement")
+    }
+
+    func sendCoordinatorCancelled(coordinator: SendCoordinator) {
+        if let vc = self.homeVC {
+            self.navigationController.popToViewController(vc, animated: true)
+        }
+    }
+}

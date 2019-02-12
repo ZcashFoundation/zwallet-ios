@@ -10,6 +10,8 @@ import UIKit
 
 class MemoVC: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var progressBar: ZWProgressBar!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var memoTextField: UITextField!
@@ -21,6 +23,14 @@ class MemoVC: UIViewController {
 
     @IBAction func nextButtonTouched() {
         self.delegate?.memoVCDelegateNextButtonTouched(sender: self, memo: self.memoTextField.text)
+    }
+
+    @IBAction func backButtonTouched() {
+        self.delegate?.memoVCDelegateBackTouched(sender: self)
+    }
+
+    @IBAction func cancelTouched() {
+        self.delegate?.memoVCDelegateCancelTouched(sender: self)
     }
 
     override func viewDidLoad() {

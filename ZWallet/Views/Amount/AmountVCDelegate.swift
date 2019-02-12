@@ -12,4 +12,6 @@ import Foundation
 internal protocol AmountVCDelegate: class {
     func amountVCDelegateSendMaximumButtonTouched(sender: AmountVC)
     func amountVCDelegateNextButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits)
+    func amountVCDelegateBackTouched(sender: AmountVC)
+    func amountVCDelegateCancelTouched(sender: AmountVC)
 }

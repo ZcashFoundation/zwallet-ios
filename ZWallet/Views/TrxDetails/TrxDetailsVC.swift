@@ -10,14 +10,20 @@ import UIKit
 
 class TrxDetailsVC: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var trxDirectionLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     @IBOutlet weak var fiatAmountLabel: UILabel!
     @IBOutlet weak var headerView: UIView!
     @IBOutlet weak var detailsTableView: UITableView!
 
+    public weak var delegate: TrxDetailsVCDelegate?
     public weak var localizer: Localizable?
     public var trxDetails: TrxDetails?
+
+    @IBAction func backButtonTouched() {
+        self.delegate?.trxDetailsVCDelegateBackTouched(sender: self)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

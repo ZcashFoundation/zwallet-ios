@@ -10,6 +10,8 @@ import UIKit
 
 class AmountVC: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var progressBar: ZWProgressBar!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var currencyLabel: UILabel!
@@ -31,6 +33,14 @@ class AmountVC: UIViewController {
         let s = self.amountTextField.text ?? "0"
         guard let zec = ZecInAtomicUnits(from: s) else { return }
         self.delegate?.amountVCDelegateNextButtonTouched(sender: self, amount: zec)
+    }
+
+    @IBAction func backButtonTouched() {
+        self.delegate?.amountVCDelegateBackTouched(sender: self)
+    }
+
+    @IBAction func cancelButtonTouched() {
+        self.delegate?.amountVCDelegateCancelTouched(sender: self)
     }
 
     override func viewDidLoad() {

@@ -137,6 +137,9 @@
                                     <constraint firstAttribute="width" constant="44" id="j2d-fh-jPr"/>
                                 </constraints>
                                 <state key="normal" image="ArrowBack"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="HA3-S8-uj6"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sj5-rL-EDb">
                                 <rect key="frame" x="356" y="48" width="44" height="44"/>
@@ -145,6 +148,9 @@
                                     <constraint firstAttribute="height" constant="44" id="bCI-BR-QXD"/>
                                 </constraints>
                                 <state key="normal" image="CloseXBlack"/>
+                                <connections>
+                                    <action selector="cancelButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="DuX-G1-mzy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -175,6 +181,8 @@
                         <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
                     </view>
                     <connections>
+                        <outlet property="backButton" destination="bCI-gj-ygp" id="ao9-5M-zO2"/>
+                        <outlet property="cancelButton" destination="sj5-rL-EDb" id="Mav-wY-cY3"/>
                         <outlet property="descriptionLabel" destination="dhj-KA-DVx" id="i3Q-Zp-D1j"/>
                         <outlet property="enterManuallyButton" destination="iSS-Fg-6dV" id="lPH-rV-svv"/>
                         <outlet property="pasteFromClipboardButton" destination="zO0-jO-sEI" id="Qpp-Fj-D5O"/>

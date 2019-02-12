@@ -13,4 +13,6 @@ internal protocol RecipientAddressDelegate: class {
     func recipientAddressVCScanButtonTouched(sender: RecipientAddressVC)
     func recipientAddressVCPasteFromClipboardButtonTouched(sender: RecipientAddressVC)
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC)
+    func recipientAddressVCBackTouched(sender: RecipientAddressVC)
+    func recipientAddressVCCancelTouched(sender: RecipientAddressVC)
 }

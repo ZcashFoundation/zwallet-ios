@@ -9,4 +9,7 @@
 import Foundation
 
 
-internal protocol SendCoordinatorDelegate: class {}
+internal protocol SendCoordinatorDelegate: class {
+    func sendCoordinatorSuccessful(coordinator: SendCoordinator)
+    func sendCoordinatorCancelled(coordinator: SendCoordinator)
+}

@@ -10,6 +10,8 @@ import UIKit
 
 class RecipientAddressVC: UIViewController {
 
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     @IBOutlet weak var progressBar: ZWProgressBar!
     @IBOutlet weak var titelLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
@@ -19,6 +21,14 @@ class RecipientAddressVC: UIViewController {
 
     public weak var delegate: RecipientAddressDelegate?
     public weak var localizer: Localizable?
+
+    @IBAction func backButtonTouched() {
+        self.delegate?.recipientAddressVCBackTouched(sender: self)
+    }
+
+    @IBAction func cancelButtonTouched() {
+        self.delegate?.recipientAddressVCCancelTouched(sender: self)
+    }
 
     @IBAction func scanCodeButtonTouched() {
         self.delegate?.recipientAddressVCScanButtonTouched(sender: self)

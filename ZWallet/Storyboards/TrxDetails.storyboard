@@ -154,6 +154,9 @@ Memo 4</string>
                                     <constraint firstAttribute="width" constant="44" id="b2a-iZ-nm6"/>
                                 </constraints>
                                 <state key="normal" image="ArrowBackWhite"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="3iR-4S-bLd" eventType="touchUpInside" id="Mzx-VB-rlA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.96854275465011597" green="0.96868163347244263" blue="0.96851247549057007" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -172,6 +175,7 @@ Memo 4</string>
                     </view>
                     <connections>
                         <outlet property="amountLabel" destination="oqZ-HW-Zcf" id="r5e-JA-dQq"/>
+                        <outlet property="backButton" destination="9h8-Pz-hky" id="dcN-P7-cwH"/>
                         <outlet property="detailsTableView" destination="etR-G8-YOv" id="5r1-iQ-qOl"/>
                         <outlet property="fiatAmountLabel" destination="9dR-7B-uMn" id="y2f-Fc-VGx"/>
                         <outlet property="headerView" destination="jbe-IX-HiN" id="ShJ-QC-BaI"/>
