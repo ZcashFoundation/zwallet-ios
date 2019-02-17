@@ -120,6 +120,8 @@ extension SendCoordinator: MemoVCDelegate {
 
     func memoVCDelegateNextButtonTouched(sender: MemoVC, memo: String?) {
         #warning("implement")
+
+        self.showReviewView()
     }
 
     func memoVCDelegateBackTouched(sender: MemoVC) {
@@ -135,6 +137,48 @@ extension SendCoordinator: MemoVCDelegate {
         vc.delegate = self
         vc.localizer = self.localizer
         vc.memo = "22of8.ch"
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+
+extension SendCoordinator: ReviewVCDelegate {
+
+    func reviewVCDelegateBackTouched(sender: ReviewVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func reviewVCDelegateCancelTouched(sender: ReviewVC) {
+        self.delegate?.sendCoordinatorCancelled(coordinator: self)
+    }
+
+    func reviewVCDelegateSendTouched(sender: ReviewVC) {
+        #warning("implement")
+    }
+
+    func reviewVCDelegateChangeAmountTouched(sender: ReviewVC) {
+        #warning("implement")
+    }
+
+    func reviewVCDelegateChangeReceivingAddressTouched(sender: ReviewVC) {
+        #warning("implement")
+    }
+
+    func reviewVCDelegateChangeMemoTouched(sender: ReviewVC) {
+        #warning("implement")
+    }
+
+    private func showReviewView() {
+        let vc = self.viewFactory.getReviewVC()
+        vc.delegate = self
+        vc.localizer = self.localizer
+
+        #warning("set view model")
+        vc.viewModel = ReviewViewModel(amount: 2208_000_000_000_000,
+                                       fiatAmount: "22.08 CHF",
+                                       receivingAddress: "reveiver's address here",
+                                       memo: "some memo for this transaction comes here and may be longer")
+
         self.navigationController.pushViewController(vc, animated: true)
     }
 }

@@ -84,3 +84,13 @@
 
 "memo.next" = "Weiter";
 
+"review.title" = "Kontrolle & Bestätigung";
+
+"review.amount" = "Betrag";
+
+"review.receivingAddress" = "Empfängeradresse";
+
+"review.memo" = "Memo";
+
+"review.send" = "Sende";
+

@@ -84,3 +84,13 @@
 
 "memo.next" = "Next";
 
+"review.title" = "Review & Confirm";
+
+"review.amount" = "Amount";
+
+"review.receivingAddress" = "Receiving Address";
+
+"review.memo" = "Memo";
+
+"review.send" = "Send";
+

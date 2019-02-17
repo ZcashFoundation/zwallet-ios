@@ -16,6 +16,9 @@
 		EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */; };
 		EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */; };
 		EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */; };
+		EE18769F221611E6004853A7 /* ReviewVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18769E221611E6004853A7 /* ReviewVCDelegate.swift */; };
+		EE1876A1221612AE004853A7 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A0221612AE004853A7 /* ReviewViewModel.swift */; };
+		EE1876A322161632004853A7 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A222161632004853A7 /* ReviewTableViewCell.swift */; };
 		EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB221E5303D00138385 /* ViewFactory.swift */; };
 		EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */; };
 		EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */; };
@@ -67,6 +70,8 @@
 		EE76B85E21D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85121D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf */; };
 		EE76B85F21D8D1930093571F /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */; };
 		EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */; };
+		EE94A7502214B52900882BB1 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94A74F2214B52900882BB1 /* ReviewVC.swift */; };
+		EE94A7512214B6C500882BB1 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE94A74D2214AA2100882BB1 /* Review.storyboard */; };
 		EEBEBB7521FF8DC800A6BD18 /* RecipientAddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB7421FF8DC800A6BD18 /* RecipientAddressVC.swift */; };
 		EEBEBB7721FF91B700A6BD18 /* RecipientAddressDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB7621FF91B700A6BD18 /* RecipientAddressDelegate.swift */; };
 		EEBEBB7821FF97AC00A6BD18 /* RecipientAddress.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBEBB7221FF8B6D00A6BD18 /* RecipientAddress.storyboard */; };
@@ -111,6 +116,9 @@
 		EE07A46B21E29EA4006031C8 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.Delegate.swift; sourceTree = "<group>"; };
+		EE18769E221611E6004853A7 /* ReviewVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVCDelegate.swift; sourceTree = "<group>"; };
+		EE1876A0221612AE004853A7 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		EE1876A222161632004853A7 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		EE377EB221E5303D00138385 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.swift; sourceTree = "<group>"; };
 		EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.Delegate.swift; sourceTree = "<group>"; };
@@ -165,6 +173,8 @@
 		EE76B85121D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
 		EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetailsVCDelegate.swift; sourceTree = "<group>"; };
+		EE94A74D2214AA2100882BB1 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
+		EE94A74F2214B52900882BB1 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
 		EE96916F21D561BE00BE1289 /* Passphrase.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Passphrase.storyboard; sourceTree = "<group>"; };
 		EEBEBB7221FF8B6D00A6BD18 /* RecipientAddress.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RecipientAddress.storyboard; sourceTree = "<group>"; };
 		EEBEBB7421FF8DC800A6BD18 /* RecipientAddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipientAddressVC.swift; sourceTree = "<group>"; };
@@ -378,6 +388,7 @@
 				EE96916F21D561BE00BE1289 /* Passphrase.storyboard */,
 				EE57702C21D38A8200433CAB /* Pin.storyboard */,
 				EEBEBB7221FF8B6D00A6BD18 /* RecipientAddress.storyboard */,
+				EE94A74D2214AA2100882BB1 /* Review.storyboard */,
 				EEBEBB7E2200E41D00A6BD18 /* Scan.storyboard */,
 				EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */,
 			);
@@ -410,6 +421,7 @@
 				EE377EC321E8F44C00138385 /* Passphrase */,
 				EE377EBA21E68A6600138385 /* Pin */,
 				EEBEBB7321FF8D9C00A6BD18 /* RecipientAddress */,
+				EE94A74E2214B50A00882BB1 /* Review */,
 				EEBEBB792200DF9900A6BD18 /* Scan */,
 				EE377EE721F7A71A00138385 /* TrxDetails */,
 			);
@@ -469,6 +481,17 @@
 				EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */,
 			);
 			path = Source_Sans_Pro;
+			sourceTree = "<group>";
+		};
+		EE94A74E2214B50A00882BB1 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				EE1876A222161632004853A7 /* ReviewTableViewCell.swift */,
+				EE94A74F2214B52900882BB1 /* ReviewVC.swift */,
+				EE18769E221611E6004853A7 /* ReviewVCDelegate.swift */,
+				EE1876A0221612AE004853A7 /* ReviewViewModel.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		EEBEBB7321FF8D9C00A6BD18 /* RecipientAddress */ = {
@@ -607,6 +630,7 @@
 			files = (
 				EE76B85421D8D1930093571F /* SourceSansPro-SemiBoldItalic.ttf in Resources */,
 				EE76B85C21D8D1930093571F /* SourceSansPro-BoldItalic.ttf in Resources */,
+				EE94A7512214B6C500882BB1 /* Review.storyboard in Resources */,
 				EE377ECC21EB4A6800138385 /* Passphrase.storyboard in Resources */,
 				EEBEBB7821FF97AC00A6BD18 /* RecipientAddress.storyboard in Resources */,
 				EE76B85321D8D1930093571F /* SourceSansPro-BlackItalic.ttf in Resources */,
@@ -653,7 +677,10 @@
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */,
+				EE1876A1221612AE004853A7 /* ReviewViewModel.swift in Sources */,
+				EE18769F221611E6004853A7 /* ReviewVCDelegate.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
+				EE1876A322161632004853A7 /* ReviewTableViewCell.swift in Sources */,
 				EE377EEB21F7AF3C00138385 /* TrxDetailTableViewCell.swift in Sources */,
 				EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */,
 				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
@@ -683,6 +710,7 @@
 				EE377ECF21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift in Sources */,
 				EEBEBB7521FF8DC800A6BD18 /* RecipientAddressVC.swift in Sources */,
 				EE377EBC21E68AB000138385 /* PinVC.swift in Sources */,
+				EE94A7502214B52900882BB1 /* ReviewVC.swift in Sources */,
 				EE377EC221E7DFD200138385 /* Constants.swift in Sources */,
 				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
 				EEBEBB9E2208D64C00A6BD18 /* AmountVC.swift in Sources */,
