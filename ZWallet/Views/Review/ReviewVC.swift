@@ -101,6 +101,12 @@ extension ReviewVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return CGFloat(self.cellDefinitions[indexPath.row].height)
     }
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let action = self.cellDefinitions[indexPath.row].action {
+            action(self)
+        }
+    }
 }
 
 

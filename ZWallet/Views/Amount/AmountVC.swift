@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class AmountVC: UIViewController {
 
     @IBOutlet weak var backButton: UIButton!
@@ -22,8 +23,9 @@ class AmountVC: UIViewController {
 
     public weak var delegate: AmountVCDelegate?
     public weak var localizer: Localizable?
-    public var amount: ZecInAtomicUnits?
-    public var availableAmount: ZecInAtomicUnits?
+    public var viewModel: AmountVCViewModel?
+
+    private var amount: ZecInAtomicUnits?
 
     @IBAction func sendMaximumButtonTouched() {
         self.delegate?.amountVCDelegateSendMaximumButtonTouched(sender: self)
@@ -32,7 +34,14 @@ class AmountVC: UIViewController {
     @IBAction func nextButtonTouched() {
         let s = self.amountTextField.text ?? "0"
         guard let zec = ZecInAtomicUnits(from: s) else { return }
-        self.delegate?.amountVCDelegateNextButtonTouched(sender: self, amount: zec)
+        guard let mode = self.viewModel?.mode else { return }
+
+        switch mode {
+        case .new:
+            self.delegate?.amountVCDelegateNextButtonTouched(sender: self, amount: zec)
+        case .edit(_):
+            self.delegate?.amountVCDelegateDoneButtonTouched(sender: self, amount: zec)
+        }
     }
 
     @IBAction func backButtonTouched() {
@@ -67,13 +76,27 @@ class AmountVC: UIViewController {
         
         guard let localizer = self.localizer else { return }
 
-        self.titleLabel.text = localizer.localized("amount.title")
         self.currencyLabel.text = "ZEC"
         self.amountTextField.text = self.amountString()
         self.availableLabel.text = self.availableAmountString()
 
         self.sendMaximumButton.setTitle(localizer.localized("amount.sendMaximum"), for: .normal)
-        self.nextButton.setTitle(localizer.localized("amount.next"), for: .normal)
+
+        if let mode = self.viewModel?.mode {
+            switch mode {
+            case .new:
+                self.titleLabel.text = localizer.localized("amount.title")
+                self.nextButton.setTitle(localizer.localized("amount.next"), for: .normal)
+                self.backButton.isHidden = false
+                self.progressBar.isHidden = false
+            case .edit(let amount):
+                self.amount = amount
+                self.titleLabel.text = localizer.localized("amount.title.edit")
+                self.nextButton.setTitle(localizer.localized("global.done"), for: .normal)
+                self.backButton.isHidden = true
+                self.progressBar.isHidden = true
+            }
+        }
     }
 
     private func amountString() -> String {
@@ -88,7 +111,7 @@ class AmountVC: UIViewController {
     private func availableAmountString() -> String {
         let postfix = self.localizer?.localized("amount.available") ?? "!!available"
 
-        guard let availableAmount = self.availableAmount else {
+        guard let availableAmount = self.viewModel?.availableAmount else {
             return "0 \(postfix)"
         }
 

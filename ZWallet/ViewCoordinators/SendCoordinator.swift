@@ -51,7 +51,11 @@ extension SendCoordinator: RecipientAddressDelegate {
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
         #warning("implement")
-        self.showAmountView()
+
+        let viewModel = AmountVCViewModel(mode: .new,
+                                          availableAmount: 2208_000_000_000)
+        #warning("set correct available amount")
+        self.showAmountView(withViewModel: viewModel)
     }
 
     func recipientAddressVCBackTouched(sender: RecipientAddressVC) {
@@ -75,7 +79,11 @@ extension SendCoordinator: ScanVCDelegate {
 
     func scanVCDelegateUriDetected(uri: String, sender: ScanVC) {
         #warning("implement")
-        self.showAmountView()
+
+        let viewModel = AmountVCViewModel(mode: .new,
+                                          availableAmount: 2208_000_000_000)
+        #warning("set correct available amount")
+        self.showAmountView(withViewModel: viewModel)
     }
 
     func scanVCDelegateCancelled(sender: ScanVC) {
@@ -96,6 +104,12 @@ extension SendCoordinator: AmountVCDelegate {
         self.showMemoView()
     }
 
+    func amountVCDelegateDoneButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits) {
+        #warning("store amount")
+
+        self.navigationController.popViewController(animated: true)
+    }
+
     func amountVCDelegateBackTouched(sender: AmountVC) {
         self.navigationController.popViewController(animated: true)
     }
@@ -104,13 +118,11 @@ extension SendCoordinator: AmountVCDelegate {
         self.delegate?.sendCoordinatorCancelled(coordinator: self)
     }
 
-    private func showAmountView() {
+    private func showAmountView(withViewModel viewModel: AmountVCViewModel) {
         let vc = self.viewFactory.getAmountView()
         vc.delegate = self
         vc.localizer = self.localizer
-        vc.amount = 0
-        #warning("set correct available amount")
-        vc.availableAmount = 22_080_000_000_000
+        vc.viewModel = viewModel
         self.navigationController.pushViewController(vc, animated: true)
     }
 }
@@ -158,14 +170,23 @@ extension SendCoordinator: ReviewVCDelegate {
 
     func reviewVCDelegateChangeAmountTouched(sender: ReviewVC) {
         #warning("implement")
+
+        let viewModel = AmountVCViewModel(mode: .edit(amount: 222888),
+                                          availableAmount: 2208_000_000_000)
+        #warning("set correct amounts")
+        self.showAmountView(withViewModel: viewModel)
     }
 
     func reviewVCDelegateChangeReceivingAddressTouched(sender: ReviewVC) {
         #warning("implement")
+
+        self.showRecipientAddressView()
     }
 
     func reviewVCDelegateChangeMemoTouched(sender: ReviewVC) {
         #warning("implement")
+
+        self.showMemoView()
     }
 
     private func showReviewView() {
