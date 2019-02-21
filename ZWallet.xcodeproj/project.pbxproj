@@ -20,6 +20,7 @@
 		EE1876A1221612AE004853A7 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A0221612AE004853A7 /* ReviewViewModel.swift */; };
 		EE1876A322161632004853A7 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A222161632004853A7 /* ReviewTableViewCell.swift */; };
 		EE1876A52219DD99004853A7 /* AmountVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A42219DD99004853A7 /* AmountVCViewModel.swift */; };
+		EE1876A72219FA15004853A7 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A62219FA15004853A7 /* Wallet.swift */; };
 		EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB221E5303D00138385 /* ViewFactory.swift */; };
 		EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */; };
 		EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */; };
@@ -121,6 +122,7 @@
 		EE1876A0221612AE004853A7 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
 		EE1876A222161632004853A7 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		EE1876A42219DD99004853A7 /* AmountVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVCViewModel.swift; sourceTree = "<group>"; };
+		EE1876A62219FA15004853A7 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		EE377EB221E5303D00138385 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.swift; sourceTree = "<group>"; };
 		EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.Delegate.swift; sourceTree = "<group>"; };
@@ -295,6 +297,7 @@
 		EE377EE021F4F16100138385 /* Types */ = {
 			isa = PBXGroup;
 			children = (
+				EE1876A62219FA15004853A7 /* Wallet.swift */,
 				EE377EE321F4F1A100138385 /* TrxDetails.swift */,
 				EE377EE121F4F18700138385 /* TrxDirection.swift */,
 				EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */,
@@ -699,6 +702,7 @@
 				EEBEBB882207061300A6BD18 /* String-Extension.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
+				EE1876A72219FA15004853A7 /* Wallet.swift in Sources */,
 				EE377EF321FE181000138385 /* Date-Extension.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */,

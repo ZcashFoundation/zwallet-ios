@@ -46,12 +46,14 @@ extension ZecInAtomicUnits {
     }
 
     /// Returns the current amount prettily formatted with predefined number of fractional digits
-    public func formatted() -> String {
+    internal func formatted(minimumFractionDigits: Int = Constants.prettyPrintNumberOfFractionDigits,
+                            maximumFractionDigits: Int = Constants.prettyPrintNumberOfFractionDigits) -> String
+    {
         let nf = NumberFormatter()
         nf.allowsFloats = true
         nf.minimumIntegerDigits = 1
-        nf.minimumFractionDigits = Constants.prettyPrintNumberOfFractionDigits
-        nf.maximumFractionDigits = Constants.prettyPrintNumberOfFractionDigits
+        nf.minimumFractionDigits = minimumFractionDigits
+        nf.maximumFractionDigits = maximumFractionDigits
 
         let zec = Double(self) / Double(Constants.atomicUnitsPerZec)
         guard let formatted = nf.string(from: NSNumber(value: zec)) else {

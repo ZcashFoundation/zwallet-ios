@@ -25,8 +25,6 @@ class AmountVC: UIViewController {
     public weak var localizer: Localizable?
     public var viewModel: AmountVCViewModel?
 
-    private var amount: ZecInAtomicUnits?
-
     @IBAction func sendMaximumButtonTouched() {
         self.delegate?.amountVCDelegateSendMaximumButtonTouched(sender: self)
     }
@@ -77,7 +75,6 @@ class AmountVC: UIViewController {
         guard let localizer = self.localizer else { return }
 
         self.currencyLabel.text = "ZEC"
-        self.amountTextField.text = self.amountString()
         self.availableLabel.text = self.availableAmountString()
 
         self.sendMaximumButton.setTitle(localizer.localized("amount.sendMaximum"), for: .normal)
@@ -86,12 +83,13 @@ class AmountVC: UIViewController {
             switch mode {
             case .new:
                 self.titleLabel.text = localizer.localized("amount.title")
+                self.amountTextField.text = "0"
                 self.nextButton.setTitle(localizer.localized("amount.next"), for: .normal)
                 self.backButton.isHidden = false
                 self.progressBar.isHidden = false
             case .edit(let amount):
-                self.amount = amount
                 self.titleLabel.text = localizer.localized("amount.title.edit")
+                self.amountTextField.text = self.formatted(amount: amount)
                 self.nextButton.setTitle(localizer.localized("global.done"), for: .normal)
                 self.backButton.isHidden = true
                 self.progressBar.isHidden = true
@@ -99,13 +97,9 @@ class AmountVC: UIViewController {
         }
     }
 
-    private func amountString() -> String {
-        guard let amount = self.amount else {
-            return "0"
-        }
-
-        #warning("do not format this value, show as user typed")
-        return "\(amount.formatted())"
+    private func formatted(amount: ZecInAtomicUnits) -> String {
+        let formatted = amount.formatted(minimumFractionDigits: 0, maximumFractionDigits: Constants.numberOfFractionDigits)
+        return formatted
     }
 
     private func availableAmountString() -> String {
@@ -126,9 +120,13 @@ extension AmountVC: UITextFieldDelegate {
                    shouldChangeCharactersIn range: NSRange,
                    replacementString string: String) -> Bool
     {
-        #warning("check for multiple decimal separators")
+        let swiftRange = Range(range, in: textField.text!)!
+        var modified = textField.text!
+        modified.replaceSubrange(swiftRange, with: string)
 
-        #warning("check for max fraction length")
+        if let prettyPrinted = modified.prettyPrintDouble() {
+            textField.text = prettyPrinted
+        }
 
         return false
     }
