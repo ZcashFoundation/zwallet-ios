@@ -21,6 +21,8 @@
 		EE1876A322161632004853A7 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A222161632004853A7 /* ReviewTableViewCell.swift */; };
 		EE1876A52219DD99004853A7 /* AmountVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A42219DD99004853A7 /* AmountVCViewModel.swift */; };
 		EE1876A72219FA15004853A7 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A62219FA15004853A7 /* Wallet.swift */; };
+		EE1876A9221EE0B2004853A7 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A8221EE0B2004853A7 /* Payment.swift */; };
+		EE1876AB221F4CD0004853A7 /* MemoVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876AA221F4CD0004853A7 /* MemoVCViewModel.swift */; };
 		EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB221E5303D00138385 /* ViewFactory.swift */; };
 		EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */; };
 		EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */; };
@@ -123,6 +125,8 @@
 		EE1876A222161632004853A7 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		EE1876A42219DD99004853A7 /* AmountVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVCViewModel.swift; sourceTree = "<group>"; };
 		EE1876A62219FA15004853A7 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		EE1876A8221EE0B2004853A7 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
+		EE1876AA221F4CD0004853A7 /* MemoVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVCViewModel.swift; sourceTree = "<group>"; };
 		EE377EB221E5303D00138385 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.swift; sourceTree = "<group>"; };
 		EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.Delegate.swift; sourceTree = "<group>"; };
@@ -302,6 +306,7 @@
 				EE377EE121F4F18700138385 /* TrxDirection.swift */,
 				EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */,
 				EE377EF021FDEE3F00138385 /* ZEC.swift */,
+				EE1876A8221EE0B2004853A7 /* Payment.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -548,6 +553,7 @@
 			children = (
 				EEBEBB9C2208D60100A6BD18 /* MemoVC.swift */,
 				EEBEBB9F2208D66600A6BD18 /* MemoVCDelegate.swift */,
+				EE1876AA221F4CD0004853A7 /* MemoVCViewModel.swift */,
 			);
 			path = Memo;
 			sourceTree = "<group>";
@@ -707,6 +713,7 @@
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */,
 				EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */,
+				EE1876A9221EE0B2004853A7 /* Payment.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
@@ -729,6 +736,7 @@
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
 				EE1876A52219DD99004853A7 /* AmountVCViewModel.swift in Sources */,
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,
+				EE1876AB221F4CD0004853A7 /* MemoVCViewModel.swift in Sources */,
 				EEBEBB7721FF91B700A6BD18 /* RecipientAddressDelegate.swift in Sources */,
 				EEBEBBA12208D75A00A6BD18 /* MemoVC.swift in Sources */,
 				EE07A45021E23E43006031C8 /* MainVC.swift in Sources */,

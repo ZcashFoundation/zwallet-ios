@@ -19,10 +19,18 @@ class MemoVC: UIViewController {
 
     public weak var delegate: MemoVCDelegate?
     public weak var localizer: Localizable?
-    public var memo: String?
+    public var viewModel: MemoVCViewModel?
 
     @IBAction func nextButtonTouched() {
-        self.delegate?.memoVCDelegateNextButtonTouched(sender: self, memo: self.memoTextField.text)
+        let memo = self.memoTextField.text
+        guard let mode = self.viewModel?.mode else { return }
+
+        switch mode {
+        case .new:
+            self.delegate?.memoVCDelegateNextButtonTouched(sender: self, memo: memo)
+        case .edit(_):
+            self.delegate?.memoVCDelegateDoneButtonTouched(sender: self, memo: memo)
+        }
     }
 
     @IBAction func backButtonTouched() {
@@ -59,18 +67,28 @@ class MemoVC: UIViewController {
         
         guard let localizer = self.localizer else { return }
 
-        self.titleLabel.text = localizer.localized("memo.title")
-        self.memoTextField.text = self.memo
         self.memoTextField.placeholder = localizer.localized("memo.memo.placeholder")
-        self.nextButton.setTitle(localizer.localized("memo.next"), for: .normal)
+
+        if let mode = self.viewModel?.mode {
+            switch mode {
+            case .new:
+                self.titleLabel.text = localizer.localized("memo.title")
+                self.memoTextField.text = ""
+                self.nextButton.setTitle(localizer.localized("memo.next"), for: .normal)
+                self.backButton.isHidden = false
+                self.progressBar.isHidden = false
+            case .edit(let memo):
+                self.titleLabel.text = localizer.localized("memo.title.edit")
+                self.memoTextField.text = memo
+                self.nextButton.setTitle(localizer.localized("global.done"), for: .normal)
+                self.backButton.isHidden = true
+                self.progressBar.isHidden = true
+            }
+        }
     }
 
     @objc
     private func memoTextFieldDidChange(_ sender: Any) {
-        self.memo = self.memoTextField.text
-
-        if let memo = self.memo {
-            print(memo)
-        }
+        #warning("how long does a memo allowed to be?")
     }
 }

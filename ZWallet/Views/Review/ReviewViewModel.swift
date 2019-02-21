@@ -13,5 +13,5 @@ internal struct ReviewViewModel {
     let amount: ZecInAtomicUnits
     let fiatAmount: String
     let receivingAddress: String
-    let memo: String
+    let memo: String?
 }

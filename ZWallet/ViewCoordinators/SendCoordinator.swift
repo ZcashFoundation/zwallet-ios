@@ -19,6 +19,8 @@ internal class SendCoordinator: BaseCoordinator {
     private var viewFactory: ViewFactoryProtocol
     private var localizer: Localizable
 
+    private var payment: PaymentProtocol
+
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
     {
@@ -26,6 +28,8 @@ internal class SendCoordinator: BaseCoordinator {
 
         self.viewFactory = self.iocContainer.viewFactory
         self.localizer = self.iocContainer.localizer
+
+        self.payment = Payment()
 
         super.init(navigationController: navigationController)
     }
@@ -46,16 +50,16 @@ extension SendCoordinator: RecipientAddressDelegate {
     }
 
     func recipientAddressVCPasteFromClipboardButtonTouched(sender: RecipientAddressVC) {
-        #warning("implement")
+        #warning("implement check and store")
     }
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
-        #warning("implement")
+        #warning("implement check and store")
 
         let viewModel = AmountVCViewModel(mode: .new,
                                           availableAmount: 2208_000_000_000)
         #warning("set correct available amount")
-        self.showAmountView(withViewModel: viewModel)
+        self.showAmountView(with: viewModel)
     }
 
     func recipientAddressVCBackTouched(sender: RecipientAddressVC) {
@@ -78,12 +82,12 @@ extension SendCoordinator: RecipientAddressDelegate {
 extension SendCoordinator: ScanVCDelegate {
 
     func scanVCDelegateUriDetected(uri: String, sender: ScanVC) {
-        #warning("implement")
+        #warning("implement check and store")
 
         let viewModel = AmountVCViewModel(mode: .new,
                                           availableAmount: 2208_000_000_000)
         #warning("set correct available amount")
-        self.showAmountView(withViewModel: viewModel)
+        self.showAmountView(with: viewModel)
     }
 
     func scanVCDelegateCancelled(sender: ScanVC) {
@@ -99,14 +103,13 @@ extension SendCoordinator: AmountVCDelegate {
     }
 
     func amountVCDelegateNextButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits) {
-        #warning("implement")
-
-        self.showMemoView()
+        self.payment.amount = amount
+        let viewModel = MemoVCViewModel(mode: .new)
+        self.showMemoView(with: viewModel)
     }
 
     func amountVCDelegateDoneButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits) {
-        #warning("store amount")
-
+        self.payment.amount = amount
         self.navigationController.popViewController(animated: true)
     }
 
@@ -118,7 +121,7 @@ extension SendCoordinator: AmountVCDelegate {
         self.delegate?.sendCoordinatorCancelled(coordinator: self)
     }
 
-    private func showAmountView(withViewModel viewModel: AmountVCViewModel) {
+    private func showAmountView(with viewModel: AmountVCViewModel) {
         let vc = self.viewFactory.getAmountView()
         vc.delegate = self
         vc.localizer = self.localizer
@@ -131,12 +134,17 @@ extension SendCoordinator: AmountVCDelegate {
 extension SendCoordinator: MemoVCDelegate {
 
     func memoVCDelegateNextButtonTouched(sender: MemoVC, memo: String?) {
-        #warning("implement")
-
+        self.payment.memo = memo
         self.showReviewView()
     }
 
+    func memoVCDelegateDoneButtonTouched(sender: MemoVC, memo: String?) {
+        self.payment.memo = memo
+        self.navigationController.popViewController(animated: true)
+    }
+
     func memoVCDelegateBackTouched(sender: MemoVC) {
+        self.payment.memo = nil
         self.navigationController.popViewController(animated: true)
     }
 
@@ -144,11 +152,11 @@ extension SendCoordinator: MemoVCDelegate {
         self.delegate?.sendCoordinatorCancelled(coordinator: self)
     }
 
-    private func showMemoView() {
+    private func showMemoView(with viewModel: MemoVCViewModel) {
         let vc = self.viewFactory.getMemoVC()
         vc.delegate = self
         vc.localizer = self.localizer
-        vc.memo = "22of8.ch"
+        vc.viewModel = viewModel
         self.navigationController.pushViewController(vc, animated: true)
     }
 }
@@ -169,12 +177,10 @@ extension SendCoordinator: ReviewVCDelegate {
     }
 
     func reviewVCDelegateChangeAmountTouched(sender: ReviewVC) {
-        #warning("implement")
-
-        let viewModel = AmountVCViewModel(mode: .edit(amount: 222888),
+        let viewModel = AmountVCViewModel(mode: .edit(amount: self.payment.amount ?? 0),
                                           availableAmount: 2208_000_000_000)
         #warning("set correct amounts")
-        self.showAmountView(withViewModel: viewModel)
+        self.showAmountView(with: viewModel)
     }
 
     func reviewVCDelegateChangeReceivingAddressTouched(sender: ReviewVC) {
@@ -184,9 +190,8 @@ extension SendCoordinator: ReviewVCDelegate {
     }
 
     func reviewVCDelegateChangeMemoTouched(sender: ReviewVC) {
-        #warning("implement")
-
-        self.showMemoView()
+        let viewModel = MemoVCViewModel(mode: .edit(memo: self.payment.memo))
+        self.showMemoView(with: viewModel)
     }
 
     private func showReviewView() {
@@ -195,10 +200,10 @@ extension SendCoordinator: ReviewVCDelegate {
         vc.localizer = self.localizer
 
         #warning("set view model")
-        vc.viewModel = ReviewViewModel(amount: 2208_000_000_000_000,
+        vc.viewModel = ReviewViewModel(amount: self.payment.amount ?? 0,
                                        fiatAmount: "22.08 CHF",
-                                       receivingAddress: "reveiver's address here",
-                                       memo: "some memo for this transaction comes here and may be longer")
+                                       receivingAddress: self.payment.targetAddress ?? "",
+                                       memo: self.payment.memo)
 
         self.navigationController.pushViewController(vc, animated: true)
     }

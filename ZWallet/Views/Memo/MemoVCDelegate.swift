@@ -11,6 +11,7 @@ import Foundation
 
 internal protocol MemoVCDelegate: class {
     func memoVCDelegateNextButtonTouched(sender: MemoVC, memo: String?)
+    func memoVCDelegateDoneButtonTouched(sender: MemoVC, memo: String?)
     func memoVCDelegateBackTouched(sender: MemoVC)
     func memoVCDelegateCancelTouched(sender: MemoVC)
 }
