@@ -23,6 +23,7 @@
 		EE1876A72219FA15004853A7 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A62219FA15004853A7 /* Wallet.swift */; };
 		EE1876A9221EE0B2004853A7 /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A8221EE0B2004853A7 /* Payment.swift */; };
 		EE1876AB221F4CD0004853A7 /* MemoVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876AA221F4CD0004853A7 /* MemoVCViewModel.swift */; };
+		EE21434D22298F8900F3902D /* UINavigationController-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE21434C22298F8900F3902D /* UINavigationController-Extension.swift */; };
 		EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB221E5303D00138385 /* ViewFactory.swift */; };
 		EE377EB521E6821F00138385 /* CreateNewWalletCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */; };
 		EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */; };
@@ -137,6 +138,7 @@
 		EE1876A62219FA15004853A7 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		EE1876A8221EE0B2004853A7 /* Payment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payment.swift; sourceTree = "<group>"; };
 		EE1876AA221F4CD0004853A7 /* MemoVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVCViewModel.swift; sourceTree = "<group>"; };
+		EE21434C22298F8900F3902D /* UINavigationController-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationController-Extension.swift"; sourceTree = "<group>"; };
 		EE377EB221E5303D00138385 /* ViewFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewFactory.swift; sourceTree = "<group>"; };
 		EE377EB421E6821F00138385 /* CreateNewWalletCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.swift; sourceTree = "<group>"; };
 		EE377EB621E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewWalletCoordinator.Delegate.swift; sourceTree = "<group>"; };
@@ -289,6 +291,7 @@
 				EE377ECE21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift */,
 				EE377EF221FE181000138385 /* Date-Extension.swift */,
 				EEBEBB872207061300A6BD18 /* String-Extension.swift */,
+				EE21434C22298F8900F3902D /* UINavigationController-Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -735,6 +738,7 @@
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
+				EE21434D22298F8900F3902D /* UINavigationController-Extension.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
 				EEBEBB7D2200E10B00A6BD18 /* ScanVCDelegate.swift in Sources */,
 				EE377ED421F4827500138385 /* HomeTrxTableViewCell.swift in Sources */,

@@ -27,16 +27,18 @@ class TrxDetailsVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         self.setup()
     }
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-
         self.updateView()
     }
 
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     private func setup() {
         self.detailsTableView.delegate = self
         self.detailsTableView.dataSource = self
