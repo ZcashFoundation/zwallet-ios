@@ -9,36 +9,36 @@
 import Foundation
 
 
-public protocol TrxHistoryProviderProtocol: class {
+internal protocol TrxHistoryProviderProtocol: class {
     func add(trxDetails: TrxDetails)
-    func all() -> [TrxDetails]
     func count() -> Int
+    func groupedByDate() -> TrxsGroupedByDate
     func register(observer: TrxHistoryObservable)
     func deregister(observer: TrxHistoryObservable)
 }
 
 
-public class TrxHistoryProvider: TrxHistoryProviderProtocol {
+internal class TrxHistoryProvider: TrxHistoryProviderProtocol {
 
-    private var trxHistory: [TrxDetails]
+    private var trxHistory: TrxHistory
     private var observers: [TrxHistoryObservable]
 
     public init() {
-        self.trxHistory = [TrxDetails]()
+        self.trxHistory = TrxHistory()
         self.observers = [TrxHistoryObservable]()
     }
 
     public func add(trxDetails: TrxDetails) {
-        self.trxHistory.append(trxDetails)
+        self.trxHistory.all.append(trxDetails)
         self.notifyAllObservers()
     }
 
-    public func all() -> [TrxDetails] {
-        return self.trxHistory
+   public func count() -> Int {
+        return self.trxHistory.all.count
     }
 
-    public func count() -> Int {
-        return self.trxHistory.count
+    func groupedByDate() -> TrxsGroupedByDate {
+        return self.trxHistory.groupedByDate()
     }
 
     public func register(observer: TrxHistoryObservable) {

@@ -13,5 +13,5 @@ internal protocol HomeVCDelegate: class {
     func homeVCSendButtonTouched(sender: HomeVC)
     func homeVCReceiveButtonTouched(sender: HomeVC)
     func homeVCSettingsButtonTouched(sender: HomeVC)
-    func homeVCTrxCellTouched(sender: HomeVC, rowNumber: Int)
+    func homeVCTrxCellTouched(sender: HomeVC, trxDetails: TrxDetails)
 }

@@ -21,7 +21,7 @@ class HomeVC: UIViewController {
     public weak var delegate: HomeVCDelegate?
     public weak var localizer: Localizable?
 
-    public var trxHistory = [TrxDetails]()
+    public var trxHistory: TrxsGroupedByDate?
 
     @IBAction func sendButtonTouched() {
         self.delegate?.homeVCSendButtonTouched(sender: self)
@@ -62,47 +62,65 @@ class HomeVC: UIViewController {
 }
 
 
-//extension HomeVC: TrxHistoryObservable {
-//
-//    func changed() {
-//        DispatchQueue.main.async {
-//            self.updateView()
-//        }
-//    }
-//}
-
-
 extension HomeVC: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.homeVCTrxCellTouched(sender: self, rowNumber: indexPath.row)
+        guard let history = self.trxHistory else { return }
+
+        let trxDetails = history[indexPath.section].transactions[indexPath.row]
+        self.delegate?.homeVCTrxCellTouched(sender: self, trxDetails: trxDetails)
     }
 }
 
 
 extension HomeVC: UITableViewDataSource {
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        guard let history = self.trxHistory else {
+            return 0
+        }
+        return history.count
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.trxHistory.count
+        guard let history = self.trxHistory else {
+            return 0
+        }
+        return history[section].transactions.count
+    }
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        guard let history = self.trxHistory else { return nil }
+        guard let localizer = self.localizer else { return nil }
+        let date = history[section].date
+        if date.isToday() {
+            return localizer.localized("global.today")
+        }
+        if date.isYesterday() {
+            return localizer.localized("global.yesterday")
+        }
+        return date.formattedDate()
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = self.trxTableView.dequeueReusableCell(withIdentifier: "TrxCell") as! HomeTrxTableViewCell
 
-        let cellData = self.trxHistory[indexPath.row]
-        cell.trxDateLabel.text = cellData.date.time()
+        guard let history = self.trxHistory else { return cell }
+        let trxDetails = history[indexPath.section].transactions[indexPath.row]
 
-        switch cellData.direction {
+        cell.trxDateLabel.text = trxDetails.date.formattedTime()
+
+        switch trxDetails.direction {
         case .receive:
             cell.directionLabel.text = self.localizer?.localized("trxDetail.received")
             cell.directionImageView.image = UIImage(named: "ArrowDown")
-            cell.trxAmountLabel.text = "+\(cellData.amount.formatted()) ZEC"
+            cell.trxAmountLabel.text = "+\(trxDetails.amount.formatted()) ZEC"
             #warning("fill in real value")
             cell.trxFiatAmountLabel.text = "+ fiat CHF"
         case .send:
             cell.directionLabel.text = self.localizer?.localized("trxDetail.sent")
             cell.directionImageView.image = UIImage(named: "ArrowUp")
-            cell.trxAmountLabel.text = "-\(cellData.amount.formatted()) ZEC"
+            cell.trxAmountLabel.text = "-\(trxDetails.amount.formatted()) ZEC"
             #warning("fill in real value")
             cell.trxFiatAmountLabel.text = "- fiat CHF"
         }

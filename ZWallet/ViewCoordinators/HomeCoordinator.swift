@@ -51,8 +51,7 @@ extension HomeCoordinator: HomeVCDelegate {
         #warning("implement")
     }
 
-    func homeVCTrxCellTouched(sender: HomeVC, rowNumber: Int) {
-        let trxDetails = self.trxHistoryProvider.all()[rowNumber]
+    func homeVCTrxCellTouched(sender: HomeVC, trxDetails: TrxDetails) {
         self.showTrxDetailsView(for: trxDetails)
     }
 
@@ -66,7 +65,7 @@ extension HomeCoordinator: HomeVCDelegate {
         if let vc = self.homeVC {
             vc.delegate = self
             vc.localizer = self.localizer
-            vc.trxHistory = self.trxHistoryProvider.all()
+            vc.trxHistory = self.trxHistoryProvider.groupedByDate()
             self.navigationController.pushViewController(vc, animated: true)
         }
     }
@@ -98,26 +97,58 @@ extension HomeCoordinator: HomeVCDelegate {
     private func test_addDummyData() {
         let trxHistoryProvider = self.iocContainer.trxHistoryProvider
 
-        let detailsSent = TrxDetails(direction: .send,
-                                     date: Date.init(),
-                                     amount: 22_080_000_000_000_000,
-                                     address: "address send to",
-                                     trxId: "trx id send",
-                                     memo: "memo send")
-        let detailsReceived = TrxDetails(direction: .receive,
-                                         date: Date.init(),
-                                         amount: 22_000_000_000_000,
-                                         address: "address received from",
-                                         trxId: "trx id receive",
-                                         memo: "memo receive")
-        trxHistoryProvider.add(trxDetails: detailsSent)
-        trxHistoryProvider.add(trxDetails: detailsReceived)
-        trxHistoryProvider.add(trxDetails: detailsSent)
-        trxHistoryProvider.add(trxDetails: detailsReceived)
-        trxHistoryProvider.add(trxDetails: detailsSent)
-        trxHistoryProvider.add(trxDetails: detailsReceived)
-        trxHistoryProvider.add(trxDetails: detailsSent)
-        trxHistoryProvider.add(trxDetails: detailsReceived)
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .send,
+                                                      date: Date(),
+                                                      amount: 22_080_000_000_000_000,
+                                                      address: "address send to",
+                                                      trxId: "trx id send",
+                                                      memo: "memo send"))
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .receive,
+                                                      date: Date(),
+                                                      amount: 22_000_000_000_000,
+                                                      address: "address received from",
+                                                      trxId: "trx id receive",
+                                                      memo: "memo receive"))
+
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .send,
+                                                      date: Calendar.current.date(byAdding: .day, value: -1, to: Date())!,
+                                                      amount: 22_080_000_000_000_000,
+                                                      address: "address send to",
+                                                      trxId: "trx id send",
+                                                      memo: "memo send"))
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .receive,
+                                                      date: Calendar.current.date(byAdding: .day, value: -1, to: Date())!,
+                                                      amount: 22_000_000_000_000,
+                                                      address: "address received from",
+                                                      trxId: "trx id receive",
+                                                      memo: "memo receive"))
+
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .send,
+                                                      date: Calendar.current.date(byAdding: .day, value: -2, to: Date())!,
+                                                      amount: 22_080_000_000_000_000,
+                                                      address: "address send to",
+                                                      trxId: "trx id send",
+                                                      memo: "memo send"))
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .receive,
+                                                      date: Calendar.current.date(byAdding: .day, value: -2, to: Date())!,
+                                                      amount: 22_000_000_000_000,
+                                                      address: "address received from",
+                                                      trxId: "trx id receive",
+                                                      memo: "memo receive"))
+
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .send,
+                                                      date: Calendar.current.date(byAdding: .day, value: -3, to: Date())!,
+                                                      amount: 22_080_000_000_000_000,
+                                                      address: "address send to",
+                                                      trxId: "trx id send",
+                                                      memo: "memo send"))
+
+        trxHistoryProvider.add(trxDetails: TrxDetails(direction: .receive,
+                                                      date: Calendar.current.date(byAdding: .day, value: -22, to: Date())!,
+                                                      amount: 22_000_000_000_000,
+                                                      address: "address received from",
+                                                      trxId: "trx id receive",
+                                                      memo: "memo receive"))
     }
 }
 

@@ -24,28 +24,28 @@ class TrxHistoryProviderTests: XCTestCase {
     }
 
     func test_WhenAddingAnElement_ThenListContainsThisElement() {
-        let trxDetail = self.getTrxDetail()
+        let trxDetails = self.getTrxDetails()
 
-        self.testee.add(trxDetails: trxDetail)
+        self.testee.add(trxDetails: trxDetails)
 
         let trxList = self.testee.all()
         XCTAssertFalse(trxList.isEmpty)
 
         let element = trxList[0]
 
-        XCTAssertEqual(element.direction, trxDetail.direction)
-        XCTAssertEqual(element.date, trxDetail.date)
-        XCTAssertEqual(element.amount, trxDetail.amount)
-        XCTAssertEqual(element.address, trxDetail.address)
-        XCTAssertEqual(element.trxId, trxDetail.trxId)
-        XCTAssertEqual(element.memo, trxDetail.memo)
+        XCTAssertEqual(element.direction, trxDetails.direction)
+        XCTAssertEqual(element.date, trxDetails.date)
+        XCTAssertEqual(element.amount, trxDetails.amount)
+        XCTAssertEqual(element.address, trxDetails.address)
+        XCTAssertEqual(element.trxId, trxDetails.trxId)
+        XCTAssertEqual(element.memo, trxDetails.memo)
     }
 
     func test_WhenAddingAnElement_ThenNotifyObservers() {
         let observer = ObserverMock()
         self.testee.register(observer: observer)
 
-        self.testee.add(trxDetails: self.getTrxDetail())
+        self.testee.add(trxDetails: self.getTrxDetails())
 
         XCTAssertTrue(observer.isNotified)
     }
@@ -53,7 +53,7 @@ class TrxHistoryProviderTests: XCTestCase {
     func test_WhenAddingAnElement_ThenCountIsIncremented() {
         let countBefore = self.testee.count()
 
-        self.testee.add(trxDetails: self.getTrxDetail())
+        self.testee.add(trxDetails: self.getTrxDetails())
 
         let countAfter = self.testee.count()
         XCTAssertTrue(countAfter == countBefore + 1)
@@ -64,12 +64,12 @@ class TrxHistoryProviderTests: XCTestCase {
         self.testee.register(observer: observer)
         self.testee.deregister(observer: observer)
 
-        self.testee.add(trxDetails: self.getTrxDetail())
+        self.testee.add(trxDetails: self.getTrxDetails())
 
         XCTAssertFalse(observer.isNotified)
     }
 
-    private func getTrxDetail() -> TrxDetails {
+    private func getTrxDetails() -> TrxDetails {
         return TrxDetails(direction: .receive,
                           date: Date.init(),
                           amount: 2208,

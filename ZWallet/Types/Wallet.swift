@@ -12,17 +12,21 @@ import Foundation
 internal protocol WalletProtocol {
     var address: String { get }
     var balance: ZecInAtomicUnits { get }
+    var history: TrxHistoryProtocol { get }
 }
 
 
-internal class Wallet: WalletProtocol {
+internal class xWallet: WalletProtocol {
     var address: String
     var balance: ZecInAtomicUnits
+    var history: TrxHistoryProtocol
 
     init(address: String,
-         balance: ZecInAtomicUnits)
+         balance: ZecInAtomicUnits,
+         history: TrxHistoryProtocol)
     {
         self.address = address
         self.balance = balance
+        self.history = history
     }
 }

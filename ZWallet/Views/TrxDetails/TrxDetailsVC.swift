@@ -90,7 +90,7 @@ class TrxDetailsVC: UIViewController {
         get {
             let cell = self.detailsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.detail.rawValue) as! TrxDetailsTableViewCell
             cell.titleLabel.text = self.localizer?.localized("trxDetail.date")
-            cell.bodyLabel.text = self.trxDetails?.date.dateAndTime()
+            cell.bodyLabel.text = self.trxDetails?.date.formattedDateAndTime()
             return cell
         }
     }

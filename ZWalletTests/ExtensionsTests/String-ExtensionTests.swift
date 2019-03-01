@@ -26,16 +26,9 @@ class String_ExtensionTest: XCTestCase {
         XCTAssertEqual("b", "abcdefg"[1])
     }
 
-
-//    public func testString_RangeInclusive() {
-//        XCTAssertEqual("bcd", "abcdefg"[1...3])
-//    }
-//
-//
-//    public func testString_RangeExclusive() {
-//        XCTAssertEqual("cd", "abcdefg"[2..<4])
-//    }
-
+    public func testString_RangeInclusive() {
+        XCTAssertEqual("bcd", "abcdefg"[1...3])
+    }
 
     public func testString_Suffix() {
         XCTAssertEqual("de", "abcde".suffix(2))
@@ -79,5 +72,21 @@ class String_ExtensionTest: XCTestCase {
             XCTAssertEqual("0\(s)10", "\(s)10".prettyPrintDouble())
             XCTAssertEqual("0\(s)00100", "0000\(s)00100".prettyPrintDouble())
         }
+    }
+    
+    public func test_convertToDate() {
+        guard let date = "20180822".toDate() else {
+            XCTFail("failed to convert string date into date")
+            return
+        }
+        
+        let calendar = Calendar.current
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
+        let day = calendar.component(.day, from: date)
+        
+        XCTAssertEqual(2018, year)
+        XCTAssertEqual(8, month)
+        XCTAssertEqual(22, day)
     }
 }

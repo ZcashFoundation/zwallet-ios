@@ -19,6 +19,12 @@ extension String {
         return String(self[i] as Character)
     }
 
+    public subscript(r: ClosedRange<Int>) -> String {
+        let start = index(startIndex, offsetBy: r.lowerBound)
+        let end = index(startIndex, offsetBy: r.upperBound)
+        return String(self[start...end])
+    }
+    
     /// Checks if can be converted into a double
     public func isValidDouble() -> Bool {
         guard let _ = self.toDouble() else { return false }
@@ -70,5 +76,25 @@ extension String {
         }
         guard let asInt = Int(self) else { return nil }
         return "\(asInt)"
+    }
+    
+    /// Converts a string of format "yyyyMMdd" into a date with time 00:00:00
+    public func toDate() -> Date? {
+        if self.count != 8 { return nil }
+        
+        guard let year = Int(self[0...3]) else { return nil }
+        guard let month = Int(self[4...5]) else { return nil }
+        guard let day = Int(self[6...7]) else { return nil }
+        
+        var dateComponents = DateComponents()
+        dateComponents.year = year
+        dateComponents.month = month
+        dateComponents.day = day
+        dateComponents.hour = 0
+        dateComponents.minute = 0
+        dateComponents.second = 0
+        dateComponents.calendar = Calendar.current
+        
+        return dateComponents.date
     }
 }

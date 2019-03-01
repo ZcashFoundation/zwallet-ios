@@ -73,6 +73,16 @@
 		EE76B85D21D8D1930093571F /* SourceSansPro-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85021D8D1930093571F /* SourceSansPro-SemiBold.ttf */; };
 		EE76B85E21D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85121D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf */; };
 		EE76B85F21D8D1930093571F /* SourceSansPro-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */; };
+		EE927CC3222567960059DADD /* TrxHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE927CC2222567960059DADD /* TrxHistory.swift */; };
+		EE927CC722256C2E0059DADD /* TrxHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE927CC622256C2E0059DADD /* TrxHistoryTests.swift */; };
+		EE927CC822256C850059DADD /* TrxHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE927CC2222567960059DADD /* TrxHistory.swift */; };
+		EE927CC922256DA60059DADD /* TrxDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE321F4F1A100138385 /* TrxDetails.swift */; };
+		EE927CCA22256DB50059DADD /* TrxDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE121F4F18700138385 /* TrxDirection.swift */; };
+		EE927CCB22256F800059DADD /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A62219FA15004853A7 /* Wallet.swift */; };
+		EE927CCC22256F890059DADD /* Payment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A8221EE0B2004853A7 /* Payment.swift */; };
+		EE927CCD22256FB00059DADD /* TrxHistoryProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */; };
+		EE927CCE22256FBD0059DADD /* TrxHistoryObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */; };
+		EE927CD02226E7190059DADD /* Date-ExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE927CCF2226E7190059DADD /* Date-ExtensionTests.swift */; };
 		EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */; };
 		EE94A7502214B52900882BB1 /* ReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE94A74F2214B52900882BB1 /* ReviewVC.swift */; };
 		EE94A7512214B6C500882BB1 /* Review.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE94A74D2214AA2100882BB1 /* Review.storyboard */; };
@@ -180,6 +190,9 @@
 		EE76B85021D8D1930093571F /* SourceSansPro-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBold.ttf"; sourceTree = "<group>"; };
 		EE76B85121D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
 		EE76B85221D8D1930093571F /* SourceSansPro-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Italic.ttf"; sourceTree = "<group>"; };
+		EE927CC2222567960059DADD /* TrxHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistory.swift; sourceTree = "<group>"; };
+		EE927CC622256C2E0059DADD /* TrxHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxHistoryTests.swift; sourceTree = "<group>"; };
+		EE927CCF2226E7190059DADD /* Date-ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-ExtensionTests.swift"; sourceTree = "<group>"; };
 		EE94A74B22135B7200882BB1 /* TrxDetailsVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrxDetailsVCDelegate.swift; sourceTree = "<group>"; };
 		EE94A74D2214AA2100882BB1 /* Review.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Review.storyboard; sourceTree = "<group>"; };
 		EE94A74F2214B52900882BB1 /* ReviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVC.swift; sourceTree = "<group>"; };
@@ -307,6 +320,7 @@
 				EE377EE521F4F1C400138385 /* TrxHistoryObservable.swift */,
 				EE377EF021FDEE3F00138385 /* ZEC.swift */,
 				EE1876A8221EE0B2004853A7 /* Payment.swift */,
+				EE927CC2222567960059DADD /* TrxHistory.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -535,6 +549,7 @@
 		EEBEBB892207071300A6BD18 /* ExtensionsTests */ = {
 			isa = PBXGroup;
 			children = (
+				EE927CCF2226E7190059DADD /* Date-ExtensionTests.swift */,
 				EEBEBB8A2207073900A6BD18 /* String-ExtensionTests.swift */,
 			);
 			path = ExtensionsTests;
@@ -544,6 +559,7 @@
 			isa = PBXGroup;
 			children = (
 				EEBEBB912207290A00A6BD18 /* ZECTests.swift */,
+				EE927CC622256C2E0059DADD /* TrxHistoryTests.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -611,6 +627,7 @@
 					};
 					EE57700D21CFCC5600433CAB = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 						TestTargetID = EE576FF921CFCC5500433CAB;
 					};
 				};
@@ -696,6 +713,7 @@
 				EE377EEB21F7AF3C00138385 /* TrxDetailTableViewCell.swift in Sources */,
 				EE377EDA21F4BE5500138385 /* TrxHistoryProvider.swift in Sources */,
 				EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */,
+				EE927CC3222567960059DADD /* TrxHistory.swift in Sources */,
 				EE377ED821F485FB00138385 /* HomeCoordinator.swift in Sources */,
 				EE07A46C21E29EA4006031C8 /* BaseCoordinator.swift in Sources */,
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
@@ -747,11 +765,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE927CCE22256FBD0059DADD /* TrxHistoryObservable.swift in Sources */,
+				EE927CCD22256FB00059DADD /* TrxHistoryProvider.swift in Sources */,
+				EE927CCA22256DB50059DADD /* TrxDirection.swift in Sources */,
 				EEBEBB8B2207073900A6BD18 /* String-ExtensionTests.swift in Sources */,
 				EE377EDF21F4C45A00138385 /* TrxHistoryProviderTests.swift in Sources */,
+				EE927CCB22256F800059DADD /* Wallet.swift in Sources */,
+				EE927CD02226E7190059DADD /* Date-ExtensionTests.swift in Sources */,
 				EEBEBB8C220707FC00A6BD18 /* String-Extension.swift in Sources */,
+				EE927CC822256C850059DADD /* TrxHistory.swift in Sources */,
+				EE927CC922256DA60059DADD /* TrxDetails.swift in Sources */,
 				EEBEBB90220728E000A6BD18 /* ZEC.swift in Sources */,
+				EE927CC722256C2E0059DADD /* TrxHistoryTests.swift in Sources */,
 				EEBEBB922207290A00A6BD18 /* ZECTests.swift in Sources */,
+				EE927CCC22256F890059DADD /* Payment.swift in Sources */,
 				EEBEBB9322073A4500A6BD18 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -956,6 +983,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6QW9ES945;
 				INFOPLIST_FILE = ZWalletTests/Info.plist;
@@ -966,6 +994,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.XMRSystemsLLC.ZWalletTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZWallet.app/ZWallet";
@@ -977,6 +1006,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H6QW9ES945;
 				INFOPLIST_FILE = ZWalletTests/Info.plist;
