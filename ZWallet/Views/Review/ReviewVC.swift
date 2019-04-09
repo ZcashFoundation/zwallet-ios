@@ -40,6 +40,11 @@ class ReviewVC: UIViewController {
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
+        if let index = self.summaryTableView.indexPathForSelectedRow {
+            self.summaryTableView.deselectRow(at: index, animated: true)
+        }
+
         self.updateView()
     }
 

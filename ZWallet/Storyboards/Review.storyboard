@@ -131,7 +131,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekj-64-Gar">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ekj-64-Gar" userLabel="BottomLineThin">
                                                     <rect key="frame" x="20" y="73.5" width="374" height="1"/>
                                                     <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -149,11 +149,12 @@
                                             <constraints>
                                                 <constraint firstItem="ekj-64-Gar" firstAttribute="leading" secondItem="Myp-Pz-B5q" secondAttribute="leadingMargin" id="0AE-e9-Hf2"/>
                                                 <constraint firstItem="0WY-9R-g3R" firstAttribute="top" secondItem="O7a-t7-fsz" secondAttribute="bottom" constant="4" id="1WS-fO-pKr"/>
+                                                <constraint firstItem="ekj-64-Gar" firstAttribute="top" relation="greaterThanOrEqual" secondItem="nyv-cF-DBr" secondAttribute="bottom" constant="9" id="GLT-UI-wfo"/>
                                                 <constraint firstItem="O7a-t7-fsz" firstAttribute="leading" secondItem="Myp-Pz-B5q" secondAttribute="leadingMargin" id="UY5-fr-2sU"/>
                                                 <constraint firstItem="0WY-9R-g3R" firstAttribute="leading" secondItem="Myp-Pz-B5q" secondAttribute="leadingMargin" id="WJ6-Vl-olG"/>
                                                 <constraint firstItem="ekj-64-Gar" firstAttribute="top" secondItem="0WY-9R-g3R" secondAttribute="bottom" constant="8" id="WpH-Ue-dDM"/>
                                                 <constraint firstItem="ekj-64-Gar" firstAttribute="trailing" secondItem="Myp-Pz-B5q" secondAttribute="trailingMargin" id="YBI-N4-wZe"/>
-                                                <constraint firstItem="nyv-cF-DBr" firstAttribute="bottom" secondItem="0WY-9R-g3R" secondAttribute="baseline" constant="4" id="bkw-c3-XZr"/>
+                                                <constraint firstItem="nyv-cF-DBr" firstAttribute="bottom" secondItem="0WY-9R-g3R" secondAttribute="baseline" priority="750" constant="4" id="bkw-c3-XZr"/>
                                                 <constraint firstItem="O7a-t7-fsz" firstAttribute="top" secondItem="Myp-Pz-B5q" secondAttribute="topMargin" constant="12" id="gnQ-12-Pob"/>
                                                 <constraint firstItem="nyv-cF-DBr" firstAttribute="leading" secondItem="0WY-9R-g3R" secondAttribute="trailing" constant="8" id="jTe-qX-HNr"/>
                                                 <constraint firstItem="nyv-cF-DBr" firstAttribute="trailing" secondItem="Myp-Pz-B5q" secondAttribute="trailingMargin" id="rrU-IG-zH4"/>
@@ -183,7 +184,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YU1-ZO-Vxj">
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YU1-ZO-Vxj" userLabel="BottomLineThin">
                                                     <rect key="frame" x="20" y="93.5" width="374" height="1"/>
                                                     <color key="backgroundColor" red="0.90000000000000002" green="0.90000000000000002" blue="0.90000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <constraints>
@@ -200,13 +201,14 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="YDb-37-YaF" firstAttribute="leading" secondItem="32I-6d-p1S" secondAttribute="leadingMargin" id="1Ev-tk-Mo2"/>
-                                                <constraint firstItem="BcW-Fs-Yig" firstAttribute="bottom" secondItem="P4o-bk-KkZ" secondAttribute="firstBaseline" constant="4" id="1hb-3x-1aP"/>
+                                                <constraint firstItem="BcW-Fs-Yig" firstAttribute="bottom" secondItem="P4o-bk-KkZ" secondAttribute="firstBaseline" priority="750" constant="4" id="1hb-3x-1aP"/>
                                                 <constraint firstItem="YU1-ZO-Vxj" firstAttribute="leading" secondItem="32I-6d-p1S" secondAttribute="leadingMargin" id="2Np-zl-RFC"/>
                                                 <constraint firstItem="YU1-ZO-Vxj" firstAttribute="top" secondItem="P4o-bk-KkZ" secondAttribute="bottom" constant="8" id="4Na-g7-HQc"/>
                                                 <constraint firstItem="BcW-Fs-Yig" firstAttribute="trailing" secondItem="32I-6d-p1S" secondAttribute="trailingMargin" id="Brw-uD-41X"/>
                                                 <constraint firstItem="BcW-Fs-Yig" firstAttribute="leading" secondItem="P4o-bk-KkZ" secondAttribute="trailing" constant="8" id="JMU-sg-1kX"/>
                                                 <constraint firstItem="P4o-bk-KkZ" firstAttribute="leading" secondItem="32I-6d-p1S" secondAttribute="leadingMargin" id="JrU-HN-zoj"/>
                                                 <constraint firstItem="YDb-37-YaF" firstAttribute="top" secondItem="32I-6d-p1S" secondAttribute="topMargin" constant="12" id="gZy-Rs-3qN"/>
+                                                <constraint firstItem="YU1-ZO-Vxj" firstAttribute="top" relation="greaterThanOrEqual" secondItem="BcW-Fs-Yig" secondAttribute="bottom" constant="9" id="iH9-Gh-dIk"/>
                                                 <constraint firstItem="P4o-bk-KkZ" firstAttribute="top" secondItem="YDb-37-YaF" secondAttribute="bottom" constant="4" id="j7c-aB-Wyl"/>
                                                 <constraint firstItem="YU1-ZO-Vxj" firstAttribute="trailing" secondItem="32I-6d-p1S" secondAttribute="trailingMargin" id="zKJ-TY-2yv"/>
                                             </constraints>
