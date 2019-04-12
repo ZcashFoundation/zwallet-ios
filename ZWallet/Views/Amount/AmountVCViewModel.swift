@@ -10,7 +10,7 @@ import Foundation
 
 
 internal enum AmountVCMode {
-    case new
+    case new(initialAmount: ZecInAtomicUnits)
     case edit(amount: ZecInAtomicUnits)
 }
 

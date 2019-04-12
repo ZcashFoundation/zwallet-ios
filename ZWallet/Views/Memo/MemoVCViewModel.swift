@@ -10,7 +10,7 @@ import Foundation
 
 
 internal enum MemoVCMode {
-    case new
+    case new(initialMemo: String?)
     case edit(memo: String?)
 }
 

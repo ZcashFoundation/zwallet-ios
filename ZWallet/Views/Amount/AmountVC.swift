@@ -34,6 +34,7 @@ class AmountVC: UIViewController {
         guard let zec = ZecInAtomicUnits(from: s) else { return }
         guard let mode = self.viewModel?.mode else { return }
 
+        #warning("have only one callback method, provide mode, coordinator must decide")
         switch mode {
         case .new:
             self.delegate?.amountVCDelegateNextButtonTouched(sender: self, amount: zec)
@@ -81,9 +82,9 @@ class AmountVC: UIViewController {
 
         if let mode = self.viewModel?.mode {
             switch mode {
-            case .new:
+            case .new(let initialAmount):
                 self.titleLabel.text = localizer.localized("amount.title")
-                self.amountTextField.text = "0"
+                self.amountTextField.text = self.formatted(amount: initialAmount)
                 self.nextButton.setTitle(localizer.localized("amount.next"), for: .normal)
                 self.backButton.isHidden = false
                 self.progressBar.isHidden = false

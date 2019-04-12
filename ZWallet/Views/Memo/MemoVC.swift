@@ -25,7 +25,8 @@ class MemoVC: UIViewController {
         let memo = self.memoTextField.text
         guard let mode = self.viewModel?.mode else { return }
 
-        switch mode {
+        #warning("have only one callback method, provide mode, coordinator must decide")
+       switch mode {
         case .new:
             self.delegate?.memoVCDelegateNextButtonTouched(sender: self, memo: memo)
         case .edit(_):
@@ -71,9 +72,9 @@ class MemoVC: UIViewController {
 
         if let mode = self.viewModel?.mode {
             switch mode {
-            case .new:
+            case .new(let initialMemo):
                 self.titleLabel.text = localizer.localized("memo.title")
-                self.memoTextField.text = ""
+                self.memoTextField.text = initialMemo
                 self.nextButton.setTitle(localizer.localized("memo.next"), for: .normal)
                 self.backButton.isHidden = false
                 self.progressBar.isHidden = false

@@ -104,3 +104,19 @@
 
 "global.yesterday" = "Yesterday";
 
+"recipientAddress.pasteboard.empty.title" = "Pasteboard";
+
+"recipientAddress.pasteboard.empty.message" = "The pasteboard is empty.";
+
+"global.targetAddress" = "Target Address";
+
+"global.amount" = "Amount";
+
+"global.memo" = "Memo";
+
+"recipientAddress.pasteboard.correct.title" = "Pasteboard";
+
+"recipientAddress.pasteboard.correct.take" = "Take";
+
+"global.cancel" = "Cancel";
+

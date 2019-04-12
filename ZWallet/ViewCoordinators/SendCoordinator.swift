@@ -18,6 +18,7 @@ internal class SendCoordinator: BaseCoordinator {
 
     private var viewFactory: ViewFactoryProtocol
     private var localizer: Localizable
+    private var paymentParser: PaymentParserProtocol
 
     private var payment: PaymentProtocol
 
@@ -28,6 +29,7 @@ internal class SendCoordinator: BaseCoordinator {
 
         self.viewFactory = self.iocContainer.viewFactory
         self.localizer = self.iocContainer.localizer
+        self.paymentParser = self.iocContainer.paymentParser
 
         self.payment = Payment()
 
@@ -50,13 +52,30 @@ extension SendCoordinator: RecipientAddressDelegate {
     }
 
     func recipientAddressVCPasteFromClipboardButtonTouched(sender: RecipientAddressVC) {
+        guard let pasteboardContent = UIPasteboard.general.string else {
+            let alert = UIAlertController(title: self.localizer.localized("recipientAddress.pasteboard.empty.title"),
+                                          message: self.localizer.localized("recipientAddress.pasteboard.empty.message"),
+                                          preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: self.localizer.localized("global.Ok"), style: .default, handler: nil))
+            sender.present(alert, animated: true, completion: nil)
+            return
+        }
+
+        let result = self.paymentParser.process(uri: pasteboardContent)
+        switch result {
+        case .success(let payment):
+            self.showPasteboardResult(payment: payment, on: sender)
+        case .failure:
+            self.showPasteboardError(on: sender)
+        }
+
         #warning("implement check and store")
     }
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
         #warning("implement check and store")
 
-        let viewModel = AmountVCViewModel(mode: .new,
+        let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
                                           availableAmount: 2208_000_000_000)
         #warning("set correct available amount")
         self.showAmountView(with: viewModel)
@@ -76,6 +95,37 @@ extension SendCoordinator: RecipientAddressDelegate {
         vc.localizer = self.localizer
         self.navigationController.pushViewController(vc, animated: true)
     }
+
+    private func showPasteboardResult(payment: PaymentProtocol, on viewController: UIViewController) {
+        guard let walletAddress = payment.targetAddress else { return }
+        var message = "\(self.localizer.localized("global.targetAddress")): \(walletAddress)"
+
+        if let amount = payment.amount {
+            message.append("\n\n\(self.localizer.localized("global.amount")): \(amount.formatted())")
+        }
+
+        if let memo = payment.memo {
+            message.append("\n\n\(self.localizer.localized("global.memo")): \(memo)")
+        }
+
+        let alert = UIAlertController(title: self.localizer.localized("recipientAddress.pasteboard.correct.title"),
+                                      message: message,
+                                      preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: self.localizer.localized("recipientAddress.pasteboard.correct.take"),
+                                      style: .default, handler: { _ in
+                                        self.payment = payment
+                                        let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
+                                                                          availableAmount: 2208_000_000_000)
+                                        #warning("set correct available amount")
+                                        self.showAmountView(with: viewModel)
+        }))
+        alert.addAction(UIAlertAction(title: self.localizer.localized("global.cancel"), style: .cancel, handler: nil))
+        viewController.present(alert, animated: true, completion: nil)
+    }
+
+    private func showPasteboardError(on viewController: UIViewController) {
+
+    }
 }
 
 
@@ -84,7 +134,7 @@ extension SendCoordinator: ScanVCDelegate {
     func scanVCDelegateUriDetected(uri: String, sender: ScanVC) {
         #warning("implement check and store")
 
-        let viewModel = AmountVCViewModel(mode: .new,
+        let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
                                           availableAmount: 2208_000_000_000)
         #warning("set correct available amount")
         self.showAmountView(with: viewModel)
@@ -104,7 +154,7 @@ extension SendCoordinator: AmountVCDelegate {
 
     func amountVCDelegateNextButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits) {
         self.payment.amount = amount
-        let viewModel = MemoVCViewModel(mode: .new)
+        let viewModel = MemoVCViewModel(mode: .new(initialMemo: self.payment.memo))
         self.showMemoView(with: viewModel)
     }
 
