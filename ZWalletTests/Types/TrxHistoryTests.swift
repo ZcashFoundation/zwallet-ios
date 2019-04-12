@@ -22,7 +22,7 @@ class TrxHistoryTests: XCTestCase {
 
     
     func test_emptyHistory_returnsEmptyGroupedList() {
-        let groupedHistory = self.testee.getGroupedByDate()
+        let groupedHistory = self.testee.all
         
         XCTAssertTrue(groupedHistory.count == 0)
     }
@@ -33,7 +33,7 @@ class TrxHistoryTests: XCTestCase {
         
         self.testee.all.append(contentsOf: testData)
         
-        let grouped = self.testee.getGroupedByDate()
+        let grouped = self.testee.groupedByDate()
         
         var groupedCount = 0
         for group in grouped {
@@ -46,7 +46,7 @@ class TrxHistoryTests: XCTestCase {
     func test_nonEmptyHistory_groupedListIsSortedByDateDescending() {
         self.testee.all.append(contentsOf: self.someTestData())
         
-        let groupedAndSorted = self.testee.getGroupedByDate()
+        let groupedAndSorted = self.testee.groupedByDate()
         
         for i in 0 ..< groupedAndSorted.count - 1 {
             let first = groupedAndSorted[i]

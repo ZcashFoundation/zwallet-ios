@@ -19,7 +19,7 @@ class TrxHistoryProviderTests: XCTestCase {
     }
 
     func test_EmptyHistory_ReturnsEmptyList() {
-        let trxList = self.testee.all()
+        let trxList = self.testee.groupedByDate()
         XCTAssertTrue(trxList.isEmpty)
     }
 
@@ -28,10 +28,10 @@ class TrxHistoryProviderTests: XCTestCase {
 
         self.testee.add(trxDetails: trxDetails)
 
-        let trxList = self.testee.all()
+        let trxList = self.testee.groupedByDate()
         XCTAssertFalse(trxList.isEmpty)
 
-        let element = trxList[0]
+        let element = trxList[0].transactions[0]
 
         XCTAssertEqual(element.direction, trxDetails.direction)
         XCTAssertEqual(element.date, trxDetails.date)
