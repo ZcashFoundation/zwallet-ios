@@ -51,6 +51,10 @@
 		EE377EEF21FDE64400138385 /* TrxDetails.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE07A44B21E206D7006031C8 /* TrxDetails.storyboard */; };
 		EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EF021FDEE3F00138385 /* ZEC.swift */; };
 		EE377EF321FE181000138385 /* Date-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EF221FE181000138385 /* Date-Extension.swift */; };
+		EE4AFAAD226652E500997CE3 /* AddressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4AFAAC226652E500997CE3 /* AddressVC.swift */; };
+		EE4AFAAF2266554100997CE3 /* AddressVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4AFAAE2266554100997CE3 /* AddressVCDelegate.swift */; };
+		EE4AFAB1226657CD00997CE3 /* AddressVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4AFAB0226657CD00997CE3 /* AddressVCViewModel.swift */; };
+		EE4AFAB222665DA900997CE3 /* Address.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE4AFAAA2266519E00997CE3 /* Address.storyboard */; };
 		EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE576FFD21CFCC5500433CAB /* AppDelegate.swift */; };
 		EE57700321CFCC5500433CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57700121CFCC5500433CAB /* Main.storyboard */; };
 		EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE57700421CFCC5600433CAB /* Assets.xcassets */; };
@@ -167,6 +171,10 @@
 		EE377EEE21F9013800138385 /* ___TODO.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "___TODO.md"; sourceTree = "<group>"; };
 		EE377EF021FDEE3F00138385 /* ZEC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZEC.swift; sourceTree = "<group>"; };
 		EE377EF221FE181000138385 /* Date-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date-Extension.swift"; sourceTree = "<group>"; };
+		EE4AFAAA2266519E00997CE3 /* Address.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Address.storyboard; sourceTree = "<group>"; };
+		EE4AFAAC226652E500997CE3 /* AddressVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVC.swift; sourceTree = "<group>"; };
+		EE4AFAAE2266554100997CE3 /* AddressVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVCDelegate.swift; sourceTree = "<group>"; };
+		EE4AFAB0226657CD00997CE3 /* AddressVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressVCViewModel.swift; sourceTree = "<group>"; };
 		EE576FFA21CFCC5500433CAB /* ZWallet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZWallet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE576FFD21CFCC5500433CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EE57700221CFCC5500433CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -345,6 +353,16 @@
 			path = TrxDetails;
 			sourceTree = "<group>";
 		};
+		EE4AFAAB2266528700997CE3 /* Address */ = {
+			isa = PBXGroup;
+			children = (
+				EE4AFAAC226652E500997CE3 /* AddressVC.swift */,
+				EE4AFAAE2266554100997CE3 /* AddressVCDelegate.swift */,
+				EE4AFAB0226657CD00997CE3 /* AddressVCViewModel.swift */,
+			);
+			path = Address;
+			sourceTree = "<group>";
+		};
 		EE576FF121CFCC5500433CAB = {
 			isa = PBXGroup;
 			children = (
@@ -413,6 +431,7 @@
 		EE57701F21CFD00100433CAB /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
+				EE4AFAAA2266519E00997CE3 /* Address.storyboard */,
 				EEBEBB802206F80300A6BD18 /* Amount.storyboard */,
 				EE76B84121D7EC3F0093571F /* Home.storyboard */,
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
@@ -447,6 +466,7 @@
 		EE57702121CFD03500433CAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EE4AFAAB2266528700997CE3 /* Address */,
 				EEBEBB822206FB3200A6BD18 /* Amount */,
 				EE377ED021F47D5200138385 /* Home */,
 				EE07A44E21E217E0006031C8 /* Main */,
@@ -680,6 +700,7 @@
 				EE57702D21D38A8200433CAB /* Pin.storyboard in Resources */,
 				EE76B85521D8D1930093571F /* SourceSansPro-Regular.ttf in Resources */,
 				EE76B85721D8D1930093571F /* SourceSansPro-LightItalic.ttf in Resources */,
+				EE4AFAB222665DA900997CE3 /* Address.storyboard in Resources */,
 				EEBEBB7F2200E41D00A6BD18 /* Scan.storyboard in Resources */,
 				EE76B85D21D8D1930093571F /* SourceSansPro-SemiBold.ttf in Resources */,
 				EE07A46521E279A8006031C8 /* InfoPlist.strings in Resources */,
@@ -740,6 +761,7 @@
 				EE377EF321FE181000138385 /* Date-Extension.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
 				EE73BAD82260EC6C00A6C82C /* PaymentParser.swift in Sources */,
+				EE4AFAB1226657CD00997CE3 /* AddressVCViewModel.swift in Sources */,
 				EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */,
 				EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */,
 				EE1876A9221EE0B2004853A7 /* Payment.swift in Sources */,
@@ -754,6 +776,7 @@
 				EE377ECF21EB56AD00138385 /* ZWKeyboardLayoutConstraint.swift in Sources */,
 				EEBEBB7521FF8DC800A6BD18 /* RecipientAddressVC.swift in Sources */,
 				EE377EBC21E68AB000138385 /* PinVC.swift in Sources */,
+				EE4AFAAF2266554100997CE3 /* AddressVCDelegate.swift in Sources */,
 				EE94A7502214B52900882BB1 /* ReviewVC.swift in Sources */,
 				EE377EC221E7DFD200138385 /* Constants.swift in Sources */,
 				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
@@ -769,6 +792,7 @@
 				EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */,
 				EE1876AB221F4CD0004853A7 /* MemoVCViewModel.swift in Sources */,
 				EEBEBB7721FF91B700A6BD18 /* RecipientAddressDelegate.swift in Sources */,
+				EE4AFAAD226652E500997CE3 /* AddressVC.swift in Sources */,
 				EEBEBBA12208D75A00A6BD18 /* MemoVC.swift in Sources */,
 				EE07A45021E23E43006031C8 /* MainVC.swift in Sources */,
 			);

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.ttf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-SemiBold.ttf">
+            <string>SourceSansPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--AddressVC-->
+        <scene sceneID="5TK-63-Amy">
+            <objects>
+                <viewController storyboardIdentifier="Address" id="M2V-hB-lEq" customClass="AddressVC" customModule="ZWallet" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MfU-s3-T92">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wua-MI-GFO" customClass="ZWProgressBar" customModule="ZWallet" customModuleProvider="target">
+                                <rect key="frame" x="24" y="124" width="366" height="16"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Wcl-zL-3Hh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="totalSteps">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="currentStep">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Recipient Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-U1-6GC">
+                                <rect key="frame" x="24" y="172" width="366" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="TKL-j1-J2Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
+                                <color key="textColor" red="0.2901675105" green="0.29021433000000002" blue="0.29015725850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="!!Start typing" textAlignment="center" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="miM-vD-sj4">
+                                <rect key="frame" x="24" y="243" width="366" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="2tw-nU-SUI"/>
+                                </constraints>
+                                <color key="textColor" red="0.17999999999999999" green="0.16" blue="0.14999999999999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0N-Ax-m9d" customClass="ZWButton" customModule="ZWallet">
+                                <rect key="frame" x="0.0" y="840" width="414" height="56"/>
+                                <color key="backgroundColor" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="brW-Yb-hQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="16"/>
+                                <state key="normal" title="!!Next"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="nextButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="g1B-jX-3Hd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD7-Xi-ojG">
+                                <rect key="frame" x="14" y="48" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8S4-IY-aNc"/>
+                                    <constraint firstAttribute="width" constant="44" id="onO-tg-fYE"/>
+                                </constraints>
+                                <state key="normal" image="ArrowBack"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="33v-Fb-tua"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-Hs-M8o">
+                                <rect key="frame" x="356" y="48" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="44" id="d2v-jx-fmA"/>
+                                    <constraint firstAttribute="height" constant="44" id="pAE-Sf-QLC"/>
+                                </constraints>
+                                <state key="normal" image="CloseXBlack"/>
+                                <connections>
+                                    <action selector="cancelTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="HSt-nc-B1R"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="miM-vD-sj4" secondAttribute="trailing" constant="24" id="2s0-qI-ezO"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="top" secondItem="wua-MI-GFO" secondAttribute="bottom" constant="32" id="2sr-L1-ZYq"/>
+                            <constraint firstItem="miM-vD-sj4" firstAttribute="top" secondItem="r9g-U1-6GC" secondAttribute="bottom" constant="40" id="CFm-5G-a67"/>
+                            <constraint firstItem="miM-vD-sj4" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="FKs-Vj-WtE"/>
+                            <constraint firstAttribute="bottom" secondItem="H0N-Ax-m9d" secondAttribute="bottom" id="FPj-Sn-BCT" customClass="ZWKeyboardLayoutConstraint" customModule="ZWallet"/>
+                            <constraint firstItem="BD7-Xi-ojG" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="14" id="KeI-Mb-OeO"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="WOg-Dr-Ycf"/>
+                            <constraint firstItem="BD7-Xi-ojG" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="4" id="XOf-4Y-77E"/>
+                            <constraint firstItem="vp4-Hs-M8o" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="4" id="hoH-wo-Cic"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="wua-MI-GFO" secondAttribute="trailing" constant="24" id="ig4-Jz-6Gs"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="H0N-Ax-m9d" secondAttribute="trailing" id="j43-qX-LKh"/>
+                            <constraint firstItem="wua-MI-GFO" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="80" id="kXJ-le-AYd"/>
+                            <constraint firstItem="H0N-Ax-m9d" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" id="mFp-Wh-To7"/>
+                            <constraint firstAttribute="trailing" secondItem="vp4-Hs-M8o" secondAttribute="trailing" constant="14" id="mSE-Ua-DYb"/>
+                            <constraint firstItem="wua-MI-GFO" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="r7j-18-XtY"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="r9g-U1-6GC" secondAttribute="trailing" constant="24" id="unm-EG-rDc"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
+                    </view>
+                    <connections>
+                        <outlet property="addressTextField" destination="miM-vD-sj4" id="DY6-eM-IA5"/>
+                        <outlet property="backButton" destination="BD7-Xi-ojG" id="rhw-g3-vdC"/>
+                        <outlet property="cancelButton" destination="vp4-Hs-M8o" id="tjd-u5-mOD"/>
+                        <outlet property="nextButton" destination="H0N-Ax-m9d" id="uTl-66-Q67"/>
+                        <outlet property="progressBar" destination="wua-MI-GFO" id="kWc-cu-dNr"/>
+                        <outlet property="titleLabel" destination="r9g-U1-6GC" id="MWl-1d-Uzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNu-aZ-Pmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.33333333333334" y="-179.46428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArrowBack" width="24" height="24"/>
+        <image name="CloseXBlack" width="24" height="24"/>
+    </resources>
+</document>

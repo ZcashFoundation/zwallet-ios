@@ -120,3 +120,11 @@
 
 "global.cancel" = "Cancel";
 
+"address.address.placeholder" = "Start typing";
+
+"address.next" = "Next";
+
+"address.title" = "Recipient Address";
+
+"address.title.edit" = "Edit Recipient Address";
+

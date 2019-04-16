@@ -71,12 +71,7 @@ extension SendCoordinator: RecipientAddressDelegate {
     }
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
-        #warning("implement check and store")
-
-        let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
-                                          availableAmount: 2208_000_000_000)
-        #warning("set correct available amount")
-        self.showAmountView(with: viewModel)
+        self.showAddressView()
     }
 
     func recipientAddressVCBackTouched(sender: RecipientAddressVC) {
@@ -128,6 +123,40 @@ extension SendCoordinator: RecipientAddressDelegate {
 
     private func showPaymentError(on viewController: UIViewController) {
 
+    }
+}
+
+
+extension SendCoordinator: AddressVCDelegate {
+
+    func addressVCDelegateNextButtonTouched(sender: AddressVC, address: String?) {
+        self.payment.targetAddress = address
+
+        let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
+                                          availableAmount: 2208_000_000_000)
+        #warning("set correct available amount")
+        self.showAmountView(with: viewModel)
+    }
+
+    func addressVCDelegateDoneButtonTouched(sender: AddressVC, address: String?) {
+        self.payment.targetAddress = address
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func addressVCDelegateBackTouched(sender: AddressVC) {
+        self.navigationController.popViewController(animated: true)
+    }
+
+    func addressVCDelegateCancelTouched(sender: AddressVC) {
+        self.delegate?.sendCoordinatorCancelled(coordinator: self)
+    }
+
+    private func showAddressView() {
+        let vc = self.viewFactory.getAddressVC()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        vc.viewModel = AddressVCViewModel(mode: .new(initialAddress: self.payment.targetAddress))
+        self.navigationController.pushViewController(vc, animated: true)
     }
 }
 
@@ -238,9 +267,7 @@ extension SendCoordinator: ReviewVCDelegate {
     }
 
     func reviewVCDelegateChangeReceivingAddressTouched(sender: ReviewVC) {
-        #warning("implement")
-
-        self.showRecipientAddressView()
+        self.showAddressView()
     }
 
     func reviewVCDelegateChangeMemoTouched(sender: ReviewVC) {
