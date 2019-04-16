@@ -64,12 +64,10 @@ extension SendCoordinator: RecipientAddressDelegate {
         let result = self.paymentParser.process(uri: pasteboardContent)
         switch result {
         case .success(let payment):
-            self.showPasteboardResult(payment: payment, on: sender)
+            self.showValid(payment: payment, on: sender, onRetake: {})
         case .failure:
-            self.showPasteboardError(on: sender)
+            self.showPaymentError(on: sender)
         }
-
-        #warning("implement check and store")
     }
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
@@ -96,7 +94,10 @@ extension SendCoordinator: RecipientAddressDelegate {
         self.navigationController.pushViewController(vc, animated: true)
     }
 
-    private func showPasteboardResult(payment: PaymentProtocol, on viewController: UIViewController) {
+    private func showValid(payment: PaymentProtocol,
+                           on viewController: UIViewController,
+                           onRetake retakeHandler: @escaping () -> Void)
+    {
         guard let walletAddress = payment.targetAddress else { return }
         var message = "\(self.localizer.localized("global.targetAddress")): \(walletAddress)"
 
@@ -108,10 +109,10 @@ extension SendCoordinator: RecipientAddressDelegate {
             message.append("\n\n\(self.localizer.localized("global.memo")): \(memo)")
         }
 
-        let alert = UIAlertController(title: self.localizer.localized("recipientAddress.pasteboard.correct.title"),
+        let alert = UIAlertController(title: self.localizer.localized("payment.title"),
                                       message: message,
                                       preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: self.localizer.localized("recipientAddress.pasteboard.correct.take"),
+        alert.addAction(UIAlertAction(title: self.localizer.localized("payment.button.take"),
                                       style: .default, handler: { _ in
                                         self.payment = payment
                                         let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
@@ -119,11 +120,13 @@ extension SendCoordinator: RecipientAddressDelegate {
                                         #warning("set correct available amount")
                                         self.showAmountView(with: viewModel)
         }))
-        alert.addAction(UIAlertAction(title: self.localizer.localized("global.cancel"), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: self.localizer.localized("global.cancel"),
+                                      style: .cancel,
+                                      handler: { _ in retakeHandler() }))
         viewController.present(alert, animated: true, completion: nil)
     }
 
-    private func showPasteboardError(on viewController: UIViewController) {
+    private func showPaymentError(on viewController: UIViewController) {
 
     }
 }
@@ -132,12 +135,13 @@ extension SendCoordinator: RecipientAddressDelegate {
 extension SendCoordinator: ScanVCDelegate {
 
     func scanVCDelegateUriDetected(uri: String, sender: ScanVC) {
-        #warning("implement check and store")
-
-        let viewModel = AmountVCViewModel(mode: .new(initialAmount: self.payment.amount ?? 0),
-                                          availableAmount: 2208_000_000_000)
-        #warning("set correct available amount")
-        self.showAmountView(with: viewModel)
+        let result = self.paymentParser.process(uri: uri)
+        switch result {
+        case .success(let payment):
+            self.showValid(payment: payment, on: sender, onRetake: { sender.resumeCapturing() })
+        case .failure:
+            self.showPaymentError(on: sender)
+        }
     }
 
     func scanVCDelegateCancelled(sender: ScanVC) {

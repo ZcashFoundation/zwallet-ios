@@ -114,9 +114,9 @@
 
 "global.memo" = "Memo";
 
-"recipientAddress.pasteboard.correct.title" = "Pasteboard";
+"payment.title" = "Payment";
 
-"recipientAddress.pasteboard.correct.take" = "Take";
+"payment.button.take" = "Take";
 
 "global.cancel" = "Cancel";
 

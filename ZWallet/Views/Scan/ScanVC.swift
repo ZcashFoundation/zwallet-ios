@@ -47,6 +47,10 @@ class ScanVC: UIViewController {
         self.stopCapturing()
     }
 
+    public func resumeCapturing() {
+        self .startCapturing()
+    }
+
     private func setup() {
         self.descriptionLabel.layer.cornerRadius = 4
         self.descriptionLabel.layer.masksToBounds = true

@@ -60,6 +60,8 @@
 		EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702A21D0230C00433CAB /* ZWProgressBar.swift */; };
 		EE57702D21D38A8200433CAB /* Pin.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE57702C21D38A8200433CAB /* Pin.storyboard */; };
 		EE57702F21D38BAD00433CAB /* ZWPinDotView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */; };
+		EE73BAD82260EC6C00A6C82C /* PaymentParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73BAD72260EC6C00A6C82C /* PaymentParser.swift */; };
+		EE73BADA2260ED6F00A6C82C /* InvalidPaymentUri.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE73BAD92260ED6F00A6C82C /* InvalidPaymentUri.swift */; };
 		EE76B84221D7EC3F0093571F /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EE76B84121D7EC3F0093571F /* Home.storyboard */; };
 		EE76B85321D8D1930093571F /* SourceSansPro-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B84621D8D1930093571F /* SourceSansPro-BlackItalic.ttf */; };
 		EE76B85421D8D1930093571F /* SourceSansPro-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = EE76B84721D8D1930093571F /* SourceSansPro-SemiBoldItalic.ttf */; };
@@ -178,6 +180,8 @@
 		EE57702A21D0230C00433CAB /* ZWProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWProgressBar.swift; sourceTree = "<group>"; };
 		EE57702C21D38A8200433CAB /* Pin.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Pin.storyboard; sourceTree = "<group>"; };
 		EE57702E21D38BAD00433CAB /* ZWPinDotView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZWPinDotView.swift; sourceTree = "<group>"; };
+		EE73BAD72260EC6C00A6C82C /* PaymentParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentParser.swift; sourceTree = "<group>"; };
+		EE73BAD92260ED6F00A6C82C /* InvalidPaymentUri.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvalidPaymentUri.swift; sourceTree = "<group>"; };
 		EE76B84121D7EC3F0093571F /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		EE76B84621D8D1930093571F /* SourceSansPro-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-BlackItalic.ttf"; sourceTree = "<group>"; };
 		EE76B84721D8D1930093571F /* SourceSansPro-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 			children = (
 				EE377EB221E5303D00138385 /* ViewFactory.swift */,
 				EE377ED921F4BE5500138385 /* TrxHistoryProvider.swift */,
+				EE73BAD72260EC6C00A6C82C /* PaymentParser.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				EE377EF021FDEE3F00138385 /* ZEC.swift */,
 				EE1876A8221EE0B2004853A7 /* Payment.swift */,
 				EE927CC2222567960059DADD /* TrxHistory.swift */,
+				EE73BAD92260ED6F00A6C82C /* InvalidPaymentUri.swift */,
 			);
 			path = Types;
 			sourceTree = "<group>";
@@ -733,6 +739,7 @@
 				EE1876A72219FA15004853A7 /* Wallet.swift in Sources */,
 				EE377EF321FE181000138385 /* Date-Extension.swift in Sources */,
 				EE07A45521E24FDD006031C8 /* Localization.swift in Sources */,
+				EE73BAD82260EC6C00A6C82C /* PaymentParser.swift in Sources */,
 				EE377EE921F7A76500138385 /* TrxDetailsVC.swift in Sources */,
 				EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */,
 				EE1876A9221EE0B2004853A7 /* Payment.swift in Sources */,
@@ -752,6 +759,7 @@
 				EE377EC921E8F67000138385 /* PassphraseVCDelegate.swift in Sources */,
 				EEBEBB9E2208D64C00A6BD18 /* AmountVC.swift in Sources */,
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
+				EE73BADA2260ED6F00A6C82C /* InvalidPaymentUri.swift in Sources */,
 				EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */,
 				EEBEBB972207477100A6BD18 /* SendCoordinatorDelegate.swift in Sources */,
 				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
