@@ -71,7 +71,8 @@ extension SendCoordinator: RecipientAddressDelegate {
     }
 
     func recipientAddressVCEnterManuallyButtonTouched(sender: RecipientAddressVC) {
-        self.showAddressView()
+        let viewModel = AddressVCViewModel(mode: .new(initialAddress: self.payment.targetAddress))
+        self.showAddressView(with: viewModel)
     }
 
     func recipientAddressVCBackTouched(sender: RecipientAddressVC) {
@@ -151,11 +152,11 @@ extension SendCoordinator: AddressVCDelegate {
         self.delegate?.sendCoordinatorCancelled(coordinator: self)
     }
 
-    private func showAddressView() {
+    private func showAddressView(with viewModel: AddressVCViewModel) {
         let vc = self.viewFactory.getAddressVC()
         vc.delegate = self
         vc.localizer = self.localizer
-        vc.viewModel = AddressVCViewModel(mode: .new(initialAddress: self.payment.targetAddress))
+        vc.viewModel = viewModel
         self.navigationController.pushViewController(vc, animated: true)
     }
 }
@@ -267,7 +268,8 @@ extension SendCoordinator: ReviewVCDelegate {
     }
 
     func reviewVCDelegateChangeReceivingAddressTouched(sender: ReviewVC) {
-        self.showAddressView()
+        let viewModel = AddressVCViewModel(mode: .edit(address: self.payment.targetAddress))
+        self.showAddressView(with: viewModel)
     }
 
     func reviewVCDelegateChangeMemoTouched(sender: ReviewVC) {
