@@ -54,12 +54,14 @@ class ReviewVC: UIViewController {
         self.summaryTableView.delegate = self
     }
 
-    private func updateView() {
+    public func updateView() {
         guard let localizer = self.localizer else {
             return
         }
 
         self.titleLabel.text = localizer.localized("review.title")
+
+        self.summaryTableView.reloadData()
     }
 
     private var amountDescription: String {

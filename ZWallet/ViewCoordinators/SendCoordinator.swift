@@ -21,6 +21,7 @@ internal class SendCoordinator: BaseCoordinator {
     private var paymentParser: PaymentParserProtocol
 
     private var payment: PaymentProtocol
+    private var reviewVC: ReviewVC?
 
     internal init(navigationController: UINavigationController,
                   iocContainer: IocContainerProtocol)
@@ -141,6 +142,10 @@ extension SendCoordinator: AddressVCDelegate {
 
     func addressVCDelegateDoneButtonTouched(sender: AddressVC, address: String?) {
         self.payment.targetAddress = address
+
+        reviewVC?.viewModel = getReviewViewModel()
+        reviewVC?.updateView()
+
         self.navigationController.popViewController(animated: true)
     }
 
@@ -194,6 +199,10 @@ extension SendCoordinator: AmountVCDelegate {
 
     func amountVCDelegateDoneButtonTouched(sender: AmountVC, amount: ZecInAtomicUnits) {
         self.payment.amount = amount
+
+        reviewVC?.viewModel = getReviewViewModel()
+        reviewVC?.updateView()
+
         self.navigationController.popViewController(animated: true)
     }
 
@@ -224,6 +233,10 @@ extension SendCoordinator: MemoVCDelegate {
 
     func memoVCDelegateDoneButtonTouched(sender: MemoVC, memo: String?) {
         self.payment.memo = memo
+
+        reviewVC?.viewModel = getReviewViewModel()
+        reviewVC?.updateView()
+
         self.navigationController.popViewController(animated: true)
     }
 
@@ -278,16 +291,20 @@ extension SendCoordinator: ReviewVCDelegate {
     }
 
     private func showReviewView() {
-        let vc = self.viewFactory.getReviewVC()
-        vc.delegate = self
-        vc.localizer = self.localizer
+        reviewVC = self.viewFactory.getReviewVC()
+        if let vc = reviewVC {
+            vc.delegate = self
+            vc.localizer = self.localizer
+            vc.viewModel = getReviewViewModel()
+            self.navigationController.pushViewController(vc, animated: true)
+        }
+    }
 
+    private func getReviewViewModel() -> ReviewViewModel {
         #warning("set view model")
-        vc.viewModel = ReviewViewModel(amount: self.payment.amount ?? 0,
-                                       fiatAmount: "22.08 CHF",
-                                       receivingAddress: self.payment.targetAddress ?? "",
-                                       memo: self.payment.memo)
-
-        self.navigationController.pushViewController(vc, animated: true)
+        return ReviewViewModel(amount: self.payment.amount ?? 0,
+                               fiatAmount: "22.08 CHF",
+                               receivingAddress: self.payment.targetAddress ?? "",
+                               memo: self.payment.memo)
     }
 }
