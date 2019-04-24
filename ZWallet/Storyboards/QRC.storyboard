@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Own Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-U1-6GC">
-                                <rect key="frame" x="24" y="172" width="366" height="31"/>
+                                <rect key="frame" x="24" y="124" width="366" height="31"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="31" id="TKL-j1-J2Y"/>
                                 </constraints>
@@ -89,7 +89,10 @@
                                 <color key="tintColor" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7Z-gG-TRz">
-                                <rect key="frame" x="24" y="784.5" width="366" height="21.5"/>
+                                <rect key="frame" x="24" y="784" width="366" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="RbR-dD-qQF"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -99,9 +102,10 @@
                         <constraints>
                             <constraint firstItem="dhk-cI-tcc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="3Oi-h6-NoS"/>
                             <constraint firstItem="E7Z-gG-TRz" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="4lB-dW-v7w"/>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r9g-U1-6GC" secondAttribute="bottom" constant="8" id="581-6J-C1K"/>
                             <constraint firstItem="7E0-Vx-mNI" firstAttribute="leading" secondItem="dhk-cI-tcc" secondAttribute="leading" constant="12" id="B3r-DC-JeO"/>
                             <constraint firstItem="dhk-cI-tcc" firstAttribute="centerY" secondItem="MfU-s3-T92" secondAttribute="centerY" id="CdO-RJ-d0Q"/>
-                            <constraint firstItem="r9g-U1-6GC" firstAttribute="top" secondItem="BD7-Xi-ojG" secondAttribute="bottom" constant="80" id="FI1-ai-blt"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="80" id="FI1-ai-blt"/>
                             <constraint firstItem="Vyu-5m-YUx" firstAttribute="bottom" secondItem="H0N-Ax-m9d" secondAttribute="bottom" id="FPj-Sn-BCT"/>
                             <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dhk-cI-tcc" secondAttribute="trailing" constant="24" id="FdI-DU-xsM"/>
                             <constraint firstItem="dhk-cI-tcc" firstAttribute="trailing" secondItem="7E0-Vx-mNI" secondAttribute="trailing" constant="12" id="H1g-tL-fB5"/>
