@@ -22,6 +22,7 @@ internal protocol ViewFactoryProtocol {
     func getMemoVC() -> MemoVC
     func getReviewVC() -> ReviewVC
     func getAddressVC() -> AddressVC
+    func getQrcVC() -> QrcVC
 }
 
 
@@ -69,6 +70,10 @@ internal class ViewFactory: ViewFactoryProtocol {
 
     func getAddressVC() -> AddressVC {
         return self.view(withName: "Address", onStoryboard: "Address")
+    }
+
+    func getQrcVC() -> QrcVC {
+        return self.view(withName: "QRC", onStoryboard: "QRC")
     }
 
     private func view<T>(withName viewName: String, onStoryboard storyboardName: String) -> T {

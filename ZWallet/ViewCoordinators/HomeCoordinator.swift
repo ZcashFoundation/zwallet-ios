@@ -44,7 +44,7 @@ extension HomeCoordinator: HomeVCDelegate {
     }
 
     func homeVCReceiveButtonTouched(sender: HomeVC) {
-        #warning("implement")
+        self.showQrc()
     }
 
     func homeVCSettingsButtonTouched(sender: HomeVC) {
@@ -76,6 +76,19 @@ extension HomeCoordinator: HomeVCDelegate {
         self.add(childCoordinator: sendCoordinator)
         sendCoordinator.delegate = self
         sendCoordinator.start()
+    }
+
+    private func showQrc() {
+        #warning("get correct wallet address instead of fake www")
+        let address = "22of8.ch"
+        let viewModel = QrcVCViewModel(walletAddress: address,
+                                       qrcImage: QrcGenerator.generate(from: address, scale: 10.0))
+
+        let vc = self.viewFactory.getQrcVC()
+        vc.delegate = self
+        vc.localizer = self.localizer
+        vc.viewModel = viewModel
+        self.navigationController.pushViewController(vc, animated: true)
     }
 
     private func showTrxDetailsView(for trxDetails: TrxDetails) {
@@ -149,6 +162,20 @@ extension HomeCoordinator: HomeVCDelegate {
                                                       address: "address received from",
                                                       trxId: "trx id receive",
                                                       memo: "memo receive"))
+    }
+}
+
+
+extension HomeCoordinator: QrcVCDelegate {
+
+    func qrcVCDelegateCopyButtonTouched(sender: QrcVC, address: String?) {
+        if let address = address {
+            UIPasteboard.general.string = address
+        }
+    }
+
+    func qrcVCDelegateBackButtonTouched(sender: QrcVC) {
+        self.navigationController.popViewController(animated: true)
     }
 }
 

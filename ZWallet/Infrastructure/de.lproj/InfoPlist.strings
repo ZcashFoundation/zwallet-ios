@@ -128,3 +128,7 @@
 
 "address.title.edit" = "Empfänger-Adresse ändern";
 
+"qrc.title" = "Wallet-Adresse";
+
+"qrc.button.copy" = "In Pasteboard kopieren";
+

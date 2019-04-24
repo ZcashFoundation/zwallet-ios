@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.ttf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+        <array key="SourceSansPro-SemiBold.ttf">
+            <string>SourceSansPro-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--QrcVC-->
+        <scene sceneID="5TK-63-Amy">
+            <objects>
+                <viewController storyboardIdentifier="QRC" id="M2V-hB-lEq" customClass="QrcVC" customModule="ZWallet" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MfU-s3-T92">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Own Address" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-U1-6GC">
+                                <rect key="frame" x="24" y="172" width="366" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="TKL-j1-J2Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
+                                <color key="textColor" red="0.2901675105" green="0.29021433000000002" blue="0.29015725850000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H0N-Ax-m9d" customClass="ZWButton" customModule="ZWallet">
+                                <rect key="frame" x="24" y="814" width="366" height="48"/>
+                                <color key="backgroundColor" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="brW-Yb-hQ5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SourceSansPro-SemiBold" family="Source Sans Pro" pointSize="16"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="!!Copy Address to Clipboard"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="copyButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="UEy-kC-vdZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BD7-Xi-ojG" userLabel="BackButton">
+                                <rect key="frame" x="14" y="48" width="44" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="8S4-IY-aNc"/>
+                                    <constraint firstAttribute="width" constant="44" id="onO-tg-fYE"/>
+                                </constraints>
+                                <state key="normal" image="ArrowBack"/>
+                                <connections>
+                                    <action selector="backButtonTouched" destination="M2V-hB-lEq" eventType="touchUpInside" id="h6T-dN-BGR"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dhk-cI-tcc" userLabel="QRCBackground">
+                                <rect key="frame" x="24" y="265" width="366" height="366"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dhk-cI-tcc" secondAttribute="height" multiplier="1:1" id="emH-nQ-axd"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="500" id="zSb-S4-Rp7"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="QRCode" translatesAutoresizingMaskIntoConstraints="NO" id="7E0-Vx-mNI">
+                                <rect key="frame" x="36" y="277" width="342" height="342"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" red="0.2404455543" green="0.49460166690000001" blue="0.8346244693" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2 22of8.ch2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E7Z-gG-TRz">
+                                <rect key="frame" x="24" y="784.5" width="366" height="21.5"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="3Oi-h6-NoS"/>
+                            <constraint firstItem="E7Z-gG-TRz" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="4lB-dW-v7w"/>
+                            <constraint firstItem="7E0-Vx-mNI" firstAttribute="leading" secondItem="dhk-cI-tcc" secondAttribute="leading" constant="12" id="B3r-DC-JeO"/>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="centerY" secondItem="MfU-s3-T92" secondAttribute="centerY" id="CdO-RJ-d0Q"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="top" secondItem="BD7-Xi-ojG" secondAttribute="bottom" constant="80" id="FI1-ai-blt"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="bottom" secondItem="H0N-Ax-m9d" secondAttribute="bottom" id="FPj-Sn-BCT"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="dhk-cI-tcc" secondAttribute="trailing" constant="24" id="FdI-DU-xsM"/>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="trailing" secondItem="7E0-Vx-mNI" secondAttribute="trailing" constant="12" id="H1g-tL-fB5"/>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="centerX" secondItem="MfU-s3-T92" secondAttribute="centerX" id="JH8-RR-EZM"/>
+                            <constraint firstItem="BD7-Xi-ojG" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="14" id="KeI-Mb-OeO"/>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="width" secondItem="MfU-s3-T92" secondAttribute="width" priority="750" id="Qtd-A4-ADD"/>
+                            <constraint firstItem="r9g-U1-6GC" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="WOg-Dr-Ycf"/>
+                            <constraint firstItem="BD7-Xi-ojG" firstAttribute="top" secondItem="Vyu-5m-YUx" secondAttribute="top" constant="4" id="XOf-4Y-77E"/>
+                            <constraint firstItem="7E0-Vx-mNI" firstAttribute="top" secondItem="dhk-cI-tcc" secondAttribute="top" constant="12" id="Ycw-EP-qbI"/>
+                            <constraint firstItem="E7Z-gG-TRz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="dhk-cI-tcc" secondAttribute="bottom" constant="8" id="hDI-ir-jFh"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="H0N-Ax-m9d" secondAttribute="trailing" constant="24" id="j43-qX-LKh"/>
+                            <constraint firstItem="H0N-Ax-m9d" firstAttribute="leading" secondItem="Vyu-5m-YUx" secondAttribute="leading" constant="24" id="mFp-Wh-To7"/>
+                            <constraint firstItem="dhk-cI-tcc" firstAttribute="bottom" secondItem="7E0-Vx-mNI" secondAttribute="bottom" constant="12" id="nB6-7I-5WJ"/>
+                            <constraint firstItem="H0N-Ax-m9d" firstAttribute="top" secondItem="E7Z-gG-TRz" secondAttribute="bottom" constant="8" id="tHn-V3-syz"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="r9g-U1-6GC" secondAttribute="trailing" constant="24" id="unm-EG-rDc"/>
+                            <constraint firstItem="Vyu-5m-YUx" firstAttribute="trailing" secondItem="E7Z-gG-TRz" secondAttribute="trailing" constant="24" id="xnQ-8g-MGg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vyu-5m-YUx"/>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="BD7-Xi-ojG" id="wrj-hX-z7d"/>
+                        <outlet property="copyButton" destination="H0N-Ax-m9d" id="VwJ-hS-P0m"/>
+                        <outlet property="qrcImageView" destination="7E0-Vx-mNI" id="jsT-Oz-R3h"/>
+                        <outlet property="titleLabel" destination="r9g-U1-6GC" id="H6c-b9-yt1"/>
+                        <outlet property="walletAddressLabel" destination="E7Z-gG-TRz" id="vMi-li-O42"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fNu-aZ-Pmz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-134.78260869565219" y="-284.59821428571428"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArrowBack" width="24" height="24"/>
+        <image name="QRCode" width="23" height="23"/>
+    </resources>
+</document>
