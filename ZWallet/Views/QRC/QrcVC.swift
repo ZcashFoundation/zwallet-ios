@@ -36,7 +36,7 @@ class QrcVC: UIViewController {
     private func setup() {
         if let localizer = self.localizer {
             self.titleLabel.text = localizer.localized("qrc.title")
-            self.backButton.setTitle(localizer.localized("qrc.button.copy"), for: .normal)
+            self.copyButton.setTitle(localizer.localized("qrc.button.copy"), for: .normal)
         }
 
         if let viewModel = self.viewModel {
