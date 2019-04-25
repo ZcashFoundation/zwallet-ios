@@ -132,3 +132,7 @@
 
 "qrc.button.copy" = "In Pasteboard kopieren";
 
+"settings.title" = "Einstellungen";
+
+"settings.button.nukeWallet" = "Wallet löschen";
+

@@ -48,7 +48,7 @@ extension HomeCoordinator: HomeVCDelegate {
     }
 
     func homeVCSettingsButtonTouched(sender: HomeVC) {
-        #warning("implement")
+        self.showSettings()
     }
 
     func homeVCTrxCellTouched(sender: HomeVC, trxDetails: TrxDetails) {
@@ -89,6 +89,14 @@ extension HomeCoordinator: HomeVCDelegate {
         vc.localizer = self.localizer
         vc.viewModel = viewModel
         self.navigationController.pushViewController(vc, animated: true)
+    }
+
+    private func showSettings() {
+        let settingsCoordinator = SettingsCoordinator(navigationController: self.navigationController,
+                                                      iocContainer: self.iocContainer)
+        self.add(childCoordinator: settingsCoordinator)
+        settingsCoordinator.delegate = self
+        settingsCoordinator.start()
     }
 
     private func showTrxDetailsView(for trxDetails: TrxDetails) {
@@ -205,6 +213,16 @@ extension HomeCoordinator: SendCoordinatorDelegate {
     func sendCoordinatorCancelled(coordinator: SendCoordinator) {
         if let vc = self.homeVC {
             self.navigationController.popToViewController(vc, animated: true)
+            self.remove(childCoordinator: coordinator)
         }
+    }
+}
+
+
+extension HomeCoordinator: SettingsCoordinatorDelegate {
+
+    func settingsCoordinatorDelegateBackTouched(coordinator: SettingsCoordinator) {
+        self.navigationController.popViewController(animated: true)
+        self.remove(childCoordinator: coordinator)
     }
 }

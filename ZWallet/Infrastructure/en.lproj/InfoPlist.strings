@@ -132,3 +132,7 @@
 
 "qrc.button.copy" = "Copy to pasteboard";
 
+"settings.title" = "Settings";
+
+"settings.button.nukeWallet" = "Nuke Wallet";
+
