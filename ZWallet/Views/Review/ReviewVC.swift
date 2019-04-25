@@ -19,7 +19,7 @@ class ReviewVC: UIViewController {
 
     public weak var delegate: ReviewVCDelegate?
     public weak var localizer: Localizable?
-    public var viewModel: ReviewViewModel?
+    public var viewModel: ReviewVCViewModel?
 
     @IBAction func backButtonTouched() {
         self.delegate?.reviewVCDelegateBackTouched(sender: self)

@@ -9,7 +9,7 @@
 import Foundation
 
 
-internal struct ReviewViewModel {
+internal struct ReviewVCViewModel {
     let amount: ZecInAtomicUnits
     let fiatAmount: String
     let receivingAddress: String

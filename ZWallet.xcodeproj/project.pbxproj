@@ -17,7 +17,7 @@
 		EE07A46E21E3E71B006031C8 /* OnboardingCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */; };
 		EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */; };
 		EE18769F221611E6004853A7 /* ReviewVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18769E221611E6004853A7 /* ReviewVCDelegate.swift */; };
-		EE1876A1221612AE004853A7 /* ReviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A0221612AE004853A7 /* ReviewViewModel.swift */; };
+		EE1876A1221612AE004853A7 /* ReviewVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A0221612AE004853A7 /* ReviewVCViewModel.swift */; };
 		EE1876A322161632004853A7 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A222161632004853A7 /* ReviewTableViewCell.swift */; };
 		EE1876A52219DD99004853A7 /* AmountVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A42219DD99004853A7 /* AmountVCViewModel.swift */; };
 		EE1876A72219FA15004853A7 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1876A62219FA15004853A7 /* Wallet.swift */; };
@@ -108,7 +108,7 @@
 		EEBEBB922207290A00A6BD18 /* ZECTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB912207290A00A6BD18 /* ZECTests.swift */; };
 		EEBEBB9322073A4500A6BD18 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE377EC121E7DFD200138385 /* Constants.swift */; };
 		EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB942207425500A6BD18 /* SendCoordinator.swift */; };
-		EEBEBB972207477100A6BD18 /* SendCoordinatorDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */; };
+		EEBEBB972207477100A6BD18 /* SendCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB962207477100A6BD18 /* SendCoordinator.Delegate.swift */; };
 		EEBEBB9E2208D64C00A6BD18 /* AmountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB9D2208D64C00A6BD18 /* AmountVC.swift */; };
 		EEBEBBA02208D75600A6BD18 /* MemoVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB9F2208D66600A6BD18 /* MemoVCDelegate.swift */; };
 		EEBEBBA12208D75A00A6BD18 /* MemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB9C2208D60100A6BD18 /* MemoVC.swift */; };
@@ -143,7 +143,7 @@
 		EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.swift; sourceTree = "<group>"; };
 		EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingCoordinator.Delegate.swift; sourceTree = "<group>"; };
 		EE18769E221611E6004853A7 /* ReviewVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVCDelegate.swift; sourceTree = "<group>"; };
-		EE1876A0221612AE004853A7 /* ReviewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewModel.swift; sourceTree = "<group>"; };
+		EE1876A0221612AE004853A7 /* ReviewVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewVCViewModel.swift; sourceTree = "<group>"; };
 		EE1876A222161632004853A7 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		EE1876A42219DD99004853A7 /* AmountVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVCViewModel.swift; sourceTree = "<group>"; };
 		EE1876A62219FA15004853A7 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
@@ -228,7 +228,7 @@
 		EEBEBB8A2207073900A6BD18 /* String-ExtensionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String-ExtensionTests.swift"; sourceTree = "<group>"; };
 		EEBEBB912207290A00A6BD18 /* ZECTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZECTests.swift; sourceTree = "<group>"; };
 		EEBEBB942207425500A6BD18 /* SendCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinator.swift; sourceTree = "<group>"; };
-		EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinatorDelegate.swift; sourceTree = "<group>"; };
+		EEBEBB962207477100A6BD18 /* SendCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendCoordinator.Delegate.swift; sourceTree = "<group>"; };
 		EEBEBB9A2208D4FD00A6BD18 /* Memo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memo.storyboard; sourceTree = "<group>"; };
 		EEBEBB9C2208D60100A6BD18 /* MemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVC.swift; sourceTree = "<group>"; };
 		EEBEBB9D2208D64C00A6BD18 /* AmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVC.swift; sourceTree = "<group>"; };
@@ -470,7 +470,7 @@
 				EE07A47121E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift */,
 				EE07A46D21E3E71B006031C8 /* OnboardingCoordinator.swift */,
 				EEBEBB942207425500A6BD18 /* SendCoordinator.swift */,
-				EEBEBB962207477100A6BD18 /* SendCoordinatorDelegate.swift */,
+				EEBEBB962207477100A6BD18 /* SendCoordinator.Delegate.swift */,
 			);
 			path = ViewCoordinators;
 			sourceTree = "<group>";
@@ -478,7 +478,6 @@
 		EE57702121CFD03500433CAB /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EEE15B0B2270E541008231B6 /* QRC */,
 				EE4AFAAB2266528700997CE3 /* Address */,
 				EEBEBB822206FB3200A6BD18 /* Amount */,
 				EE377ED021F47D5200138385 /* Home */,
@@ -486,6 +485,7 @@
 				EEBEBB9B2208D5E700A6BD18 /* Memo */,
 				EE377EC321E8F44C00138385 /* Passphrase */,
 				EE377EBA21E68A6600138385 /* Pin */,
+				EEE15B0B2270E541008231B6 /* QRC */,
 				EEBEBB7321FF8D9C00A6BD18 /* RecipientAddress */,
 				EE94A74E2214B50A00882BB1 /* Review */,
 				EEBEBB792200DF9900A6BD18 /* Scan */,
@@ -555,7 +555,7 @@
 				EE1876A222161632004853A7 /* ReviewTableViewCell.swift */,
 				EE94A74F2214B52900882BB1 /* ReviewVC.swift */,
 				EE18769E221611E6004853A7 /* ReviewVCDelegate.swift */,
-				EE1876A0221612AE004853A7 /* ReviewViewModel.swift */,
+				EE1876A0221612AE004853A7 /* ReviewVCViewModel.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -761,7 +761,7 @@
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */,
-				EE1876A1221612AE004853A7 /* ReviewViewModel.swift in Sources */,
+				EE1876A1221612AE004853A7 /* ReviewVCViewModel.swift in Sources */,
 				EE18769F221611E6004853A7 /* ReviewVCDelegate.swift in Sources */,
 				EE57702621CFFDDB00433CAB /* ZWButtom.swift in Sources */,
 				EE1876A322161632004853A7 /* ReviewTableViewCell.swift in Sources */,
@@ -811,7 +811,7 @@
 				EE07A45721E26E88006031C8 /* IocContainer.swift in Sources */,
 				EE73BADA2260ED6F00A6C82C /* InvalidPaymentUri.swift in Sources */,
 				EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */,
-				EEBEBB972207477100A6BD18 /* SendCoordinatorDelegate.swift in Sources */,
+				EEBEBB972207477100A6BD18 /* SendCoordinator.Delegate.swift in Sources */,
 				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
 				EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,

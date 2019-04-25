@@ -26,7 +26,7 @@ class MemoVC: UIViewController {
         guard let mode = self.viewModel?.mode else { return }
 
         #warning("have only one callback method, provide mode, coordinator must decide")
-       switch mode {
+        switch mode {
         case .new:
             self.delegate?.memoVCDelegateNextButtonTouched(sender: self, memo: memo)
         case .edit(_):

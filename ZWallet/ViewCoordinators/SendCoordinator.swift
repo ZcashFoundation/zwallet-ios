@@ -300,9 +300,9 @@ extension SendCoordinator: ReviewVCDelegate {
         }
     }
 
-    private func getReviewViewModel() -> ReviewViewModel {
+    private func getReviewViewModel() -> ReviewVCViewModel {
         #warning("set view model")
-        return ReviewViewModel(amount: self.payment.amount ?? 0,
+        return ReviewVCViewModel(amount: self.payment.amount ?? 0,
                                fiatAmount: "22.08 CHF",
                                receivingAddress: self.payment.targetAddress ?? "",
                                memo: self.payment.memo)
