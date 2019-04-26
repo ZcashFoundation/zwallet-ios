@@ -136,3 +136,19 @@
 
 "settings.button.nukeWallet" = "Nuke Wallet";
 
+"settings.generalSettings" = "General Settings";
+
+"settings.language" = "Language";
+
+"settings.fiat" = "Fiat Conversion Unit";
+
+"settings.node" = "Node";
+
+"settings.faceId" = "Face ID";
+
+"settings.resetPin" = "Reset PIN";
+
+"settings.securityAndPin" = "Security & PIN";
+
+"settings.displayPassphrase" = "Display Passphrase";
+

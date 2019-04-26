@@ -124,6 +124,9 @@
 		EEE15B1D227231F0008231B6 /* SettingsVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B1C227231F0008231B6 /* SettingsVCViewModel.swift */; };
 		EEE15B1F22723478008231B6 /* SettingsCoordinator.Delegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B1E22723478008231B6 /* SettingsCoordinator.Delegate.swift */; };
 		EEE15B20227238FF008231B6 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE15B1622722CEE008231B6 /* Settings.storyboard */; };
+		EEE15B222273B6C5008231B6 /* SettingsTwoLabelsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B212273B6C5008231B6 /* SettingsTwoLabelsTableViewCell.swift */; };
+		EEE15B242273B701008231B6 /* SettingsOneLabelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B232273B701008231B6 /* SettingsOneLabelTableViewCell.swift */; };
+		EEE15B262273B721008231B6 /* SettingsSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B252273B721008231B6 /* SettingsSwitchTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -250,6 +253,9 @@
 		EEE15B1A22723179008231B6 /* SettingsVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVCDelegate.swift; sourceTree = "<group>"; };
 		EEE15B1C227231F0008231B6 /* SettingsVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVCViewModel.swift; sourceTree = "<group>"; };
 		EEE15B1E22723478008231B6 /* SettingsCoordinator.Delegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCoordinator.Delegate.swift; sourceTree = "<group>"; };
+		EEE15B212273B6C5008231B6 /* SettingsTwoLabelsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTwoLabelsTableViewCell.swift; sourceTree = "<group>"; };
+		EEE15B232273B701008231B6 /* SettingsOneLabelTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsOneLabelTableViewCell.swift; sourceTree = "<group>"; };
+		EEE15B252273B721008231B6 /* SettingsSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSwitchTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -648,6 +654,9 @@
 				EEE15B182272305C008231B6 /* SettingsVC.swift */,
 				EEE15B1A22723179008231B6 /* SettingsVCDelegate.swift */,
 				EEE15B1C227231F0008231B6 /* SettingsVCViewModel.swift */,
+				EEE15B212273B6C5008231B6 /* SettingsTwoLabelsTableViewCell.swift */,
+				EEE15B232273B701008231B6 /* SettingsOneLabelTableViewCell.swift */,
+				EEE15B252273B721008231B6 /* SettingsSwitchTableViewCell.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -807,6 +816,7 @@
 				EE377EE421F4F1A100138385 /* TrxDetails.swift in Sources */,
 				EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */,
 				EEBEBB882207061300A6BD18 /* String-Extension.swift in Sources */,
+				EEE15B242273B701008231B6 /* SettingsOneLabelTableViewCell.swift in Sources */,
 				EE377EB321E5303E00138385 /* ViewFactory.swift in Sources */,
 				EE07A47221E3EACE006031C8 /* OnboardingCoordinator.Delegate.swift in Sources */,
 				EE1876A72219FA15004853A7 /* Wallet.swift in Sources */,
@@ -823,6 +833,7 @@
 				EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */,
 				EEE15B0F2270E89F008231B6 /* QrcVCDelegate.swift in Sources */,
 				EE377EC021E7D92200138385 /* PinEntryMode.swift in Sources */,
+				EEE15B262273B721008231B6 /* SettingsSwitchTableViewCell.swift in Sources */,
 				EE21434D22298F8900F3902D /* UINavigationController-Extension.swift in Sources */,
 				EE377EB721E6831E00138385 /* CreateNewWalletCoordinator.Delegate.swift in Sources */,
 				EEBEBB7D2200E10B00A6BD18 /* ScanVCDelegate.swift in Sources */,
@@ -844,6 +855,7 @@
 				EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */,
 				EEBEBB972207477100A6BD18 /* SendCoordinator.Delegate.swift in Sources */,
 				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
+				EEE15B222273B6C5008231B6 /* SettingsTwoLabelsTableViewCell.swift in Sources */,
 				EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
 				EE1876A52219DD99004853A7 /* AmountVCViewModel.swift in Sources */,

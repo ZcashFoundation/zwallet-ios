@@ -37,12 +37,37 @@ internal class SettingsCoordinator: BaseCoordinator {
 
 
 extension SettingsCoordinator: SettingsVCDelegate {
+
     func settingsVCDelegateBackTouched(sender: SettingsVC) {
         self.delegate?.settingsCoordinatorDelegateBackTouched(coordinator: self)
     }
 
     func settingsVCDelegateNukeWalletTouched(sender: SettingsVC) {
         #warning("implement")
+    }
+
+    func settingsVCDelegateLanguageSelectionTouched(sender: SettingsVC) {
+
+    }
+
+    func settingsVCDelegateFiatSelectionTouched(sender: SettingsVC) {
+
+    }
+
+    func settingsVCDelegateNodeSelectionTouched(sender: SettingsVC) {
+
+    }
+
+    func settingsVCDelegateBiometricSwitchTouched(sender: SettingsVC) {
+
+    }
+
+    func settingsVCDelegateResetPinTouched(sender: SettingsVC) {
+
+    }
+
+    func settingsVCDelegateDisplayPassphraseTouched(sender: SettingsVC) {
+        
     }
 
     private func showSettingsView() {

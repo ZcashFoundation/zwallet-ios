@@ -43,8 +43,8 @@ class SettingsVC: UIViewController {
     }
 
     private func setup() {
-//        self.settingsTableView.dataSource = self
-//        self.settingsTableView.delegate = self
+        self.settingsTableView.dataSource = self
+        self.settingsTableView.delegate = self
     }
 
     public func updateView() {
@@ -59,60 +59,116 @@ class SettingsVC: UIViewController {
     }
 
     private enum CellIdentifier: String {
-        case review = "ReviewCell"
-        case memo = "ReviewMemoCell"
+        case twoLabels = "SettingsTwoLabelsCell"
+        case oneLabel = "SettingsOneLabelCell"
+        case labelSwitch = "SettingsSwitchCell"
     }
 
-//    private var cellDefinitions: [(cell: UITableViewCell, height: Int, action: ((ReviewVC) -> Void)?)] {
-//        return [(self.amountCell, 100, self.delegate?.reviewVCDelegateChangeAmountTouched),
-//                (self.receivingAddressCell, 100, self.delegate?.reviewVCDelegateChangeReceivingAddressTouched),
-//                (self.memoCell, 120, self.delegate?.reviewVCDelegateChangeMemoTouched)]
-//    }
-//
-//    private var amountCell: UITableViewCell {
-//        let cell = self.summaryTableView.dequeueReusableCell(withIdentifier: CellIdentifier.review.rawValue) as! ReviewTableViewCell
-//        cell.titleLabel.text = self.localizer?.localized("review.amount")
-//        cell.descriptionLabel.text = self.amountDescription
-//        return cell
-//    }
-//
-//    private var receivingAddressCell: UITableViewCell {
-//        let cell = self.summaryTableView.dequeueReusableCell(withIdentifier: CellIdentifier.review.rawValue) as! ReviewTableViewCell
-//        cell.titleLabel.text = self.localizer?.localized("review.receivingAddress")
-//        cell.descriptionLabel.text = self.viewModel?.receivingAddress
-//        return cell
-//    }
-//
-//    private var memoCell: UITableViewCell {
-//        let cell = self.summaryTableView.dequeueReusableCell(withIdentifier: CellIdentifier.memo.rawValue) as! ReviewTableViewCell
-//        cell.titleLabel.text = self.localizer?.localized("review.memo")
-//        cell.descriptionLabel.text = self.viewModel?.memo
-//        return cell
-//    }
+    private var cellDefinitions: [(section: Int, cell: UITableViewCell, action: ((SettingsVC) -> Void)?)] {
+        return [(section: 0,
+                 cell:self.languageCell,
+                 action: self.delegate?.settingsVCDelegateLanguageSelectionTouched),
+                (section: 0,
+                 cell:self.fiatCell,
+                 action: self.delegate?.settingsVCDelegateFiatSelectionTouched),
+
+                (section: 1,
+                 cell:self.nodeCell,
+                 action: self.delegate?.settingsVCDelegateNodeSelectionTouched),
+
+                (section: 2,
+                 cell:self.biometricCell,
+                 action: self.delegate?.settingsVCDelegateBiometricSwitchTouched),
+                (section: 2,
+                 cell:self.resetPinCell,
+                 action: self.delegate?.settingsVCDelegateResetPinTouched),
+                (section: 2,
+                 cell:self.displayPassphraseCell,
+                 action: self.delegate?.settingsVCDelegateDisplayPassphraseTouched),
+        ]
+    }
+
+    private var sectionHeaders = ["settings.generalSettings",
+                                  "settings.node",
+                                  "settings.securityAndPin"]
+
+    private var languageCell: UITableViewCell {
+        let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.twoLabels.rawValue) as! SettingsTwoLabelsTableViewCell
+        cell.leftLabel.text = self.localizer?.localized("settings.language")
+        cell.rightLabel.text = "__language__"
+        return cell
+    }
+
+    private var fiatCell: UITableViewCell {
+        let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.twoLabels.rawValue) as! SettingsTwoLabelsTableViewCell
+        cell.leftLabel.text = self.localizer?.localized("settings.fiat")
+        cell.rightLabel.text = "__fiat__"
+        return cell
+    }
+
+    private var nodeCell: UITableViewCell {
+        let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.oneLabel.rawValue) as! SettingsOneLabelTableViewCell
+        cell.leftLabel.text = "__node__"
+        return cell
+    }
+
+    private var biometricCell: UITableViewCell {
+        let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.labelSwitch.rawValue) as! SettingsSwitchTableViewCell
+        cell.leftLabel.text = self.localizer?.localized("settings.faceId")
+        cell.switchSwitch.isOn = true
+        return cell
+    }
+
+    private var resetPinCell: UITableViewCell {
+        let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.oneLabel.rawValue) as! SettingsOneLabelTableViewCell
+        cell.leftLabel.text = self.localizer?.localized("settings.resetPin")
+        return cell
+    }
+
+    private var displayPassphraseCell: UITableViewCell {
+        let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.oneLabel.rawValue) as! SettingsOneLabelTableViewCell
+        cell.leftLabel.text = self.localizer?.localized("settings.displayPassphrase")
+        return cell
+    }
 }
 
 
-//extension SettingsVC: UITableViewDelegate {
-//
-//    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-//        return CGFloat(self.cellDefinitions[indexPath.row].height)
-//    }
-//
-//    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        if let action = self.cellDefinitions[indexPath.row].action {
-//            action(self)
-//        }
-//    }
-//}
+extension SettingsVC: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let sectionItems = self.cellDefinitions
+            .filter { $0.section == indexPath.section }
+
+        if let action = sectionItems[indexPath.row].action {
+            action(self)
+        }
+    }
+}
 
 
-//extension SettingsVC: UITableViewDataSource {
-//
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return self.cellDefinitions.count
-//    }
-//
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        return self.cellDefinitions[indexPath.row].cell
-//    }
-//}
+extension SettingsVC: UITableViewDataSource {
+
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return self.localizer?.localized(self.sectionHeaders[section])
+    }
+
+    func numberOfSections(in tableView: UITableView) -> Int {
+        let n = (cellDefinitions.map { $0.section }.max() ?? 0) + 1
+        return n
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        let n = self.cellDefinitions
+            .filter { $0.section == section }
+            .count
+        return n
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let sectionItems = self.cellDefinitions
+            .filter { $0.section == indexPath.section }
+
+        let cell = sectionItems[indexPath.row].cell
+        return cell
+    }
+}

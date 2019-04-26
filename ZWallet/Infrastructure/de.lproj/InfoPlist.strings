@@ -136,3 +136,19 @@
 
 "settings.button.nukeWallet" = "Wallet löschen";
 
+"settings.generalSettings" = "Allgemeine Einstellungen";
+
+"settings.language" = "Sprache";
+
+"settings.fiat" = "Fiat Einheit";
+
+"settings.node" = "Node";
+
+"settings.faceId" = "Face ID";
+
+"settings.resetPin" = "PIN zurücksetzen";
+
+"settings.securityAndPin" = "Sicherheit und PIN";
+
+"settings.displayPassphrase" = "Passwort anzeigen";
+
