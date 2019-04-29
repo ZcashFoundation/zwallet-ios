@@ -11,6 +11,10 @@ import Foundation
 
 internal class Constants {
 
+    public static let defaultLanguage = "en"
+    public static let defaultCurrency = "USD"
+    public static let defaultNodeAddress = "node.22of8.ch:2208"
+
     public static let pinCodeLength = 6
 
     public static let atomicUnitsPerZec: UInt64 = 1_000_000_000_000
