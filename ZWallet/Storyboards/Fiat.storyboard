@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.ttf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.ttf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--!!Fiat-->
+        <scene sceneID="BVC-Ua-pHo">
+            <objects>
+                <tableViewController storyboardIdentifier="Fiat" title="!!Fiat" id="3kL-n4-JwT" customClass="FiatVC" customModule="ZWallet" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="55" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="mXm-SR-Pcu">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" searchBarStyle="minimal" placeholder="!!Search" id="AUu-dA-6Da">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FiatIndexCell" id="rhZ-K8-mRq" userLabel="FiatIndexCell" customClass="FiatIndexTableViewCell" customModule="ZWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="111.5" width="414" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="rhZ-K8-mRq" id="Bea-hJ-yx7">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!A" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CkO-4a-ScX">
+                                            <rect key="frame" x="24" y="24" width="366" height="31"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="24"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="CkO-4a-ScX" firstAttribute="centerY" secondItem="Bea-hJ-yx7" secondAttribute="centerY" constant="12" id="YFh-Cr-RUI"/>
+                                        <constraint firstAttribute="trailing" secondItem="CkO-4a-ScX" secondAttribute="trailing" constant="24" id="jwB-KW-JzI"/>
+                                        <constraint firstItem="CkO-4a-ScX" firstAttribute="leading" secondItem="Bea-hJ-yx7" secondAttribute="leading" constant="24" id="s1A-as-6go"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="indexLabel" destination="CkO-4a-ScX" id="Yug-NN-Eqv"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FiatCurrencyCell" id="zfR-r3-fJ3" userLabel="FiatCurrencyCell" customClass="FiatCurrencyTableViewCell" customModule="ZWallet" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="166.5" width="414" height="55"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zfR-r3-fJ3" id="uED-33-qTF">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!CHF" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I2k-bc-yN7">
+                                            <rect key="frame" x="24" y="16" width="50" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="4hG-ct-G5l"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
+                                            <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RadioSelected" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hlI-2C-BhY">
+                                            <rect key="frame" x="370" y="17" width="20" height="20"/>
+                                            <color key="tintColor" red="0.2784313725" green="0.54901960780000003" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="20" id="9rT-mI-gfs"/>
+                                                <constraint firstAttribute="height" constant="20" id="TKZ-LW-rdR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwT-bQ-iFQ">
+                                            <rect key="frame" x="24" y="54" width="366" height="1"/>
+                                            <color key="backgroundColor" red="0.91764705882352937" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="1" id="QhN-ko-j1n"/>
+                                            </constraints>
+                                        </view>
+                                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="!!Swiss Franc" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QeC-uA-kJs">
+                                            <rect key="frame" x="124" y="16" width="238" height="23"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
+                                            <color key="textColor" red="0.50980392156862742" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="xwT-bQ-iFQ" firstAttribute="leading" secondItem="uED-33-qTF" secondAttribute="leading" constant="24" id="5eT-sr-fvg"/>
+                                        <constraint firstItem="QeC-uA-kJs" firstAttribute="leading" secondItem="I2k-bc-yN7" secondAttribute="leading" constant="100" id="G2K-qn-YOb"/>
+                                        <constraint firstItem="I2k-bc-yN7" firstAttribute="leading" secondItem="uED-33-qTF" secondAttribute="leading" constant="24" id="GJy-IE-8eu"/>
+                                        <constraint firstItem="I2k-bc-yN7" firstAttribute="top" secondItem="uED-33-qTF" secondAttribute="top" constant="16" id="INK-GV-dcO"/>
+                                        <constraint firstItem="hlI-2C-BhY" firstAttribute="top" secondItem="uED-33-qTF" secondAttribute="top" constant="17" id="Jad-ne-MJS"/>
+                                        <constraint firstAttribute="trailing" secondItem="xwT-bQ-iFQ" secondAttribute="trailing" constant="24" id="VK5-BD-Z85"/>
+                                        <constraint firstAttribute="bottom" secondItem="xwT-bQ-iFQ" secondAttribute="bottom" id="ZRs-r7-xTN"/>
+                                        <constraint firstAttribute="trailing" secondItem="hlI-2C-BhY" secondAttribute="trailing" constant="24" id="fGz-KS-bUC"/>
+                                        <constraint firstItem="QeC-uA-kJs" firstAttribute="top" secondItem="uED-33-qTF" secondAttribute="top" constant="16" id="tL1-nW-9uN"/>
+                                        <constraint firstItem="hlI-2C-BhY" firstAttribute="leading" secondItem="QeC-uA-kJs" secondAttribute="trailing" constant="8" id="vQ3-sP-XsR"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="currencyNameLabel" destination="QeC-uA-kJs" id="pUM-6F-CjE"/>
+                                    <outlet property="currenyIdLabel" destination="I2k-bc-yN7" id="XPg-m5-3rF"/>
+                                    <outlet property="radioImageView" destination="hlI-2C-BhY" id="2RP-1V-0ao"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <sections/>
+                        <connections>
+                            <outlet property="dataSource" destination="3kL-n4-JwT" id="abQ-jL-aMC"/>
+                            <outlet property="delegate" destination="3kL-n4-JwT" id="m0d-Uf-9Km"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="!!Fiat" largeTitleDisplayMode="always" id="Dge-KJ-Zam">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="ArrowBack" id="K6K-1f-aoz" userLabel="BackButton">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="backButtonTouched" destination="3kL-n4-JwT" id="RQK-nX-tvF"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="searchBar" destination="AUu-dA-6Da" id="SAv-sw-Nqo"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7cG-nS-xgr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105.79710144927537" y="151.33928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ArrowBack" width="24" height="24"/>
+        <image name="RadioSelected" width="20" height="20"/>
+    </resources>
+</document>

@@ -113,6 +113,17 @@
 		EEBEBBA02208D75600A6BD18 /* MemoVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB9F2208D66600A6BD18 /* MemoVCDelegate.swift */; };
 		EEBEBBA12208D75A00A6BD18 /* MemoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBEBB9C2208D60100A6BD18 /* MemoVC.swift */; };
 		EEBEBBA22208D76200A6BD18 /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBEBB9A2208D4FD00A6BD18 /* Memo.storyboard */; };
+		EECB178A2275A7CB002964A4 /* Language.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECB17892275A7B4002964A4 /* Language.storyboard */; };
+		EECB178D2275A836002964A4 /* LanguageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB178C2275A836002964A4 /* LanguageVC.swift */; };
+		EECB178F2275AA4D002964A4 /* Fiat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EECB178E2275AA4D002964A4 /* Fiat.storyboard */; };
+		EECB17922275ACB3002964A4 /* FiatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB17912275ACB3002964A4 /* FiatVC.swift */; };
+		EECB17942275E5D4002964A4 /* FiatIndexTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB17932275E5D4002964A4 /* FiatIndexTableViewCell.swift */; };
+		EECB17962275E601002964A4 /* FiatCurrencyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB17952275E601002964A4 /* FiatCurrencyTableViewCell.swift */; };
+		EECB17982275E7B5002964A4 /* FiatVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB17972275E7B5002964A4 /* FiatVCDelegate.swift */; };
+		EECB179A2275E894002964A4 /* FiatVCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB17992275E894002964A4 /* FiatVCViewModel.swift */; };
+		EECB179C22760EAB002964A4 /* Currencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB179B22760EAB002964A4 /* Currencies.swift */; };
+		EECB179E22777ADE002964A4 /* PropertyStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB179D22777ADE002964A4 /* PropertyStore.swift */; };
+		EECB17A022777D6A002964A4 /* Languages.swift in Sources */ = {isa = PBXBuildFile; fileRef = EECB179F22777D6A002964A4 /* Languages.swift */; };
 		EEE15B0A2270DA23008231B6 /* QRC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEE15B092270D93B008231B6 /* QRC.storyboard */; };
 		EEE15B0D2270E736008231B6 /* QrcVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B0C2270E736008231B6 /* QrcVC.swift */; };
 		EEE15B0F2270E89F008231B6 /* QrcVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE15B0E2270E89F008231B6 /* QrcVCDelegate.swift */; };
@@ -242,6 +253,17 @@
 		EEBEBB9C2208D60100A6BD18 /* MemoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVC.swift; sourceTree = "<group>"; };
 		EEBEBB9D2208D64C00A6BD18 /* AmountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountVC.swift; sourceTree = "<group>"; };
 		EEBEBB9F2208D66600A6BD18 /* MemoVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoVCDelegate.swift; sourceTree = "<group>"; };
+		EECB17892275A7B4002964A4 /* Language.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Language.storyboard; sourceTree = "<group>"; };
+		EECB178C2275A836002964A4 /* LanguageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageVC.swift; sourceTree = "<group>"; };
+		EECB178E2275AA4D002964A4 /* Fiat.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Fiat.storyboard; sourceTree = "<group>"; };
+		EECB17912275ACB3002964A4 /* FiatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatVC.swift; sourceTree = "<group>"; };
+		EECB17932275E5D4002964A4 /* FiatIndexTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatIndexTableViewCell.swift; sourceTree = "<group>"; };
+		EECB17952275E601002964A4 /* FiatCurrencyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatCurrencyTableViewCell.swift; sourceTree = "<group>"; };
+		EECB17972275E7B5002964A4 /* FiatVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatVCDelegate.swift; sourceTree = "<group>"; };
+		EECB17992275E894002964A4 /* FiatVCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiatVCViewModel.swift; sourceTree = "<group>"; };
+		EECB179B22760EAB002964A4 /* Currencies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Currencies.swift; sourceTree = "<group>"; };
+		EECB179D22777ADE002964A4 /* PropertyStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyStore.swift; sourceTree = "<group>"; };
+		EECB179F22777D6A002964A4 /* Languages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Languages.swift; sourceTree = "<group>"; };
 		EEE15B092270D93B008231B6 /* QRC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRC.storyboard; sourceTree = "<group>"; };
 		EEE15B0C2270E736008231B6 /* QrcVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcVC.swift; sourceTree = "<group>"; };
 		EEE15B0E2270E89F008231B6 /* QrcVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrcVCDelegate.swift; sourceTree = "<group>"; };
@@ -292,6 +314,7 @@
 				EE07A46721E279A8006031C8 /* InfoPlist.strings */,
 				EE07A45621E26E88006031C8 /* IocContainer.swift */,
 				EE07A45421E24FDD006031C8 /* Localization.swift */,
+				EECB179D22777ADE002964A4 /* PropertyStore.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -462,7 +485,9 @@
 			children = (
 				EE4AFAAA2266519E00997CE3 /* Address.storyboard */,
 				EEBEBB802206F80300A6BD18 /* Amount.storyboard */,
+				EECB178E2275AA4D002964A4 /* Fiat.storyboard */,
 				EE76B84121D7EC3F0093571F /* Home.storyboard */,
+				EECB17892275A7B4002964A4 /* Language.storyboard */,
 				EE57700621CFCC5600433CAB /* LaunchScreen.storyboard */,
 				EE57700121CFCC5500433CAB /* Main.storyboard */,
 				EEBEBB9A2208D4FD00A6BD18 /* Memo.storyboard */,
@@ -501,7 +526,9 @@
 			children = (
 				EE4AFAAB2266528700997CE3 /* Address */,
 				EEBEBB822206FB3200A6BD18 /* Amount */,
+				EECB17902275AC78002964A4 /* Fiat */,
 				EE377ED021F47D5200138385 /* Home */,
+				EECB178B2275A814002964A4 /* Language */,
 				EE07A44E21E217E0006031C8 /* Main */,
 				EEBEBB9B2208D5E700A6BD18 /* Memo */,
 				EE377EC321E8F44C00138385 /* Passphrase */,
@@ -531,6 +558,8 @@
 			children = (
 				EE57702821D0011400433CAB /* Colors.swift */,
 				EE377EC121E7DFD200138385 /* Constants.swift */,
+				EECB179B22760EAB002964A4 /* Currencies.swift */,
+				EECB179F22777D6A002964A4 /* Languages.swift */,
 			);
 			path = Definitions;
 			sourceTree = "<group>";
@@ -636,6 +665,26 @@
 				EE1876AA221F4CD0004853A7 /* MemoVCViewModel.swift */,
 			);
 			path = Memo;
+			sourceTree = "<group>";
+		};
+		EECB178B2275A814002964A4 /* Language */ = {
+			isa = PBXGroup;
+			children = (
+				EECB178C2275A836002964A4 /* LanguageVC.swift */,
+			);
+			path = Language;
+			sourceTree = "<group>";
+		};
+		EECB17902275AC78002964A4 /* Fiat */ = {
+			isa = PBXGroup;
+			children = (
+				EECB17952275E601002964A4 /* FiatCurrencyTableViewCell.swift */,
+				EECB17932275E5D4002964A4 /* FiatIndexTableViewCell.swift */,
+				EECB17912275ACB3002964A4 /* FiatVC.swift */,
+				EECB17972275E7B5002964A4 /* FiatVCDelegate.swift */,
+				EECB17992275E894002964A4 /* FiatVCViewModel.swift */,
+			);
+			path = Fiat;
 			sourceTree = "<group>";
 		};
 		EEE15B0B2270E541008231B6 /* QRC */ = {
@@ -768,9 +817,11 @@
 				EE76B85A21D8D1930093571F /* OFL.txt in Resources */,
 				EEBEBBA22208D76200A6BD18 /* Memo.storyboard in Resources */,
 				EE76B84221D7EC3F0093571F /* Home.storyboard in Resources */,
+				EECB178A2275A7CB002964A4 /* Language.storyboard in Resources */,
 				EE57700821CFCC5600433CAB /* LaunchScreen.storyboard in Resources */,
 				EEE15B0A2270DA23008231B6 /* QRC.storyboard in Resources */,
 				EEBEBB812206F81F00A6BD18 /* Amount.storyboard in Resources */,
+				EECB178F2275AA4D002964A4 /* Fiat.storyboard in Resources */,
 				EE76B85E21D8D1930093571F /* SourceSansPro-ExtraLightItalic.ttf in Resources */,
 				EE57700521CFCC5600433CAB /* Assets.xcassets in Resources */,
 				EE57700321CFCC5500433CAB /* Main.storyboard in Resources */,
@@ -795,6 +846,7 @@
 				EE377EE221F4F18700138385 /* TrxDirection.swift in Sources */,
 				EE07A46A21E29B6F006031C8 /* AppCoordinator.swift in Sources */,
 				EE07A45221E23E92006031C8 /* MainVCDelegate.swift in Sources */,
+				EECB17922275ACB3002964A4 /* FiatVC.swift in Sources */,
 				EE377EC521E8F47100138385 /* PassphraseVC.swift in Sources */,
 				EEBEBB952207425500A6BD18 /* SendCoordinator.swift in Sources */,
 				EE1876A1221612AE004853A7 /* ReviewVCViewModel.swift in Sources */,
@@ -811,8 +863,11 @@
 				EE57702B21D0230C00433CAB /* ZWProgressBar.swift in Sources */,
 				EECB17A022777D6A002964A4 /* Languages.swift in Sources */,
 				EE377EED21F7B02600138385 /* TrxMemoTableViewCell.swift in Sources */,
+				EECB17942275E5D4002964A4 /* FiatIndexTableViewCell.swift in Sources */,
 				EE57702921D0011400433CAB /* Colors.swift in Sources */,
 				EE377EE621F4F1C400138385 /* TrxHistoryObservable.swift in Sources */,
+				EECB179A2275E894002964A4 /* FiatVCViewModel.swift in Sources */,
+				EECB179E22777ADE002964A4 /* PropertyStore.swift in Sources */,
 				EEBEBBA02208D75600A6BD18 /* MemoVCDelegate.swift in Sources */,
 				EE377EE421F4F1A100138385 /* TrxDetails.swift in Sources */,
 				EE377ECB21E8F71700138385 /* PassphraseEntryMode.swift in Sources */,
@@ -829,6 +884,7 @@
 				EEBEBB7B2200DFC000A6BD18 /* ScanVC.swift in Sources */,
 				EEE15B1D227231F0008231B6 /* SettingsVCViewModel.swift in Sources */,
 				EE1876A9221EE0B2004853A7 /* Payment.swift in Sources */,
+				EECB178D2275A836002964A4 /* LanguageVC.swift in Sources */,
 				EEE15B1522722C77008231B6 /* SettingsCoordinator.swift in Sources */,
 				EE576FFE21CFCC5500433CAB /* AppDelegate.swift in Sources */,
 				EE94A74C22135B7200882BB1 /* TrxDetailsVCDelegate.swift in Sources */,
@@ -857,6 +913,7 @@
 				EE377EF121FDEE3F00138385 /* ZEC.swift in Sources */,
 				EEBEBB972207477100A6BD18 /* SendCoordinator.Delegate.swift in Sources */,
 				EE377ED221F47E1400138385 /* HomeVC.swift in Sources */,
+				EECB17982275E7B5002964A4 /* FiatVCDelegate.swift in Sources */,
 				EEE15B222273B6C5008231B6 /* SettingsTwoLabelsTableViewCell.swift in Sources */,
 				EE377ED621F4835F00138385 /* HomeVCDelegate.swift in Sources */,
 				EE377EBE21E68C0B00138385 /* PinVCDelegate.swift in Sources */,
@@ -866,6 +923,7 @@
 				EEBEBB7721FF91B700A6BD18 /* RecipientAddressDelegate.swift in Sources */,
 				EEE15B112270E903008231B6 /* QrcVCViewModel.swift in Sources */,
 				EE4AFAAD226652E500997CE3 /* AddressVC.swift in Sources */,
+				EECB17962275E601002964A4 /* FiatCurrencyTableViewCell.swift in Sources */,
 				EEBEBBA12208D75A00A6BD18 /* MemoVC.swift in Sources */,
 				EE07A45021E23E43006031C8 /* MainVC.swift in Sources */,
 				EEE15B192272305C008231B6 /* SettingsVC.swift in Sources */,
