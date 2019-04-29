@@ -36,6 +36,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.appCoordinator.start()
 
         self.window?.makeKeyAndVisible()
+
+        UINavigationBar.appearance().prefersLargeTitles = true
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0),
+            NSAttributedString.Key.font: UIFont(name: "SourceSansPro-Bold", size: 34)!
+        ]
+        UINavigationBar.appearance().titleTextAttributes = [
+            NSAttributedString.Key.foregroundColor: UIColor(red: 0.2, green: 0.2, blue: 0.2, alpha: 1.0),
+            NSAttributedString.Key.font: UIFont(name: "SourceSansPro-Regular", size: 18)!
+        ]
         
         return true
     }

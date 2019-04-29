@@ -35,6 +35,8 @@ class SettingsVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        self.navigationController?.navigationBar.isHidden = true
+
         if let index = self.settingsTableView.indexPathForSelectedRow {
             self.settingsTableView.deselectRow(at: index, animated: true)
         }
@@ -95,20 +97,20 @@ class SettingsVC: UIViewController {
     private var languageCell: UITableViewCell {
         let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.twoLabels.rawValue) as! SettingsTwoLabelsTableViewCell
         cell.leftLabel.text = self.localizer?.localized("settings.language")
-        cell.rightLabel.text = "__language__"
+        cell.rightLabel.text = self.viewModel?.language
         return cell
     }
 
     private var fiatCell: UITableViewCell {
         let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.twoLabels.rawValue) as! SettingsTwoLabelsTableViewCell
         cell.leftLabel.text = self.localizer?.localized("settings.fiat")
-        cell.rightLabel.text = "__fiat__"
+        cell.rightLabel.text = self.viewModel?.currency
         return cell
     }
 
     private var nodeCell: UITableViewCell {
         let cell = self.settingsTableView.dequeueReusableCell(withIdentifier: CellIdentifier.oneLabel.rawValue) as! SettingsOneLabelTableViewCell
-        cell.leftLabel.text = "__node__"
+        cell.leftLabel.text = self.viewModel?.nodeAddress
         return cell
     }
 

@@ -24,6 +24,8 @@ internal protocol ViewFactoryProtocol {
     func getAddressVC() -> AddressVC
     func getQrcVC() -> QrcVC
     func getSettingsVC() -> SettingsVC
+    func getLanguageVC() -> LanguageVC
+    func getFiatVC() -> FiatVC
 }
 
 
@@ -79,6 +81,14 @@ internal class ViewFactory: ViewFactoryProtocol {
 
     func getSettingsVC() -> SettingsVC {
         return self.view(withName: "Settings", onStoryboard: "Settings")
+    }
+
+    func getLanguageVC() -> LanguageVC {
+        return self.view(withName: "Language", onStoryboard: "Language")
+    }
+
+    func getFiatVC() -> FiatVC {
+        return self.view(withName: "Fiat", onStoryboard: "Fiat")
     }
 
     private func view<T>(withName viewName: String, onStoryboard storyboardName: String) -> T {

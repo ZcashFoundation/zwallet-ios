@@ -28,3 +28,26 @@ internal class Localization: Localizable {
         return self.languageBundle.localizedString(forKey: text, value: text, table: "InfoPlist")
     }
 }
+
+
+extension Localization {
+
+    public static func initialLanguage() -> String {
+        let preferredLanguages = Locale.preferredLanguages
+        let supportedLanguages = LanguageId.allCases.map { $0.rawValue }
+
+        for preferredLanguage in preferredLanguages {
+            if supportedLanguages.contains(preferredLanguage) {
+                return preferredLanguage
+            }
+
+            for supportedLanguage in supportedLanguages {
+                if preferredLanguage.starts(with: supportedLanguage) {
+                    return supportedLanguage
+                }
+            }
+        }
+
+        return Constants.defaultLanguage
+    }
+}

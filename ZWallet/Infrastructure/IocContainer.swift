@@ -15,6 +15,7 @@ internal protocol IocContainerProtocol {
     var viewFactory: ViewFactoryProtocol { get }
     var trxHistoryProvider: TrxHistoryProviderProtocol { get }
     var paymentParser: PaymentParserProtocol { get }
+    var propertyStore: PropertyStoreProtocol { get }
 }
 
 
@@ -36,5 +37,9 @@ internal class IocContainer: IocContainerProtocol {
 
     public lazy var paymentParser: PaymentParserProtocol = {
         return PaymentParser()
+    }()
+
+    public lazy var propertyStore: PropertyStoreProtocol = {
+        return  PropertyStore()
     }()
 }

@@ -10,5 +10,16 @@ import Foundation
 
 
 internal struct SettingsVCViewModel {
-    
+    var currency: String
+    var language: String
+    var nodeAddress: String
+
+    init(currency: String,
+         language: String,
+         nodeAddress: String)
+    {
+        self.currency = currency
+        self.language = language
+        self.nodeAddress = nodeAddress
+    }
 }
