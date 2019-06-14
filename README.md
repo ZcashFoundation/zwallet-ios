@@ -1,3 +1,3 @@
-# zwallet
+# zwallet-ios
 
-The Zcash Foundation's official reference wallet for iOS. 
+This is a WIP, shielded-first Zcash iOS wallet. It is not in active development.
